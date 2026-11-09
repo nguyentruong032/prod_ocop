@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>OCOP Việt Nam Điện tử - Báo chí Điện tử Phi Thương mại</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/fonts/material-symbols.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { "darkMode": "class", "theme": { "extend": { "colors": { "on-primary": "#ffffff", "surface-dim": "#d0daf0", "error": "#ba1a1a", "surface-bright": "#f9f9ff", "on-error": "#ffffff", "tertiary": "#372200", "on-tertiary-container": "#ce9e54", "surface-container": "#e7eeff", "on-tertiary-fixed": "#291800", "surface-container-high": "#dee8ff", "on-primary-fixed": "#002114", "primary-fixed-dim": "#a5d0b9", "error-container": "#ffdad6", "inverse-primary": "#a5d0b9", "inverse-surface": "#273141", "tertiary-fixed": "#ffddb1", "tertiary-container": "#533600", "surface-container-low": "#f0f3ff", "secondary": "#984724", "primary-container": "#1b4332", "on-primary-fixed-variant": "#274e3d", "on-tertiary-fixed-variant": "#614000", "surface-container-highest": "#d9e3f9", "on-surface": "#121c2c", "on-error-container": "#93000a", "on-surface-variant": "#414844", "outline": "#717973", "on-secondary-container": "#752d0b", "surface-tint": "#3f6653", "primary-fixed": "#c1ecd4", "inverse-on-surface": "#ebf1ff", "tertiary-fixed-dim": "#f2be71", "secondary-container": "#fd966d", "surface-variant": "#d9e3f9", "on-tertiary": "#ffffff", "outline-variant": "#c1c8c2", "on-primary-container": "#86af99", "surface-container-lowest": "#ffffff", "secondary-fixed": "#ffdbce", "secondary-fixed-dim": "#ffb599", "on-background": "#121c2c", "on-secondary": "#ffffff", "surface": "#f9f9ff", "background": "#f9f9ff", "primary": "#012d1d", "on-secondary-fixed": "#370e00", "on-secondary-fixed-variant": "#79300f" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-tablet": "2rem", "gutter-tablet": "1.25rem", "gutter": "1.5rem", "margin": "4rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem" }, "fontFamily": { "lead-paragraph": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "headline-sm": ["Noto Serif"], "title-editorial": ["Noto Serif"], "body-md": ["Be Vietnam Pro"], "headline-lg-mobile": ["Noto Serif"], "display-hero": ["Noto Serif"], "headline-lg": ["Noto Serif"], "display-hero-mobile": ["Noto Serif"], "body-sm": ["Be Vietnam Pro"], "quote-display": ["Noto Serif"], "headline-md": ["Noto Serif"] }, "fontSize": { "lead-paragraph": ["20px", { "lineHeight": "34px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "body-lg": ["17px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "title-editorial": ["19px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg-mobile": ["28px", { "lineHeight": "38px", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "quote-display": ["24px", { "lineHeight": "38px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "38px", "fontWeight": "600" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+    <main class="w-full  bg-surface">
+        <!-- THANH SUB-HEADER CHUYÊN MỤC KIỂU BÁO NÔNG NGHIỆP & MÔI TRƯỜNG -->
+        <div class="bg-white pt-3 pb-0">
+            <div class="max-w-[1360px] mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+                <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 border-b-2 border-gray-200">
+
+                    <a href="/diem-den-du-lich/index.html" data-subnav="parent"
+                        class="text-lg md:text-xl font-bold text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-[#2C5E2E] whitespace-nowrap transition-colors">
+                        Điểm đến du lịch
+                    </a>
+
+                    <nav class="flex items-center gap-x-5 overflow-x-auto no-scrollbar">
+                        <a href="/diem-den-du-lich/lang-nghe-truyen-thong/index.html" data-subnav="item"
+                            class="subnav-link text-[13px] font-medium text-gray-700 hover:text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-transparent hover:border-[#2C5E2E] whitespace-nowrap transition-all">
+                            Làng nghề truyền thống
+                        </a>
+                        <a href="/diem-den-du-lich/du-lich-sinh-thai-trai-nghiem-ocop/index.html" data-subnav="item"
+                            class="subnav-link text-[13px] font-medium text-gray-700 hover:text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-transparent hover:border-[#2C5E2E] whitespace-nowrap transition-all">
+                            Du lịch sinh thái - Trải nghiệm OCOP
+                        </a>
+                        <a href="/diem-den-du-lich/ban-do-ocop-viet-nam/index.html" data-subnav="item"
+                            class="text-lg md:text-xl font-bold text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-[#2C5E2E] whitespace-nowrap transition-colors">
+                            Bản đồ OCOP Việt Nam
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <section class="w-full py-space-xl bg-surface">
+            <div
+                class="max-w-[1360px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex flex-col gap-space-lg">
+                <div class="flex flex-col gap-space-xs max-w-4xl">
+                    <div
+                        class="inline-flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider text-secondary">
+                        <span class="material-symbols-outlined text-[15px]">explore</span>
+                        <span class="">Hệ thống Địa lý Dữ liệu &amp; Phân bố Không gian Bản địa</span>
+                    </div>
+                    <h1 class="font-display-hero text-headline-lg lg:text-display-hero text-primary tracking-tight">
+                        Bản đồ OCOP Việt Nam: Số hóa không gian văn hóa &amp; sản vật 63 tỉnh, thành
+                    </h1>
+                    <p
+                        class="font-lead-paragraph text-lead-paragraph text-on-surface-variant mt-space-xs leading-relaxed">
+                        Công cụ tương tác trực quan tra cứu tọa độ địa lý, chỉ dẫn địa lý, hệ sinh thái làng
+                        nghề và các điểm đến trải nghiệm sản phẩm OCOP đạt sao trên toàn quốc. Nền tảng tư liệu
+                        địa lý nông nghiệp thuộc Cổng thông tin OCOP Việt Nam điện tử.
+                    </p>
+                </div>
+                <!-- 4 Key Spatial Metrics Bar -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-md">
+                    <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+                        <div class="flex items-center justify-between text-primary">
+                            <span class="font-label-sm text-label-sm uppercase text-outline">Độ phủ hành
+                                chính</span>
+                            <span class="material-symbols-outlined text-[20px] text-secondary">share_location</span>
+                        </div>
+                        <div class="font-display-hero text-headline-md text-primary font-bold">63 / 63</div>
+                        <div class="font-body-sm text-body-sm text-on-surface-variant">Tỉnh, thành phố đã hoàn
+                            tất số hóa tọa độ GIS chuẩn</div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+                        <div class="flex items-center justify-between text-primary">
+                            <span class="font-label-sm text-label-sm uppercase text-outline">Chủ thể &amp; Vùng
+                                nguyên liệu</span>
+                            <span class="material-symbols-outlined text-[20px] text-primary">hub</span>
+                        </div>
+                        <div class="font-display-hero text-headline-md text-primary font-bold">10.800+</div>
+                        <div class="font-body-sm text-body-sm text-on-surface-variant">Hợp tác xã &amp; Cơ sở
+                            chế biến nông sản đạt chứng nhận OCOP</div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+                        <div class="flex items-center justify-between text-primary">
+                            <span class="font-label-sm text-label-sm uppercase text-outline">Di sản bách
+                                nghệ</span>
+                            <span
+                                class="material-symbols-outlined text-[20px] text-tertiary-container">architecture</span>
+                        </div>
+                        <div class="font-display-hero text-headline-md text-primary font-bold">1.850+</div>
+                        <div class="font-body-sm text-body-sm text-on-surface-variant">Tọa độ làng nghề truyền
+                            thống và dòng họ nghệ nhân kế nghiệp</div>
+                    </div>
+                    <div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs">
+                        <div class="flex items-center justify-between text-primary">
+                            <span class="font-label-sm text-label-sm uppercase text-outline">Điểm du lịch
+                                OCOP</span>
+                            <span class="material-symbols-outlined text-[20px] text-secondary">cottage</span>
+                        </div>
+                        <div class="font-display-hero text-headline-md text-primary font-bold">320+</div>
+                        <div class="font-body-sm text-body-sm text-on-surface-variant">Điểm đến trải nghiệm nông
+                            thôn gắn kết chuỗi văn hóa bản địa</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= INTERACTIVE GIS WORKSPACE (2 COLUMNS) ================= -->
+        <section class="w-full py-space-xl bg-surface-container-low/40">
+            <div
+                class="max-w-[1360px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex flex-col gap-space-lg">
+                <!-- Interactive workspace container -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden grid grid-cols-1 lg:grid-cols-12 min-h-[720px]">
+                    <!-- Left: Cartographic Map Canvas (60% Desktop: 7 cols) -->
+                    <div
+                        class="lg:col-span-7 bg-surface-container-lowest relative flex flex-col p-space-md md:p-space-lg justify-between">
+                        <!-- Map Tool Controls Layer -->
+                        <div class="flex items-center justify-between gap-space-sm flex-wrap z-10">
+                            <div
+                                class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-md px-space-sm py-space-xs rounded-lg shadow-sm">
+                                <span class="material-symbols-outlined text-outline text-[18px]">layers</span>
+                                <span class="font-label-md text-label-md text-on-surface">Lớp dữ liệu:</span>
+                                <button
+                                    class="px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-primary text-on-primary">Tất
+                                    cả</button>
+                                <button
+                                    class="px-space-xs py-0.5 rounded text-label-sm font-label-sm text-on-surface-variant hover:bg-surface-container">OCOP
+                                    5 Sao</button>
+                                <button
+                                    class="px-space-xs py-0.5 rounded text-label-sm font-label-sm text-on-surface-variant hover:bg-surface-container">Làng
+                                    nghề</button>
+                                <button
+                                    class="px-space-xs py-0.5 rounded text-label-sm font-label-sm text-on-surface-variant hover:bg-surface-container">Điểm
+                                    du lịch</button>
+                            </div>
+                            <div
+                                class="flex items-center gap-space-xs bg-surface/90 backdrop-blur-md p-1 rounded-lg shadow-sm">
+                                <button aria-label="Zoom in"
+                                    class="p-1 rounded text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"
+                                    title="Phóng to">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                                <button aria-label="Zoom out"
+                                    class="p-1 rounded text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"
+                                    title="Thu nhỏ">
+                                    <span class="material-symbols-outlined text-[18px]">remove</span>
+                                </button>
+                                <button aria-label="Reset view"
+                                    class="p-1 rounded text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors"
+                                    title="Đặt lại góc nhìn">
+                                    <span class="material-symbols-outlined text-[18px]">crop_free</span>
+                                </button>
+                                <span class="text-outline-variant">|</span>
+                                <span class="font-label-sm text-label-sm px-1 text-on-surface-variant">Tỷ lệ
+                                    1:2.500.000</span>
+                            </div>
+                        </div>
+                        <!-- Stylized S-Shaped Vietnam Cartography SVG / Canvas View -->
+                        <div
+                            class="relative w-full h-[520px] md:h-[580px] my-space-sm flex items-center justify-center overflow-hidden rounded-lg bg-surface-container-low/30">
+                            <!-- Background Topography Graphic Simulation -->
+                            <svg class="absolute inset-0 w-full h-full text-outline-variant/15 pointer-events-none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <pattern height="40" id="grid-carto" patternUnits="userSpaceOnUse" width="40">
+                                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor"
+                                            stroke-width="0.75"></path>
+                                    </pattern>
+                                </defs>
+                                <rect fill="url(#grid-carto)" height="100%" width="100%"></rect>
+                            </svg>
+                            <!-- Geographic S-Curve Arc Representation with Regional Clusters -->
+                            <div
+                                class="relative w-full max-w-md h-full flex flex-col items-center justify-between py-6">
+                                <!-- Hotspot 1: Miền Núi & Trung Du Phía Bắc -->
+                                <div class="w-full flex justify-start pl-12 relative group cursor-pointer">
+                                    <div
+                                        class="flex items-center gap-space-xs bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-secondary/20 hover:scale-105 transition-transform">
+                                        <span class="w-3 h-3 rounded-full bg-secondary ring-4 ring-secondary/20"></span>
+                                        <div>
+                                            <div class="font-title-editorial text-body-sm font-bold text-primary">
+                                                Hà Giang - Lào Cai - Yên Bái</div>
+                                            <div class="font-label-sm text-label-sm text-outline">Chè Shan
+                                                Tuyết, Thảo quả, Thổ cẩm H'Mông</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hotspot 2: Thái Nguyên (ĐANG CHỌN - ACTIVE FOCUS) -->
+                                <div class="w-full flex justify-center -ml-16 relative cursor-pointer">
+                                    <div
+                                        class="flex items-center gap-space-xs bg-primary text-on-primary px-3.5 py-2 rounded-lg shadow-md ring-4 ring-primary/20 scale-110">
+                                        <span
+                                            class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">local_cafe</span>
+                                        <div>
+                                            <div class="font-title-editorial text-body-sm font-bold">Thái Nguyên
+                                                (Đang chọn)</div>
+                                            <div class="font-label-sm text-label-sm text-primary-fixed">Đệ nhất
+                                                danh trà • 420 Làng nghề</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hotspot 3: Đồng Bằng Sông Hồng & Hà Nội -->
+                                <div class="w-full flex justify-end pr-16 relative group cursor-pointer">
+                                    <div
+                                        class="flex items-center gap-space-xs bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform">
+                                        <span
+                                            class="w-3 h-3 rounded-full bg-tertiary-container ring-4 ring-tertiary-container/20"></span>
+                                        <div>
+                                            <div class="font-title-editorial text-body-sm font-bold text-primary">
+                                                Hà Nội &amp; Bắc Ninh</div>
+                                            <div class="font-label-sm text-label-sm text-outline">1.350 sản phẩm
+                                                • Gốm Bát Tràng, Lụa Vạn Phúc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hotspot 4: Bắc Trung Bộ & Quảng Nam -->
+                                <div class="w-full flex justify-center pl-10 relative group cursor-pointer">
+                                    <div
+                                        class="flex items-center gap-space-xs bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform">
+                                        <span
+                                            class="w-3 h-3 rounded-full bg-secondary-container ring-4 ring-secondary-container/20"></span>
+                                        <div>
+                                            <div class="font-title-editorial text-body-sm font-bold text-primary">
+                                                Nghệ An - Quảng Nam</div>
+                                            <div class="font-label-sm text-label-sm text-outline">Sâm Ngọc Linh,
+                                                Gốm Thanh Hà, Nước mắm Cửa Lò</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hotspot 5: Tây Nguyên - Đắk Lắk -->
+                                <div class="w-full flex justify-start pl-20 relative group cursor-pointer">
+                                    <div
+                                        class="flex items-center gap-space-xs bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform">
+                                        <span class="w-3 h-3 rounded-full bg-tertiary ring-4 ring-tertiary/20"></span>
+                                        <div>
+                                            <div class="font-title-editorial text-body-sm font-bold text-primary">
+                                                Tây Nguyên (Đắk Lắk - Gia Lai)</div>
+                                            <div class="font-label-sm text-label-sm text-outline">Cà phê Buôn Ma
+                                                Thuột, Mắc ca, Rượu cần</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Hotspot 6: ĐBSCL - Bến Tre & Cà Mau -->
+                                <div class="w-full flex justify-end pr-24 relative group cursor-pointer">
+                                    <div
+                                        class="flex items-center gap-space-xs bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm border border-outline-variant/30 hover:scale-105 transition-transform">
+                                        <span
+                                            class="w-3 h-3 rounded-full bg-primary-container ring-4 ring-primary-container/20"></span>
+                                        <div>
+                                            <div class="font-title-editorial text-body-sm font-bold text-primary">
+                                                Bến Tre - Cần Thơ - Cà Mau</div>
+                                            <div class="font-label-sm text-label-sm text-outline">Kinh tế dừa,
+                                                Tôm sinh thái rừng đước Năm Căn</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bottom Map Legend Bar -->
+                        <div
+                            class="bg-surface-container-lowest/95 backdrop-blur-md p-space-sm rounded-lg shadow-sm flex items-center justify-between flex-wrap gap-space-sm z-10 text-body-sm">
+                            <span class="font-label-md text-label-md text-primary font-bold">Chú giải
+                                GIS:</span>
+                            <div
+                                class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+                                <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                                <span class="">OCOP 5 Sao Quốc gia</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+                                <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+                                <span class="">Làng nghề di sản</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+                                <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                                <span class="">Du lịch sinh thái OCOP</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+                                <span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+                                <span class="">Chỉ dẫn địa lý (GI)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Survey Coordinates & Cultural Dossier Panel (40% Desktop: 5 cols) -->
+                    <div
+                        class="lg:col-span-5 bg-surface-container-low p-space-lg flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-md">
+                            <!-- Header of Selected Territory -->
+                            <div class="flex items-start justify-between">
+                                <div>
+                                    <span
+                                        class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">
+                                        Vùng Đông Bắc Bộ • Mộc chè xứ Bắc
+                                    </span>
+                                    <h2 class="font-headline-sm text-headline-sm text-primary font-bold mt-1">
+                                        Tỉnh Thái Nguyên
+                                    </h2>
+                                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                                        Tọa độ khảo sát: 21.5674° B, 105.8252° Đ • Vùng văn hóa sông Cầu
+                                    </p>
+                                </div>
+                                <span
+                                    class="px-space-sm py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-lg">
+                                    Hồ sơ số #TN-2026
+                                </span>
+                            </div>
+                            <!-- Territory Micro Stats Grid -->
+                            <div
+                                class="grid grid-cols-2 gap-space-sm bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+                                <div class="flex flex-col">
+                                    <span class="font-headline-sm text-headline-sm font-bold text-primary">148</span>
+                                    <span class="font-label-sm text-label-sm text-outline">Điểm đến du lịch
+                                        &amp; trải nghiệm</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-headline-sm text-headline-sm font-bold text-secondary">420</span>
+                                    <span class="font-label-sm text-label-sm text-outline">Làng nghề được công
+                                        nhận</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-headline-sm text-headline-sm font-bold text-tertiary-container">32</span>
+                                    <span class="font-label-sm text-label-sm text-outline">Sản phẩm OCOP 4 sao
+                                        &amp; 5 sao</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="font-headline-sm text-headline-sm font-bold text-primary-container">12</span>
+                                    <span class="font-label-sm text-label-sm text-outline">Câu chuyện văn hóa
+                                        bản địa</span>
+                                </div>
+                            </div>
+                            <!-- Representative Locations of Selected Territory -->
+                            <div class="flex flex-col gap-space-sm">
+                                <span
+                                    class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">
+                                    Điểm đến &amp; Vùng nguyên liệu tiêu biểu
+                                </span>
+                                <!-- Item 1 -->
+                                <div
+                                    class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm hover:bg-surface-bright transition-colors">
+                                    <img class="w-16 h-16 object-cover rounded-md flex-shrink-0"
+                                        data-alt="Tea harvest fields in Tan Cuong commune Thai Nguyen Vietnam with green undulating hills morning mist and artisan tea harvesters wearing traditional bamboo cone hats under soft dawn lighting"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO7qf0RR8fmflXq_4sR86VgJ7XIXfkYaPcn-79C25dMlgaSkXiAP4GhyYOOEtKJpzLSiWah-kr8Wrpu2oL4XZcr-4_qd-jBdI2O3AXm-KwzOPo3dRr_9j9AXtwsf_VuN6xEUwYf9fY9GgOm_0xMjEqNVwTXdozq-5EGlao79eL4a7yWj0zqGJT5ON4JEifbCAGOiwiqsnWG8O0hqYBI_aAzVrhHtHVQq87QDL6WHM">
+                                    <div class="flex flex-col min-w-0">
+                                        <div class="flex items-center gap-1.5">
+                                            <span
+                                                class="font-title-editorial text-body-md font-bold text-primary truncate">HTX
+                                                Trà Tân Cương</span>
+                                            <span
+                                                class="px-1.5 py-0.5 bg-primary-container text-on-primary font-label-sm text-label-sm rounded">5
+                                                Sao</span>
+                                        </div>
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Xã
+                                            Tân Cương, TP. Thái Nguyên</span>
+                                        <span class="font-label-sm text-label-sm text-secondary mt-0.5">Sản vật
+                                            di sản: Trà Đinh Ngọc thượng hạng</span>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div
+                                    class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm hover:bg-surface-bright transition-colors">
+                                    <img class="w-16 h-16 object-cover rounded-md flex-shrink-0"
+                                        data-alt="Traditional open-air tea pavilion and cultural exhibition space in La Bang Dai Tu Thai Nguyen surrounded by emerald tea bushes and Tam Dao mountain foothills with artisans performing wood charcoal tea roasting"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfLj1AzrnuCCfz2Qwyavy9OIHvjVuSP65dosQwF1a88bPVucNuTgum5ZggIaUuuBL9nA9oI9ZD2SVX7zdjryD8BFmSulBIWVm-wqueWwht-2UC-8EirKC1xk8AxXhtF5bazfbiXUM4kSQpXavijnkCVA_Z_TNENrQNYChmo1EJQS6e6LDVpijolIVEGxcPdF__3iEO8z-ecQCeRQ3j41zKghCYLCTzQdIKWo6KGpg">
+                                    <div class="flex flex-col min-w-0">
+                                        <div class="flex items-center gap-1.5">
+                                            <span
+                                                class="font-title-editorial text-body-md font-bold text-primary truncate">Không
+                                                gian Văn hóa Trà La Bằng</span>
+                                            <span
+                                                class="px-1.5 py-0.5 bg-surface-variant text-on-surface font-label-sm text-label-sm rounded">Điểm
+                                                du lịch</span>
+                                        </div>
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Xã
+                                            La Bằng, Huyện Đại Từ</span>
+                                        <span class="font-label-sm text-label-sm text-outline mt-0.5">Trải
+                                            nghiệm sao chè thủ công dưới chân Tam Đảo</span>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div
+                                    class="flex items-center gap-space-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm hover:bg-surface-bright transition-colors">
+                                    <img class="w-16 h-16 object-cover rounded-md flex-shrink-0"
+                                        data-alt="Traditional craft tea village Hong Thai Dong Hy Thai Nguyen Vietnam with rustic wooden drying trays clay ovens and generational artisans rolling freshly picked tea leaves"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoKdveMlwKv-Pdlh71SLvwuLqFcX3FR4I8YRTvx7_8-lIR2twrJVG9N1_8XBZu6XhwPsJiq5ZCEQRZ3-wZl7224iVf54K-SZoFF7vPs5VBFtQ2VUgtPVEkuNKmi_HxqE-TQOByPYj7DNHAZR8ClHi_Izk9qlvf14YLEPlwsAcnkOdb34H1hpYj7wJ75FUbkDScgeaCn3PJb5ykCM74MY4xO35lRCR7pC7hOxiyRXE">
+                                    <div class="flex flex-col min-w-0">
+                                        <div class="flex items-center gap-1.5">
+                                            <span
+                                                class="font-title-editorial text-body-md font-bold text-primary truncate">Làng
+                                                nghề Chè Xóm Hồng Thái</span>
+                                            <span
+                                                class="px-1.5 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded">Làng
+                                                nghề</span>
+                                        </div>
+                                        <span class="font-body-sm text-body-sm text-on-surface-variant truncate">Xã
+                                            Tân Cương &amp; Vùng ven Sông Cầu, Huyện Đồng Hỷ</span>
+                                        <span class="font-label-sm text-label-sm text-outline mt-0.5">Bảo tồn 4
+                                            đời kỹ thuật ủ hương thảo mộc</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Action Button for Dossier -->
+                        <div class="pt-space-sm">
+                            <a class="w-full inline-flex items-center justify-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md py-space-sm px-space-md rounded-lg shadow-sm transition-colors uppercase tracking-wider"
+                                href="#">
+                                <span class="">Xem báo cáo số hóa đầy đủ của Tỉnh này</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= 6 REGIONAL ECO-CULTURAL FILTERS ================= -->
+        <section class="w-full py-space-xl bg-surface">
+
+        </section>
+        <!-- ================= GRID 6 REPRESENTATIVE PROVINCES ================= -->
+        <section class="w-full py-space-xl bg-surface-container-low/20">
+            <div
+                class="max-w-[1360px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex flex-col gap-space-lg">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+                    <div>
+                        <span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Hồ
+                            sơ địa phương điển hình</span>
+                        <h2 class="font-headline-sm text-headline-sm text-primary font-bold">Danh mục Phân bổ
+                            Tọa độ theo Tỉnh/Thành Tiêu biểu</h2>
+                    </div>
+                    <div class="font-body-sm text-body-sm text-on-surface-variant">
+                        Hiển thị 6 hồ sơ không gian hoàn thiện cấu trúc dữ liệu di sản &amp; GIS
+                    </div>
+                </div>
+                <!-- 6-Card Editorial Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                    <!-- Card 1: Hà Nội -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <div class="relative h-48 w-full rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Traditional lacquerware and ceramic artisans working in Bat Trang ancient craft village Hanoi with sunlit drying terracotta vessels and atmospheric river mists"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdvcBru0hYtWxHSyunb1uTYjKRaRUCvP_xAA7k_J3pOh--yE74dHvaXnYcdibYpT--k307dqKWEzyX_qIMUeV8fzeOK1SNXGgWsjJJS4WedZ6--tWTPeGv6jakeu6sPDWu2yYCpF4pwA5SrSy5hF1_MvAnfCWhQxdllwFGGKD24cWS-KRPKgqWIqFPSiIk3ndrou-Gzjj-QoFfus4w8itS05mLVytiy_NJF_R2jMQ">
+                                <div
+                                    class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
+                                    Đồng bằng sông Hồng
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="font-label-sm text-label-sm text-secondary font-bold">Thăng Long
+                                    nghìn năm bách nghệ</span>
+                                <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                                    Thành phố Hà Nội</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                                    Hạt nhân bảo tồn làng nghề truyền thống lớn nhất cả nước với các chuỗi giá
+                                    trị gốm Bát Tràng, lụa Vạn Phúc, khảm trai Chuyên Mỹ.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+                            <div class=""><span class="font-bold text-primary">1.350</span> Sản phẩm OCOP</div>
+                            <div class="text-outline-variant">•</div>
+                            <div class=""><span class="font-bold text-secondary">318</span> Làng nghề số hóa
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2: Thái Nguyên -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <div class="relative h-48 w-full rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Terraced green tea plantations in Tan Cuong Thai Nguyen under serene morning light with mist floating over reservoir lake and local tea farmers"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0kfvBMAmgKZbUaplIoHqgXvfkkNUuAk1tycAA5F5EHnMEqmjuoSs6TPb_OuvlRa1ZfVaVGbTurBu6Z__UOqSCmSqazXXndBZbX3sumgGLmgYtWkn85Qzi1xNts4q4kGPAHp5s50Nh8z0uvpAQvjxcqL_-uvPmndg6xHayV4s0oRh5xfARKJsGfoLk9n8amSgkCQeDskEtWVus6gJsbLoRb8Nt13BHlinEWMvPgfI">
+                                <div
+                                    class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
+                                    Trung du Miền núi phía Bắc
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="font-label-sm text-label-sm text-secondary font-bold">Đệ nhất danh
+                                    trà xứ Bắc</span>
+                                <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                                    Tỉnh Thái Nguyên</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                                    Quy tụ 4 vùng trà đặc sản di sản: Tân Cương, La Bằng, Trại Cài, Khe Cốc với
+                                    chỉ dẫn địa lý được bảo hộ nghiêm ngặt.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+                            <div class=""><span class="font-bold text-primary">173</span> Sản phẩm OCOP</div>
+                            <div class="text-outline-variant">•</div>
+                            <div class=""><span class="font-bold text-secondary">4</span> Vùng chè đặc sản</div>
+                        </div>
+                    </div>
+                    <!-- Card 3: Quảng Nam -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <div class="relative h-48 w-full rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Artisanal pottery spinning wheel in Thanh Ha pottery village Quang Nam alongside silkworm weaving looms in Ma Chau with warm earthy terracotta lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW-Iz-aGSdI9XuZTDyTCjoSQHNMjDn1uKYt1k1kP5L-nhN9yw2M4W11-vmBP8HujnLFpAt84om7-iy8HoMjPmZBE_CCD_A6vbwcJ018CXKNQaBdEDOinrFsK11YgNbQzGs_K8sHYiC8NSyY9oEezLoKjdTrs4zowAeiMOkeOgotbxAtsKEdmMM3LlWtG7tDzu_wEl5N97rmAT4WdJf2DhGj7SDuXVOifeOhu8E1fA">
+                                <div
+                                    class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
+                                    Bắc Trung Bộ &amp; Duyên hải
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="font-label-sm text-label-sm text-secondary font-bold">Di sản văn
+                                    hóa &amp; Thảo dược đại ngàn</span>
+                                <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                                    Tỉnh Quảng Nam</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                                    Vành đai dược liệu Sâm Ngọc Linh Nam Trà My kết hợp các làng nghề ven sông
+                                    Thu Bồn như gốm Thanh Hà, dệt lụa Mã Châu.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+                            <div class=""><span class="font-bold text-primary">268</span> Sản phẩm OCOP</div>
+                            <div class="text-outline-variant">•</div>
+                            <div class=""><span class="font-bold text-secondary">Sâm Ngọc Linh</span> GI</div>
+                        </div>
+                    </div>
+                    <!-- Card 4: Đắk Lắk -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <div class="relative h-48 w-full rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Sun-dried ripe red coffee cherries spread over raised drying tables in Buon Ma Thuot Dak Lak basalt plateau with long wooden Ede communal houses in background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVzFtq7jN_mCNnLDxXcbmVt8w0U2R0cHr9tMTlaLjNKcIBRsMSCRO_tpQeRipHVBNCZj1Sp3H9K2DQ2RcUy84qmr5JO4q2T0e_V7X5q4aKe7SJ0usuvSbPI3f7IJP2Jj0zEQgPc3hBzvZUBBnI8lak4l8tTA4gh5dpiXgT1kNaXBvd3QKk0MqPFU0BYlOW3QuHF4AbwODcLpTa_oOlkwuq-e3MFeyrRUMSb_10-5M">
+                                <div
+                                    class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
+                                    Tây Nguyên
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="font-label-sm text-label-sm text-secondary font-bold">Thủ phủ cà
+                                    phê &amp; Đất đỏ bazan</span>
+                                <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                                    Tỉnh Đắk Lắk</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                                    Không gian văn hóa Cồng chiêng gắn liền chuỗi giá trị Cà phê Buôn Ma Thuột,
+                                    hạt Mắc ca Krông Năng và mật ong hoa rừng.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+                            <div class=""><span class="font-bold text-primary">145</span> Sản phẩm OCOP</div>
+                            <div class="text-outline-variant">•</div>
+                            <div class=""><span class="font-bold text-secondary">Cà phê BMT</span> Chỉ dẫn GI
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5: Bến Tre -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <div class="relative h-48 w-full rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Lush green coconut canal waterways in Ben Tre Mekong Delta with artisanal workers handcrafting coconut shell crafts and organic macapuno wax coconut confectionery"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5TsJG20U3tSoNb7JTIGegBTiGnvI0ldHcCIzeptjLMtBpI44q_MhCFzGWYXE3tBPMURdppJP4jgtPWsLnj6mpVbLwA193_Ei1YhcxH57h9CGcTPuGdDRMZwxRlSEgOf-rly56p9sB2DsvQW-3_IOSjSM1tWDfcMciR7AEbfgONrvf8OmOmJRVaJ9Ui54y77pFWCaf6SKhVvJCo1IboMhNim1OR80EPxJzoiiLJ_Y">
+                                <div
+                                    class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
+                                    Đồng bằng Sông Cửu Long
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="font-label-sm text-label-sm text-secondary font-bold">Xứ dừa đồng
+                                    khởi &amp; Kinh tế tuần hoàn</span>
+                                <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                                    Tỉnh Bến Tre</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                                    Hệ sinh thái sản phẩm dừa độc bản: kẹo dừa Mỏ Cày, chỉ xơ dừa, dầu dừa tinh
+                                    khiết và du lịch sinh thái sông nước Cù lao.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+                            <div class=""><span class="font-bold text-primary">182</span> Sản phẩm OCOP</div>
+                            <div class="text-outline-variant">•</div>
+                            <div class=""><span class="font-bold text-secondary">Chuỗi Dừa sáp</span> &amp; Thủ
+                                công</div>
+                        </div>
+                    </div>
+                    <!-- Card 6: Cà Mau -->
+                    <div
+                        class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <div class="relative h-48 w-full rounded-lg overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Vast mangrove forest waterways in Nam Can Ca Mau Vietnam with wooden fishing boats harvesting eco-certified black tiger prawns and giant sea mud crabs under coastal sunset"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtpLUKHykgjftw4LtwAlKQ9AdroBquUMEtU0cjzaT-Y1V9h5mn4QUOjwEUA4U97Jy_5zDQHOQT5o07r98g8IUnsgkw0-qNHyYXiMH3ZqV8u7TRDblD4WpmpBJUdo4l4nF3EP3EkIv3HDgn6UhOr0izVdgn3XP_3A62cU1vsQM7JAEMIxLDlPlLdFbWuNnZpRr3kDTB7F-WRRk1t-G5XLa574XN4ZE1ZlonvFTjEMw">
+                                <div
+                                    class="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
+                                    Đồng bằng Sông Cửu Long
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="font-label-sm text-label-sm text-secondary font-bold">Rừng ngập mặn
+                                    &amp; Thổ nhưỡng cực Nam</span>
+                                <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                                    Tỉnh Cà Mau</h3>
+                                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                                    Hệ sinh thái sản vật rừng đước U Minh Hạ và mũi Cà Mau: Cua biển Năm Căn,
+                                    tôm khô sinh thái, mật ong hoa tràm nguyên chất.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-space-sm flex items-center justify-between font-label-sm text-label-sm bg-surface-container-low p-space-sm rounded-lg">
+                            <div class=""><span class="font-bold text-primary">116</span> Sản phẩm OCOP</div>
+                            <div class="text-outline-variant">•</div>
+                            <div class=""><span class="font-bold text-secondary">Cua Năm Căn</span> Tôm sinh
+                                thái</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= GEOSPATIAL DATA JOURNALISM & HEATMAP ESSAY ================= -->
+        <section class="w-full py-space-xl bg-surface">
+            <div
+                class="max-w-[1360px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Left Column: Data Visualization (Bar & Altitude Chart) -->
+                <div
+                    class="lg:col-span-6 flex flex-col justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+                    <div class="flex flex-col gap-space-xs">
+                        <span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Trắc
+                            đồ phân bố địa sinh thái</span>
+                        <h3 class="font-title-editorial text-title-editorial text-primary font-bold">
+                            Mật độ sản phẩm OCOP 4–5 sao theo độ cao địa hình (Việt Nam 2026)
+                        </h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant">
+                            Khảo sát 2.140 sản phẩm đạt chuẩn quốc gia và cấp tỉnh phân bổ từ vùng ven biển đến
+                            rẻo cao trên 1.500m.
+                        </p>
+                    </div>
+                    <!-- Inline SVG Data Chart -->
+                    <div class="w-full py-space-md">
+                        <div class="flex flex-col gap-space-sm">
+                            <!-- Tier 1 -->
+                            <div class="flex flex-col gap-1">
+                                <div class="flex justify-between font-label-sm text-label-sm">
+                                    <span class="text-primary font-bold">Vùng cao &gt; 1.200m (Dược liệu, Trà cổ
+                                        thụ Shan tuyết)</span>
+                                    <span class="text-on-surface-variant">420 SP (19.6%)</span>
+                                </div>
+                                <div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 38%;"></div>
+                                </div>
+                            </div>
+                            <!-- Tier 2 -->
+                            <div class="flex flex-col gap-1">
+                                <div class="flex justify-between font-label-sm text-label-sm">
+                                    <span class="text-primary font-bold">Vùng đồi gò 500m - 1.200m (Cà phê, Mắc
+                                        ca, Chè búp)</span>
+                                    <span class="text-on-surface-variant">615 SP (28.7%)</span>
+                                </div>
+                                <div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+                                    <div class="h-full bg-secondary rounded-full" style="width: 58%;"></div>
+                                </div>
+                            </div>
+                            <!-- Tier 3 -->
+                            <div class="flex flex-col gap-1">
+                                <div class="flex justify-between font-label-sm text-label-sm">
+                                    <span class="text-primary font-bold">Đồng bằng phù sa 0m - 500m (Lúa đặc
+                                        sản, Bách nghệ)</span>
+                                    <span class="text-on-surface-variant">780 SP (36.4%)</span>
+                                </div>
+                                <div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+                                    <div class="h-full bg-tertiary-container rounded-full" style="width: 74%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tier 4 -->
+                            <div class="flex flex-col gap-1">
+                                <div class="flex justify-between font-label-sm text-label-sm">
+                                    <span class="text-primary font-bold">Vùng ven biển &amp; Rừng ngập mặn (Thủy
+                                        sản sinh thái, Muối)</span>
+                                    <span class="text-on-surface-variant">325 SP (15.2%)</span>
+                                </div>
+                                <div class="w-full h-3 bg-surface-container rounded-full overflow-hidden">
+                                    <div class="h-full bg-surface-tint rounded-full" style="width: 32%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-space-sm bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+                        <span class="material-symbols-outlined text-secondary text-[20px]">analytics</span>
+                        <span class="">Nguồn: Viện Quy hoạch &amp; Dữ liệu Nông thôn Quốc gia, xử lý định vị GIS
+                            tháng 02/2026.</span>
+                    </div>
+                </div>
+                <!-- Right Column: Editorial Essay -->
+                <div
+                    class="lg:col-span-6 flex flex-col justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+                    <div class="flex flex-col gap-space-sm">
+                        <span
+                            class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Chuyên
+                            đề nghiên cứu địa văn hóa</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary font-bold">
+                            Đọc bản đồ OCOP: Khi thổ nhưỡng và tiểu khí hậu định hình chuỗi giá trị nông sản độc
+                            bản
+                        </h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Quan sát tấm bản đồ OCOP toàn quốc không đơn thuần là đếm các chấm định vị hành
+                            chính. Đó là chuyến du hành xuyên qua các tầng trầm tích sinh thái: từ lớp mùn
+                            nguyên sinh trên dãy Hoàng Liên Sơn nuôi dưỡng cội trà Shan Tuyết cổ thụ, qua vùng
+                            đất sét sông Đáy làm nên gốm sứ truyền thống, đến thổ nhưỡng đất đỏ bazan bazơ cao
+                            nguyên Tây Nguyên hay nước lợ phù sa cửa biển Cửu Long.
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            Mỗi ngôi sao OCOP gắn trên bản đồ là một lời khẳng định về chủ quyền tri thức bản
+                            địa—nơi mà công nghệ số hóa GIS đang giúp lưu giữ nguyên vẹn tọa độ của từng gốc quế
+                            Trà My, từng giàn tiêu Phú Quốc và từng lò nung thủ công trước nguy cơ mai một của
+                            thời đại công nghiệp hóa.
+                        </p>
+                    </div>
+                    <div class="pt-space-xs">
+                        <a class="inline-flex items-center gap-space-xs text-secondary hover:text-on-secondary-container font-label-md text-label-md font-bold uppercase tracking-wider"
+                            href="#">
+                            <span class="">Đọc toàn văn bài luận địa lý nông nghiệp</span>
+                            <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <script src="/navigation-active.js"></script>
+</body>
+
+</html>

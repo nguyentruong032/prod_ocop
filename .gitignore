@@ -48,3 +48,27 @@ Thumbs.db
 
 #logs
 *.log
+
+# legacy static demo files (migrated to micro-frontends under apps/)
+/404/
+/cau-chuyen-ocop/
+/compare/
+/diem-den-du-lich/
+/fonts/
+/gui-bai-ho-so-ocop/
+/ocop-hoi-nhap/
+/san-pham-ocop/
+/tim-kiem/
+/tin-tuc-su-kien/
+/index.html
+/shared-header.html
+/shared-footer.html
+/interactive-demo.js
+/navigation-active.js
+/server.js
+/start-demo.sh
+/anh_phong_canh.png
+/anh_phong_canh.webp
+/logo.png
+/logo.webp
+

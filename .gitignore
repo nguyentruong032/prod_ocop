@@ -45,3 +45,6 @@ pnpm-debug.log*
 
 # OS
 Thumbs.db
+
+#logs
+*.log

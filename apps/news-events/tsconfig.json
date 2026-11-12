@@ -1,0 +1,35 @@
+{
+  "extends": "@ocop/tsconfig/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@ocop/shared-types": [
+        "../../packages/shared-types/src"
+      ],
+      "@ocop/ui": [
+        "../../packages/ui/src"
+      ],
+      "@ocop/seo-config": [
+        "../../packages/seo-config/src"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "esModuleInterop": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

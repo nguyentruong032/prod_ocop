@@ -1,0 +1,11 @@
+{
+  "extends": "@ocop/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ocop/shared-types/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", ".turbo"]
+}

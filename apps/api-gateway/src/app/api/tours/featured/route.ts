@@ -1,0 +1,226 @@
+// API Route: /api/tours/featured
+// Returns featured eco-tours for homepage/carousel
+
+import { NextRequest, NextResponse } from 'next/server';
+
+// Featured tours - subset of toursData with featured flag
+const featuredTours = [
+  {
+    id: 'eco-tour-ba-be-3d2n',
+    slug: 'ba-be-3d2n',
+    name: 'Khám phá Hồ Ba Bể - Vườn Quốc Gia Ba Bể 3N2Đ',
+    region: 'Bắc Bộ',
+    province: 'Bắc Kạn',
+    duration: '3 ngày 2 đêm',
+    difficulty: 'Dễ',
+    groupSize: '8-12 người',
+    price: '4.500.000đ',
+    originalPrice: '5.200.000đ',
+    rating: 4.9,
+    reviewCount: 234,
+    highlights: [
+      'Tham quan hồ Ba Bể - hồ nước ngọt tự nhiên lớn nhất Việt Nam',
+      'Thăm hang Pुआng - hang động đá vôi kỳ vĩ',
+      'Trải nghiệm văn hóa dân tộc Tày tại bản Pac Ngòi',
+      'Thưởng thức đặc sản: cá suối, măng đen, rượu cần',
+      'Chèo kayak trên hồ vào buổi sớm mai',
+    ],
+    bestTime: 'Tháng 10 - Tháng 4 năm sau',
+    images: [
+      { src: '/images/tours/ba-be-1.jpg', alt: 'Hồ Ba Bể bình minh', width: 1200, height: 800 },
+    ],
+    coordinates: { lat: 22.4167, lng: 105.6167 },
+    tags: ['sinh thái', 'văn hóa', 'nghỉ dưỡng', 'gia đình'],
+    seo: {
+      metaTitle: 'Tour Hồ Ba Bể 3N2Đ - Khám Phá Vườn Quốc Gia Ba Bể | OCOP Vietnam',
+      metaDescription: 'Tour du lịch sinh thái Hồ Ba Bể 3 ngày 2 đêm: chèo kayak, thăm hang Puồng, trải nghiệm văn hóa Tày, thưởng thức đặc sản. Giá từ 4.500.000đ. Đặt tour ngay!',
+      ogImage: '/images/tours/ba-be-1.jpg',
+    },
+    featured: true,
+    featuredOrder: 1,
+  },
+  {
+    id: 'eco-tour-ban-gioc-4d3n',
+    slug: 'ban-gioc-4d3n',
+    name: 'Bản Gióc - Pác Bó - Thác Bản Gióc 4N3Đ',
+    region: 'Bắc Bộ',
+    province: 'Cao Bằng',
+    duration: '4 ngày 3 đêm',
+    difficulty: 'Trung bình',
+    groupSize: '10-15 người',
+    price: '6.800.000đ',
+    originalPrice: '7.500.000đ',
+    rating: 4.8,
+    reviewCount: 187,
+    highlights: [
+      'Chiêm ngưỡng thác Bản Gióc - thác nước đẹp nhất Việt Nam',
+      'Tham quan di tích sử Pác Bó - nơi Bác Hồ về sau 30 năm đi cứu nước',
+      'Khám phá hang Ngườm Ngao - hang động vạn năm',
+      'Trải nghiệm văn hóa Tày, Nùng tại bản Đàm Thòn',
+      'Thưởng thức 7 món đặc sản Cao Bằng',
+    ],
+    bestTime: 'Tháng 9 - Tháng 11 (nước thác nhiều nhất)',
+    images: [
+      { src: '/images/tours/ban-gioc-1.jpg', alt: 'Thác Bản Gióc toàn cảnh', width: 1200, height: 800 },
+    ],
+    coordinates: { lat: 22.8833, lng: 106.7167 },
+    tags: ['sinh thái', 'lịch sử', 'văn hóa', 'nhiếp ảnh'],
+    seo: {
+      metaTitle: 'Tour Bản Gióc 4N3Đ - Thác Nước Đẹp Nhất Việt Nam | OCOP Vietnam',
+      metaDescription: 'Tour Cao Bằng 4 ngày 3 đêm: tham quan thác Bản Gióc, Pác Bó, hang Ngườm Ngao, trải nghiệm văn hóa Tày Nùng. Giá từ 6.800.000đ. Book ngay!',
+      ogImage: '/images/tours/ban-gioc-1.jpg',
+    },
+    featured: true,
+    featuredOrder: 2,
+  },
+  {
+    id: 'eco-tour-sapa-fansipan-3d2n',
+    slug: 'sapa-fansipan-3d2n',
+    name: 'Sapa - Fansipan "Nóc Nhà Đông Dương" 3N2Đ',
+    region: 'Bắc Bộ',
+    province: 'Lào Cai',
+    duration: '3 ngày 2 đêm',
+    difficulty: 'Khó',
+    groupSize: '12-18 người',
+    price: '5.900.000đ',
+    originalPrice: '6.500.000đ',
+    rating: 4.9,
+    reviewCount: 456,
+    highlights: [
+      'Chinh phục đỉnh Fansipan 3.143m bằng cáp treo hiện đại',
+      'Check-in cầu Rồng May - cầu kính dài nhất thế giới',
+      'Tham quan thác Bạc, thác Tình Yêu',
+      'Trải nghiệm văn hóa Mông, Dao tại bản Cát Cát',
+      'Mua sắm tại chợ Sapa đêm',
+    ],
+    bestTime: 'Tháng 3 - Tháng 5 (hoa mộc miến) hoặc Tháng 9 - Tháng 11 (lúa chín)',
+    images: [
+      { src: '/images/tours/sapa-1.jpg', alt: 'Đỉnh Fansipan', width: 1200, height: 800 },
+    ],
+    coordinates: { lat: 22.3406, lng: 103.8442 },
+    tags: ['leo núi', 'check-in', 'văn hóa', 'nghỉ dưỡng'],
+    seo: {
+      metaTitle: 'Tour Sapa Fansipan 3N2Đ - Chinh Phục Nóc Nhà Đông Dương | OCOP Vietnam',
+      metaDescription: 'Tour Sapa 3 ngày 2 đêm: cáp treo Fansipan, cầu Rồng May, thác Bạc, bản Cát Cát. Giá từ 5.900.000đ. Đặt chỗ ngay hôm nay!',
+      ogImage: '/images/tours/sapa-1.jpg',
+    },
+    featured: true,
+    featuredOrder: 3,
+  },
+  {
+    id: 'eco-tour-ha-giang-loop-4d3n',
+    slug: 'ha-giang-loop-4d3n',
+    name: 'Hành Trình Cao Nguyên Đá Đồng Văn - Hà Giang 4N3Đ',
+    region: 'Bắc Bộ',
+    province: 'Hà Giang',
+    duration: '4 ngày 3 đêm',
+    difficulty: 'Khó',
+    groupSize: '8-12 người (xe máy) / 10-16 người (xe du lịch)',
+    price: '7.500.000đ',
+    originalPrice: '8.200.000đ',
+    rating: 5.0,
+    reviewCount: 312,
+    highlights: [
+      'Chinh phục đèo Ma Pi Lèng - "Vua các đèo núi"',
+      'Tham quan Lũng Cú - cực Bắc Tổ quốc',
+      'Khám phá cổ trấn Đồng Văn - Di sản địa chất UNESCO',
+      'Trải nghiệm văn hóa Mông, Lô Lô, Pù Péo',
+      'Check-in cổng trời Quản Bạ, thung lũng Nho Quế',
+    ],
+    bestTime: 'Tháng 10 - Tháng 12 (hoa tam giác mạch) hoặc Tháng 3 - Tháng 5 (mưa ít)',
+    images: [
+      { src: '/images/tours/ha-giang-1.jpg', alt: 'Đèo Ma Pi Lèng', width: 1200, height: 800 },
+    ],
+    coordinates: { lat: 22.8211, lng: 104.9786 },
+    tags: ['xe máy', 'phiêu lưu', 'văn hóa', 'nhiếp ảnh', 'di sản UNESCO'],
+    seo: {
+      metaTitle: 'Tour Hà Giang 4N3Đ - Cao Nguyên Đá Đồng Văn & Đèo Ma Pi Lèng | OCOP Vietnam',
+      metaDescription: 'Tour Hà Giang 4 ngày 3 đêm: chinh phục Ma Pi Lèng, Lũng Cú, cổ trấn Đồng Văn. Di sản địa chất UNESCO. Giá từ 7.500.000đ. Book tour xe máy/xe du lịch!',
+      ogImage: '/images/tours/ha-giang-1.jpg',
+    },
+    featured: true,
+    featuredOrder: 4,
+  },
+  {
+    id: 'eco-tour-phong-nha-3d2n',
+    slug: 'phong-nha-3d2n',
+    name: 'Phong Nha - Kẻ Bàng: Vương Quốc Hang Động 3N2Đ',
+    region: 'Trung Bộ',
+    province: 'Quảng Bình',
+    duration: '3 ngày 2 đêm',
+    difficulty: 'Trung bình',
+    groupSize: '10-16 người',
+    price: '5.200.000đ',
+    originalPrice: '5.800.000đ',
+    rating: 4.9,
+    reviewCount: 278,
+    highlights: [
+      'Tham quan hang Thiên Đường - "Cung điện địa cung"',
+      'Khám phá hang Tiên Sơn - hang khô đẹp nhất',
+      'Thuyền kayak vào hang Tối - trải nghiệm độc đáo',
+      'Tham quan Vườn Quốc gia Phong Nha - Kẻ Bàng UNESCO',
+      'Thưởng thức hải sản Quảng Bình tươi ngon',
+    ],
+    bestTime: 'Tháng 4 - Tháng 8 (khô ráo, dễ đi hang)',
+    images: [
+      { src: '/images/tours/phong-nha-1.jpg', alt: 'Hang Thiên Đường', width: 1200, height: 800 },
+    ],
+    coordinates: { lat: 17.5894, lng: 106.2872 },
+    tags: ['hang động', 'di sản UNESCO', 'phiêu lưu', 'sinh thái'],
+    seo: {
+      metaTitle: 'Tour Phong Nha 3N2Đ - Hang Thiên Đường, Hang Tối, Tiên Sơn | OCOP Vietnam',
+      metaDescription: 'Tour Quảng Bình 3 ngày 2 đêm: khám phá hang Thiên Đường, Tiên Sơn, kayak hang Tối. Di sản thế giới UNESCO. Giá từ 5.200.000đ.',
+      ogImage: '/images/tours/phong-nha-1.jpg',
+    },
+    featured: true,
+    featuredOrder: 5,
+  },
+  {
+    id: 'eco-tour-phu-quoc-4d3n',
+    slug: 'phu-quoc-4d3n',
+    name: 'Phú Quốc - Ngọc Trai Biển Đông 4N3Đ',
+    region: 'Đồng bằng sông Cửu Long',
+    province: 'Kiên Giang',
+    duration: '4 ngày 3 đêm',
+    difficulty: 'Dễ',
+    groupSize: '15-25 người',
+    price: '7.900.000đ',
+    originalPrice: '8.900.000đ',
+    rating: 4.9,
+    reviewCount: 512,
+    highlights: [
+      'Nghỉ dưỡng biển Bãi Kem - bãi biển đẹp nhất Việt Nam',
+      'Tham quan VinWonders, Vinpearl Safari',
+      'Đi cáp treo qua biển dài nhất thế giới',
+      'Tham quan nhà tù Phú Quốc, chợ đêm Dương Đông',
+      'Thưởng thức hải sản tươi, nước mắm Phú Quốc',
+    ],
+    bestTime: 'Tháng 11 - Tháng 4 (khô ráo, biển đẹp nhất)',
+    images: [
+      { src: '/images/tours/phu-quoc-1.jpg', alt: 'Bãi Kem Phú Quốc', width: 1200, height: 800 },
+    ],
+    coordinates: { lat: 10.2237, lng: 103.9667 },
+    tags: ['biển', 'nghỉ dưỡng', 'giải trí', 'hải sản', 'gia đình'],
+    seo: {
+      metaTitle: 'Tour Phú Quốc 4N3Đ - Bãi Kem, VinWonders, Cáp Treo Dài Nhất Thế Giới | OCOP Vietnam',
+      metaDescription: 'Tour Phú Quốc 4 ngày 3 đêm: bãi Kem, VinWonders, Safari, cáp treo, hải sản, nước mắm. Giá từ 7.900.000đ. Bay từ TP.HCM/Hà Nội.',
+      ogImage: '/images/tours/phu-quoc-1.jpg',
+    },
+    featured: true,
+    featuredOrder: 6,
+  },
+];
+
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url);
+  const limit = parseInt(searchParams.get('limit') || '6', 10);
+
+  // Sort by featuredOrder and return limited results
+  const sorted = [...featuredTours].sort((a, b) => a.featuredOrder - b.featuredOrder);
+  const tours = sorted.slice(0, limit);
+
+  return NextResponse.json({
+    tours,
+    total: featuredTours.length,
+  });
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@ocop/tsconfig",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.json",
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json",
+    "node.json"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo"
+  }
+}

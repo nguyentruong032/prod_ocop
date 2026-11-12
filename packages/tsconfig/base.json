@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "strict": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ocop/shared-types/*": ["../shared-types/src/*"],
+      "@ocop/ui/*": ["../ui/src/*"],
+      "@ocop/seo-config/*": ["../seo-config/src/*"],
+      "@ocop/tailwind-config/*": ["../tailwind-config/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".turbo", ".next"]
+}

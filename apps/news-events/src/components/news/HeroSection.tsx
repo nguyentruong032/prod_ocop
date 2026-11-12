@@ -13,6 +13,9 @@ export function HeroSection({ className }: HeroSectionProps) {
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1LEKw4aCODgV45-iQaN0q8iZ_gEeTYAjLyEO02l94ftTwYR47TLIyUqEYfDWOPA42VYpbB7HMyZxedzAeT6MjvQ0zZRLlW0GO-3ZBBWd2aAqpSE3dgBPvGVftTiaG8MBsyw5cYsS4BlBChA-ADgUVUFVJC9KYa3QGx_CGfEFw85py_DUI81xNIlS2nryXrM7a1FQ5_Fft0DJzzhdqhISc04k2vD7nQuldZkpn6hA"
               alt="Hội nghị Quốc hội về chính sách OCOP: các bộ trưởng nông nghiệp, giám đốc hợp tác xã, chuyên gia kinh tế thảo luận tài liệu chính sách. Bàn gỗ sơn tự nhiên, background con dấu nhà nước, ánh sáng tự nhiên định hướng, nhiếp ảnh báo chí nghiêm túc với điểm nhấn xanh rừng sâu."
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="absolute top-4 left-4">
               <span className="px-space-md py-1 bg-secondary text-on-secondary text-label-sm font-label-sm rounded uppercase tracking-wider shadow">
@@ -62,7 +65,7 @@ export function HeroSection({ className }: HeroSectionProps) {
         <div className="lg:col-span-5 flex flex-col gap-space-md">
           <article className="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow transition-shadow flex gap-space-md">
             <div className="w-32 h-28 shrink-0 overflow-hidden rounded bg-surface-container">
-              <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiMzMYgaInIxCbLdTfUmCMq7ci1Zamgtl7_EeBOGDxyvC0siC7tHpjVbqA6gNn84Ob4qG5SaiOmWve3C8LJJhUSpiUvhW-vySrMQ4zpQLT97sEFKqGMU64TPuXCx0CpQQ-iXMSJaNVAtXq-xwU24CO1NUhGN3WrF8dNEHVJPUJOmFfCKqVBD3lm5A584D6yODw-ws9Bh6JO9HBC4oPFgtlmimLw-UY00dTqEPcMhQ" alt="Xưởng chế biến thảo dược truyền thống Việt Nam với máy sấy năng lượng mặt trời hiện đại và tem chứng nhận sinh học. Ánh sáng tự nhiên mềm nhấn mạnh lá trà thảo dược màu hổ phách và khay tre tự nhiên." />
+              <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiMzMYgaInIxCbLdTfUmCMq7ci1Zamgtl7_EeBOGDxyvC0siC7tHpjVbqA6gNn84Ob4qG5SaiOmWve3C8LJJhUSpiUvhW-vySrMQ4zpQLT97sEFKqGMU64TPuXCx0CpQQ-iXMSJaNVAtXq-xwU24CO1NUhGN3WrF8dNEHVJPUJOmFfCKqVBD3lm5A584D6yODw-ws9Bh6JO9HBC4oPFgtlmimLw-UY00dTqEPcMhQ" alt="Xưởng chế biến thảo dược truyền thống Việt Nam với máy sấy năng lượng mặt trời hiện đại và tem chứng nhận sinh học. Ánh sáng tự nhiên mềm nhấn mạnh lá trà thảo dược màu hổ phách và khay tre tự nhiên." loading="eager" fetchPriority="high" decoding="async" />
             </div>
             <div className="flex flex-col justify-between flex-1">
               <div>
@@ -80,7 +83,7 @@ export function HeroSection({ className }: HeroSectionProps) {
 
           <article className="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow transition-shadow flex gap-space-md">
             <div className="w-32 h-28 shrink-0 overflow-hidden rounded bg-surface-container">
-              <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh7Lf3CR6Q6gDdPr73iwIfUaD7VGQCwBqbMZD_B5lM2GMxNfM0SAK3d_Tdoa0ikaGhMHoZkSdYhAbK2FmfbSaehb3ZlLJ8frhd_HEjHXM4Ub8t4pRdo5grlQUx7j31XWuo16QQURkbL6lZQcK5Hm8TRvBE6ocpCCHkpAo0muESOzzCK07SHW8Vb4rE0VrFGLc3yeFEQGM3sFVtDPU2geoxnWuEyWd_UT48qnzzXow" alt="Máy tính bảng hiển thị mã QR truy xuất nguồn gốc độ phân giải cao và văn bản chứng nhận sao quốc gia cạnh ly trà thủ công gốm trong studio nghệ nhân tối giản. Tông màu đất mờ, ánh sáng xanh rừng và terracotta." />
+              <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh7Lf3CR6Q6gDdPr73iwIfUaD7VGQCwBqbMZD_B5lM2GMxNfM0SAK3d_Tdoa0ikaGhMHoZkSdYhAbK2FmfbSaehb3ZlLJ8frhd_HEjHXM4Ub8t4pRdo5grlQUx7j31XWuo16QQURkbL6lZQcK5Hm8TRvBE6ocpCCHkpAo0muESOzzCK07SHW8Vb4rE0VrFGLc3yeFEQGM3sFVtDPU2geoxnWuEyWd_UT48qnzzXow" alt="Máy tính bảng hiển thị mã QR truy xuất nguồn gốc độ phân giải cao và văn bản chứng nhận sao quốc gia cạnh ly trà thủ công gốm trong studio nghệ nhân tối giản. Tông màu đất mờ, ánh sáng xanh rừng và terracotta." loading="eager" fetchPriority="high" decoding="async" />
             </div>
             <div className="flex flex-col justify-between flex-1">
               <div>
@@ -98,7 +101,7 @@ export function HeroSection({ className }: HeroSectionProps) {
 
           <article className="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow transition-shadow flex gap-space-md">
             <div className="w-32 h-28 shrink-0 overflow-hidden rounded bg-surface-container">
-              <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS6aFP6GKdjnwEa_gHT6MWH7G2yDappzViuwKx6ULQAGRPB5uejZ4yME1WrAjwdDl1QojvPMfDx5eONRfNS1XkDUUZKAzrx-ZgHyYnq_qYK4mNKKg0UGLyIiRi2XEUaFd9JsitfWkcr_8nuRgJynqgbsv2ZVmN_XMFq2zXX16rrA-Gz3RYOo-B-BOWW2h0bzdRm3ohJrBnKR_9tAtgMd6Z81W4S778HqNaCW7Tq0c" alt="Chứng nhận Chỉ dẫn địa lý chính bản đóng dấu đỏ chính thức đặt cạnh trái bưởi chín và hộp sơn mài truyền thống. Ánh sáng studio mềm kiến trúc, không gian lưu trữ học thuật." />
+              <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS6aFP6GKdjnwEa_gHT6MWH7G2yDappzViuwKx6ULQAGRPB5uejZ4yME1WrAjwdDl1QojvPMfDx5eONRfNS1XkDUUZKAzrx-ZgHyYnq_qYK4mNKKg0UGLyIiRi2XEUaFd9JsitfWkcr_8nuRgJynqgbsv2ZVmN_XMFq2zXX16rrA-Gz3RYOo-B-BOWW2h0bzdRm3ohJrBnKR_9tAtgMd6Z81W4S778HqNaCW7Tq0c" alt="Chứng nhận Chỉ dẫn địa lý chính bản đóng dấu đỏ chính thức đặt cạnh trái bưởi chín và hộp sơn mài truyền thống. Ánh sáng studio mềm kiến trúc, không gian lưu trữ học thuật." loading="eager" fetchPriority="high" decoding="async" />
             </div>
             <div className="flex flex-col justify-between flex-1">
               <div>

@@ -39,7 +39,7 @@ export function EventCard({ title, date, location, image, alt, status, descripti
   return (
     <article className={`bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col ${variant === 'featured' ? 'lg:col-span-2' : ''}`}>
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-container">
-        <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={image} alt={alt} />
+        <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={image} alt={alt}  loading="lazy" decoding="async"/>
         <div className="absolute top-4 right-4">
           <span className={config.badgeClass}>
             {config.pulse && <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse"></span>}

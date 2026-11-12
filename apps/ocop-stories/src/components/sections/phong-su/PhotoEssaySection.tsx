@@ -36,7 +36,7 @@ export function PhotoEssaySection() {
                 data-alt="Vast golden tiered rice terrace fields in Mu Cang Chai Yen Bai during harvest season with Hmong women carrying woven bamboo baskets, warm late afternoon sunlight sweeping across mountain valleys, award-winning documentary photo style."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3usSIwJnho7ySHbOay9B1XWN-Voaa0MqJmxTRSnGZ85kIvu29Q7TJlPIgrdVDzM5ARxzo4IGb91T0CEpHrTf_eoBWmPIhoHluPXmwO8cGlUHcAOGOkXFUdzyVV0MzjxrPv9CymJ-nPphmtyBqiSdfJhpJ6EEgr6QcYBId8_YxnVs-S8ZYDyjYdKEez6SGuceYyuT0TyuCcrR-rYgr-TvxjdPzmbsU2fOqzSmExyU"
                 alt="Gặt lúa trên lưng trời: Bản hùng ca màu mật của người Mông Mù Cang Chải"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute top-4 left-4">
                 <span className="px-3 py-1.5 rounded bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold uppercase tracking-wider shadow-xs">
@@ -75,7 +75,7 @@ export function PhotoEssaySection() {
                   data-alt="Autumn star anise harvest in Lang Son Vietnam, dried eight-pointed star pods laid out in sun-drenched wicker trays in village square, elderly Nung ethnic woman sorting fragrant spices, natural warm earth tones."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpqvA1qAua9d34hWCdVsbmpFEREoyoHxprOOP7BYU7Sr2irkN3xpALICALN-CgGgPCxmo8LpOd4vIT48RkQVUaF_UIbM1Zcbp8NDQMR_5w7KVG1diO7cPYSyNIeSEkwEZa50ZIatViNfUFe19BRlLowNmYI6H9C4JQh11hCZAq90XBG3AXItFCASbxXb6lwEh12Qcl4b9EK292PO5ReqOmHNAHQ3ZNWpGBb0PkDV4"
                   alt="Mùa hoa hồi xứ Lạng"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
                 <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/60 backdrop-blur text-white font-label-sm text-label-sm">
                   18 Tác phẩm độc quyền
@@ -105,7 +105,7 @@ export function PhotoEssaySection() {
                   data-alt="Traditional red terracotta brick and pottery kiln dome along Co Chien river in Vinh Long Mekong Delta Vietnam, billowing light wood smoke at dawn, terracotta pottery stacked in rustic river boats."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2Po9_IQO3gyl9fhiIT-wHhSKwlf9K0V2ToTp72egHy97fogm8nV_FQ3rd6MGAq1nkb32GGdbrDVEyJg78j86gL4ZnYgdCSWOGSdbwquju6_bxKzWaqmZdUjOu__NSSQMBdvsiiWk5eEg3NZThrtT5knxgv-boJjyXcFOgOuWABXDK-DCGVCc2tC3WIMBxfO8puo6s3C-3WJm12TbNqhb4Ru4OvloHviWC1tlg_FY"
                   alt="Vương quốc gốm đỏ bên dòng Cổ Chiên"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
                 <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/60 backdrop-blur text-white font-label-sm text-label-sm">
                   22 Tác phẩm nghệ thuật

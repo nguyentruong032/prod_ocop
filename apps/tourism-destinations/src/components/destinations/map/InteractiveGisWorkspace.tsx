@@ -488,7 +488,7 @@ export function InteractiveGisWorkspace() {
                         data-alt={item.alt}
                         src={item.image}
                         alt={item.name}
-                      />
+                       loading="lazy" decoding="async"/>
                       <div className="flex flex-col min-w-0">
                         <div className="flex items-center gap-1.5">
                           <span className="font-title-editorial text-body-md font-bold text-primary truncate">

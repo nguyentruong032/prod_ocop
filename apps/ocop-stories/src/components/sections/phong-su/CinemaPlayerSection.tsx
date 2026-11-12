@@ -42,7 +42,7 @@ export function CinemaPlayerSection() {
                 data-alt="Cinematic still from Vietnam central highlands documentary: ethnic village elder playing bronze gong in traditional communal stilt house, golden firelight, aromatic rice wine terracotta jars with bamboo straws in foreground, deep forest green and amber cinematic tones, highly detailed documentary photography."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8ZxtCydLL8Uw38X3Y64T3-7PXENUVWFzu3CYwBfWZH4cEDtO_L8z944VJPeGWwfM8d-Zn_zFz7egvzurmkXOnsG0fZOwW63_kR88x-70f39B3teQPRnoyLHI38UxYolFXHVvcY9PVhwD1loFolw8q1j9W9Xl-2_RqhstHoehtjmcpLj8SonxR8grdeDR7y6k5nyZDMO2RCtIwaWznHyaKeyhsLoFXM4L-M-2qIZs"
                 alt="Âm vang cồng chiêng và men rượu cần truyền thống Tây Nguyên"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/20" />
               {/* Badges top left & right */}
               <div className="absolute top-4 left-4 flex items-center gap-2">
@@ -162,7 +162,7 @@ export function CinemaPlayerSection() {
                       data-alt="Traditional salt pan workers in Sa Huynh Quang Ngai Vietnam at sunset, harvesting mineral white sea salt crystals under warm orange and deep amber twilight sky, cinematic documentary quality."
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXXTp4PejX0PSMd3890-TOmx8EZUPokUGH_yh6XAkgZNW4RwKWL5xfVBLV7wJx-QrPcX4zSJq4Zw013zLpsGPSjJ7sXllypoJkQSe1jrKgrYFGbtyfzPd-7cGq3CiTAbAjHVSZTyTvjKElFBYnCMsioxTsuPuNtDOsMaYjWHGeop5a3Y6jINUtyC8rKs3ODHEhmGBv7bmqmjxwjCHs9roP8_QsfKAVSCpI9zgdEFM"
                       alt="Muối Sa Huỳnh"
-                    />
+                     loading="lazy" decoding="async"/>
                     <span className="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] font-mono px-1 rounded">
                       12:30
                     </span>
@@ -185,7 +185,7 @@ export function CinemaPlayerSection() {
                       data-alt="Traditional woodcarver in Kim Bong carpentry village Hoi An Vietnam carving ornate dragon motifs onto salvaged dark jackfruit wood, sawdust floating in afternoon sunbeams, terracotta workshop backdrop."
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ_zXvf7PJTn9kNfD173Gk47UZziNBWBxsj5GpPGKRf-WiXRYxm3KrPC_jxSwtz8gmLGuENb1q0mNnxn8iD1uJfNsufxGFx5QNyG-WA532ducFS_mpmmyWnieU2J4GiDuum8_uT3sQ9W0LJL-VaSsg61Zc0iBV3chM7bHyvI8SIiSlzZb8_Xv61YEEk4kUGp77NfUYNhMpMVBFPxkKQHFn4f_vy_IsHvnxXMLWVpc"
                       alt="Làng mộc Kim Bồng"
-                    />
+                     loading="lazy" decoding="async"/>
                     <span className="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] font-mono px-1 rounded">
                       15:10
                     </span>
@@ -208,7 +208,7 @@ export function CinemaPlayerSection() {
                       data-alt="Thuy Xuan incense village in Hue Vietnam with colorful bouquets of red, yellow, and violet incense sticks drying in imperial courtyard sunshine, artisan woman hand rolling natural agarwood incense paste."
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw5WFYIyXuM5clUghE0Ba2DB85NVbAPEFdJo_bjDlCxL_AXZ7sWsNtOugzE5bEU39LqpVfu69v9bH9GDJLHa_IeJAB3R8yaXcntQg1xVrvV7d1uecF9u1HAJjKT-GgjTSP_e8-lou7NpCYpOuxucDS_Trc8iMpS2_QlKCmme56NBpQ6W7WhoX6rT57MJH6l7zp04LEL_shfjSOColep_WKxtasIG3f4Q-hfWL42_s"
                       alt="Hương trầm xứ Huế"
-                    />
+                     loading="lazy" decoding="async"/>
                     <span className="absolute bottom-1 right-1 bg-black/80 text-white text-[10px] font-mono px-1 rounded">
                       14:20
                     </span>

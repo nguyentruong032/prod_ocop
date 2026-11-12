@@ -32,7 +32,7 @@ export function StarStoriesSection() {
               data-alt="Elderly Vietnamese master artisan with weathered hands delicately sorting green tea leaves in traditional wicker flat basket inside a morning sunlit rustic wooden cottage in Tan Cuong"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdenWJJFYekrJ8oEedeiXEoKZ4fNMVXaaGLmW03d-ShBseaCtuptntlksMJIew_v0yeZie7xo63XOE2Hb-0pJq8tQbi1GBwIVifw6PsQ9Q4w58uqfk-5BTL4oNLqX9L7QDATs5HXM0mMLjW7ecIzpggsVcrV5xlS_y1m3KhDDuISMSjcxq3fBMvjDGMYNIVcqia38Oh52MJ8J5M6ZaAsuU6grFTCAC2oW5TbnetKA"
               alt="Nghệ nhân chè Tân Cương"
-            />
+             loading="lazy" decoding="async"/>
           </div>
           <div className="p-6 flex flex-col flex-1 justify-between gap-4">
             <div>
@@ -62,7 +62,7 @@ export function StarStoriesSection() {
               data-alt="An expansive natural aerial perspective of the vast coastal fish sauce barrel houses in Phu Quoc Vietnam during gentle maritime dawn"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2kfUEENTOZzqpiI_r6iYFf_2lLU0BcUhq39AwXZwCn7ltRiyKrcAWApOaZAvRIoLqs-tqjZCAq0WTAce7nxVIwXhSHXp569Y-A6BaepLZiME35oHi26g23zudUJ_gEDGzE9o2cCn7s7y1shnAjfslOXJgxNClR2XRcazO4G-_1y5sczYpS5Ux0WEZ2byhlh2q8Hn4Ear0u8gKgwaXPuse3uGW-WtmcR99h49F530"
               alt="Nhà thùng nước mắm Phú Quốc"
-            />
+             loading="lazy" decoding="async"/>
           </div>
           <div className="p-6 flex flex-col flex-1 justify-between gap-4">
             <div>
@@ -92,7 +92,7 @@ export function StarStoriesSection() {
               data-alt="Vietnamese indigenous Xo Dang woman tenderly holding a freshly uncovered wild Ngoc Linh ginseng flower pod amidst dense mystical misty canopy in Kon Tum mountain range"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJIUwlJW64mTEaJRQAAtyxSZciJd3OdgmirjTGhlqhahMg9aD6OQL3aQSohyMAzDw6alY2Ail9sGE6ynO8CmSIwXqWRRFOlNff_YskKxb3KaOv1wtaXBLcLKazLiAn6PvrELRBEKFfwH8lbU6tTrTs0TG8kDu61RGQyeTilrCc2YwTHJWaUH_xOM2CWq1x2wpGoJDcDbSnCsyPltd-4H3b0ByNSv5K6S2v56VeJL8"
               alt="Sâm Ngọc Linh Kon Tum"
-            />
+             loading="lazy" decoding="async"/>
           </div>
           <div className="p-6 flex flex-col flex-1 justify-between gap-4">
             <div>

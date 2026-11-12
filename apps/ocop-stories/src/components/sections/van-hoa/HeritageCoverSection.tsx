@@ -31,7 +31,7 @@ export function HeritageCoverSection() {
                 data-alt="An elderly Vietnamese artisan with weathered hands stirring green tea leaves by hand in a glowing cast-iron wok over a wood fire hearth. Soft natural smoke drifting through the rustic wooden workshop in Tan Cuong, Thai Nguyen, captured in warm chiaroscuro documentary light with rich organic emerald and charcoal tones."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuqAllV1Pee0yZQGLOPa1YjgoYio0C-7Eibvw5G4QMaoYeghqCVpg017F2a3wYGPSoUdFNMwe_cz8D0yLVUzIu9gfANIGHnbELzecl7SmCM_2JN1hxy0ntMz8ZQOD4HrWEWIEndQ5svNllDS6i4EJVjr0oKD2cUNQ6z3pAr0hxKzw0X0S5SXfgdQCphHTxaBjB24GQ3fXSfYAjVxc5F51cRpAShmcoyntIauNhE00"
                 alt="Bảo tồn tri thức sao chè thủ công của nghệ nhân vùng núi Tân Cương"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
               <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
@@ -90,7 +90,7 @@ export function HeritageCoverSection() {
                   data-alt="Massive ancient wooden barrels made of litsea wood strapped with rattan ropes inside a traditional fish sauce house in Phu Quoc. Warm rays of sunlight penetrating the rustic warehouse illuminated fine dust particles, amber droplets dripping from wooden spigots, deep warm terracotta and wood tones."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKUCZJm9lzuonc3SxK2szO9Dq0UWbn5JgJ-tij0CG4mUejJ6QPQ8CAzK1VKUaPY1cgN9YNF8gqKmDwi8TpU4_DKgjRgm7PId4om8KnZ03gdNat0gssgVcoYePDhgOxEtDpm49XRfCx_wzkr8sBQbWt2z8enkabXtfD9Ybj7Djjyx8kBnODuN-rymdTpX51_Yt2b-nBUo_ELiByJb2rCoEIN6_bFcc_m_yezrmRm8k"
                   alt="Nước mắm Phú Quốc"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary text-[10px] font-label-sm uppercase font-semibold">
                   Kiên Giang
                 </span>
@@ -126,7 +126,7 @@ export function HeritageCoverSection() {
                   data-alt="A Cham woman artisan sitting gracefully at a traditional wooden horizontal loom, hand-weaving intricate geometric brocade textiles in village My Nghiep, Ninh Thuan. Natural dyed threads in deep ochre, madder red, and indigo, soft daylight falling on traditional motifs, fine craft details."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXh5u6Gisodwy7D8zzMhtLvrvSgvRWugEg9eJMu3x3ay_IOj7KbrVnFtgLl4nVenX0REMg5fhvndYRo5glzo5eaSomnPfpSMX0e-n_yKMO6AjCac0S_fKz_romGoteCkJQS5rINIv3hTA2lYd2zmJECwjyAEhskK_nICrbQsNLL6hqpUL_649_idIHIDbRdz3B5welj6yIRGOtmkGWedIHEyUE16uNgjJTtX-QSYU"
                   alt="Dệt thổ cẩm Chăm Mỹ Nghiệp"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary text-[10px] font-label-sm uppercase font-semibold">
                   Ninh Thuận
                 </span>
@@ -162,7 +162,7 @@ export function HeritageCoverSection() {
                   data-alt="Rustic earthenware pottery jars with natural wood-ash glaze arranged along the brick kilns on the banks of Cau River in Phu Lang village, Bac Ninh. Earthy ochre, eel-skin brown glaze hues, stacks of firewood, morning mist rising over clay vessels, authentic cultural documentary feel."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOrC54Fi0MR4qOu9BRl3UYtFDpAd4nkfPDE1hU-h2yIoioovHep087CxkNoQXzHuB8JPikoazLSgPOg2oy_0PNilVVcrY1FefO2Bbi5JWy2HAtIyKOxearAbP0gbwtyQikW1Gjp40e3-TOW8A3GE4VuVr70xHH7fkK0ygncIZG0LtqpRdBtNySA4454QFndFRkYlqrJqpHdX5NIbF2FrW43lQK7dM7H5jrrw8iT6Q"
                   alt="Men tro gốm cổ Phù Lãng"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary text-[10px] font-label-sm uppercase font-semibold">
                   Bắc Ninh
                 </span>

@@ -123,7 +123,7 @@ export default function OCOPDiaPhuongPage() {
           {/* Lead Feature - 7 cols */}
           <article className="lg:col-span-7 bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-container">
-              <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={leadFeature.image} alt={leadFeature.alt} />
+              <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={leadFeature.image} alt={leadFeature.alt}  loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4">
                 <span className="px-space-md py-1 bg-secondary text-on-secondary text-label-sm font-label-sm rounded uppercase tracking-wider shadow">
                   {leadFeature.category}
@@ -166,7 +166,7 @@ export default function OCOPDiaPhuongPage() {
             {sideArticles.map((article, index) => (
               <article key={index} className="bg-surface-container-lowest p-space-md rounded-lg shadow-sm hover:shadow transition-shadow flex gap-space-md">
                 <div className="w-32 h-28 shrink-0 overflow-hidden rounded bg-surface-container">
-                  <img className="w-full h-full object-cover" src={article.image} alt={article.alt} />
+                  <img className="w-full h-full object-cover" src={article.image} alt={article.alt}  loading="lazy" decoding="async"/>
                 </div>
                 <div className="flex flex-col justify-between flex-1">
                   <div>
@@ -207,7 +207,7 @@ export default function OCOPDiaPhuongPage() {
           {editorialFlow.map((article, index) => (
             <article key={index} className="bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
               <div className="aspect-video w-full overflow-hidden bg-surface-container">
-                <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={article.image} alt={article.title} />
+                <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={article.image} alt={article.title}  loading="lazy" decoding="async"/>
               </div>
               <div className="p-space-lg flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-2">

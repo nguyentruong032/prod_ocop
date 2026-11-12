@@ -50,6 +50,9 @@ export function CraftVillagesHeroSection() {
                 data-alt="Toàn cảnh làng gốm men tro Phù Lãng Bắc Ninh cổ kính ven bờ sông Cầu. Hình ảnh những lò nung củi truyền thống đang nghi ngút khói lam chiều, hàng trăm chiếc chum vại bình gốm đất nung mộc mạc xếp lớp trên sân gạch rêu phong. Tông màu nâu đất nung ấm áp, ánh chiều tà vàng mật ong rọi qua hàng cây cau và mái ngói âm dương, phong cách nhiếp ảnh tài liệu báo chí nghệ thuật di sản sâu lắng."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdp0NBRyxW1JBNWj-XwWMptOBSTCh42VE0Ary6ww4X8kxMp5OS4f_nikXhGunAtDBJ9xOc4-rHz_FdqU-ZB2HbQ3-STD-9f2y8-gR0k5pldYVjZKJPa4tnqM4KKE55VneK7JEMSmI4ae-rQh-A-6vMDsIso2d6VSJUQCxSTNyZ6Xbm22LyD5PR3iRmc9Fx53N9BYJQD9aHZozyNV7j0u_npogjyDKXyEHarYW7Ios"
                 alt="Gốm Phù Lãng"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />
               <div className="absolute top-space-md left-space-md flex flex-wrap gap-space-xs">

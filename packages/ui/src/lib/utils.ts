@@ -114,7 +114,7 @@ export function isValidUrl(str: string): boolean {
 /**
  * Get image URL with fallback
  */
-export function getImageUrl(url: string | undefined, fallback: string = '/images/placeholder.jpg'): string {
+export function getImageUrl(url: string | undefined, fallback: string = '/images/placeholder.webp'): string {
   if (!url) return fallback;
   if (url.startsWith('data:')) return url;
   if (isValidUrl(url)) return url;

@@ -142,7 +142,7 @@ export default function XucTienThuongMaiPage() {
           {spotlightArticles.map((article, index) => (
             <article key={index} className="bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
               <div className="aspect-video w-full overflow-hidden bg-surface-container">
-                <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={article.image} alt={article.alt} />
+                <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={article.image} alt={article.alt}  loading="lazy" decoding="async"/>
               </div>
               <div className="p-space-lg flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-2">
@@ -182,7 +182,7 @@ export default function XucTienThuongMaiPage() {
           {filteredArticles.map((article, index) => (
             <article key={index} className="bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
               <div className="aspect-video w-full overflow-hidden bg-surface-container">
-                <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={article.image} alt={article.alt || article.title} />
+                <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={article.image} alt={article.alt || article.title}  loading="lazy" decoding="async"/>
               </div>
               <div className="p-space-lg flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-2">

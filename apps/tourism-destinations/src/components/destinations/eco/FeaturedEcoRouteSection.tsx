@@ -25,7 +25,7 @@ export function FeaturedEcoRouteSection() {
                 data-alt="Breathtaking morning mist enveloping terraced Shan Tuyet ancient tea mountains in Ta Xua and Ban Cong, Vietnam. Indigenous Dao and H'Mong women wearing traditional embroidered indigo garments delicately picking dew-covered silver white tea buds under golden sunrise light, organic and documentary photojournalism style, lush forest canopy."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTKN1N-OtLKvsIU818IhiF8PTDUpa8gECjuWnQudd-ocDrhkRurx-Rz2C6T8fmW6p4RqbAfaK711H6FdNlfL3idfZnQ-WHwuAAK7NYzKquDcNaOKdQ-p4XzuXBv7HX-6A3fscjlZoIaWUPsA2uI2NoqyPwWwQ6HzBDtwW1J21Rb2S5juZmj0iO1XGqlQXwA-4cgivHYXbYHCrhxH07cf4fWXokbI4uY6xKNKfoY_c"
                 alt="Tà Xùa &amp; Bản Công"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent" />
               <div className="absolute top-space-md left-space-md flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold uppercase tracking-wider">
@@ -87,7 +87,7 @@ export function FeaturedEcoRouteSection() {
                   data-alt="Serene mangrove island landscape at Cu Lao Dung, Soc Trang, Mekong Delta. Traditional wooden boat navigating narrow brackish river channels flanked by lush water coconut palms, local farmers collecting natural Nypa palm sweet sap in earthen clay pots under warm equatorial sunlight."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsBwPCY5zDZ-N_H5rQMJSA9N34eqKb4k8W933bqwoz_M-CHoNCjrUVsdwC2r3WtHoQpbmVXT5zBd5FL-5N03Jo_x3zw2d5Com5mE1Gf_dR9wGreq4nyQtDtxuQS9QnTr6RoR1QMb0vrRq21paZbdplEIaidR8kOkyHCw3-ipqI7mo_hhZOor3huMLkU1x0O_MyGDjKynJJAwMFYP-bh4oFsY4HLn3QmsKaTI5cKso"
                   alt="Cù Lao Dung"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary/90 text-on-primary font-label-sm text-label-sm">
                   Đồng bằng Sông Cửu Long
                 </span>
@@ -112,7 +112,7 @@ export function FeaturedEcoRouteSection() {
                   data-alt="Misty herbal valley of Ta Phin in Sa Pa Lao Cai Vietnam. Terraced organic medicinal botanical gardens with Red Dao ethnic women harvesting aromatic medicinal foliage for traditional herbal baths, wooden tubs steaming with herbal infusion against mountain backdrops."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpXvnwkYChUlPf6zq4v3EY9lFVNd629VgTsLoGwvQ_rKDagQn8y4b9qvgeYY1AtJ1g0rpH5H5Nrehp7IPCaVLewyreUlsLAEOZPEc_VnFgkyjm7bkqsKFDET25oe901Sh88zmYZowMvlWbHoig1jLDExZU3tnnfvHPtwkOGqFT072RLCw2-Bic4DNgushwwgkTrEtRj5v8Evn6oLg9QGWF9NkTGCPGGQcMV9LcHsE"
                   alt="Tả Phìn"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary/90 text-on-primary font-label-sm text-label-sm">
                   Tây Bắc • Sa Pa
                 </span>
@@ -137,7 +137,7 @@ export function FeaturedEcoRouteSection() {
                   data-alt="Vibrant blooming pink lotus fields in Dong Thap wetland alongside Tram Chim national park. Wooden sampan rowing amidst tall melaleuca forests, Sarus cranes taking flight at sunset over mirror-like wetlands, peaceful Vietnamese countryside."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiY9TemLlSQ-8NMYL12xvTmOFseaHQN42v-FlJ2GyBnAyciO3WRZGiFMybjD-ENvqsLxc2VOlYtYJDfr80Su52yUnozy0Jd17YCzAdlT5DpnekPePdLLtg_7I4rxNB_MQ_Bkw-JwgS6htIvGhdXEUjEolIRocYXYzvQWrmIga42Z2VuwN1Gp48sYr3AfZrkI1UZQFuWV_WM5D_dDz5M8wHsG2A9wH2g0B7wtotcNU"
                   alt="Tràm Chim &amp; Đồng Sen"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary/90 text-on-primary font-label-sm text-label-sm">
                   Đồng Tháp Mười
                 </span>

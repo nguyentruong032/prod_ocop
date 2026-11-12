@@ -29,7 +29,7 @@ export function ThuCongShowcaseSection() {
                 data-alt="Master silk weaver in Vạn Phúc village adjusting warp threads on an antique wooden Jacquard loom, fine mulberry silk with embossed traditional cloud and dragon patterns shimmering under sunlight, deep golden emerald aesthetic"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS4fa7UMz1zCCYmT7UHYYErw-IKZgPeAYmy63X2ou-YWHn7tI2IGF6hfPgHKG_w5FVSyg59q6pH8M9L2UTbM9Zioig3XgIxI6GzPN2UagWEU4J4NnijD2JacaFawpEXbLC9aBD8QfDhk-LgdetUSThOo8i9iHWu36gkmqZsAQOdEpKIF0grxbjOjwnU7AAt_JOpLy3JqMTGAcBTQPb44ktj_H9AZ7Vs_KEXKvw-Ws"
                 alt="Lụa tơ tằm Vạn Phúc"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4 flex gap-2">
                 <span className="px-2.5 py-1 bg-primary text-on-primary text-label-sm font-label-sm uppercase rounded font-semibold flex items-center gap-1">
                   <span className="material-symbols-outlined text-[14px] text-tertiary-fixed">stars</span>
@@ -80,7 +80,7 @@ export function ThuCongShowcaseSection() {
                   data-alt="Traditional ash glazed ceramic jar from Phù Lãng village, rough natural clay texture with deep amber and forest green runny wood ash glaze, displayed in an artisan kiln yard"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH39kSjO10S89WCrtgrXrTxHp9oPtn1-5bsCiZn_1dAKN8PzSzV_aEj0O53LeBmRagnkIV3kZN0EUSWX_kihDwVk21Hy4iarIP7H_RkPzz1eLZOgkVStOLfSm-571b8jj8zOcvspjlgk85jW2IfLrFCbZ_fR-6dl-VWx3pE7IGios5HUHl29hRiPfkeYgrCgWycdQ2EFRSQGNNjiQz5B6hJswonepCdfJxDMMRF_4"
                   alt="Gốm Phù Lãng"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 bg-primary text-on-primary text-[10px] uppercase font-semibold rounded">
                   OCOP 5 Sao
                 </span>
@@ -112,7 +112,7 @@ export function ThuCongShowcaseSection() {
                   data-alt="Chau Phong Cham ethnic woman in An Giang hand weaving geometric red and indigo brocade textiles using foot-treadle wooden loom, detailed view of dyed cotton threads"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyu_juBcpHXY0uHXz4zv_0B_2s3_kyinxBrCCaoeZrVUlpg3j1k7Z4TrLTlhhyniaqSHhxihXpmsSFJP_7WCgVoOz9bA1Ne11djinnq-H598fdwDHSuTC283Nz_oCxcH-cu6HBYKXhvOkP5zLdXO1kOXESMhwnRlSjEQaq39mSw1KnNAu3n0p_7Ny2cMclQLRvNS1ugBH9HSpdnypkwW1YYxOUhH4_18lIkIk1OZo"
                   alt="Thổ cẩm dệt tay Chăm"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute top-2 left-2 px-2 py-0.5 bg-secondary text-on-secondary text-[10px] uppercase font-semibold rounded">
                   OCOP 4 Sao
                 </span>
@@ -147,7 +147,7 @@ export function ThuCongShowcaseSection() {
                 data-alt="Exquisitely woven bamboo basket from Phú Vinh village, hair-thin bamboo strips woven into intricate openwork lace patterns, warm natural cane texture"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxcC5WdVC-Ih-giYKcHNfFuln16HVsgyvyZCawAj_SRLBEUsXECER08qUOfl_Gf_pwxIvlyL4Qv-BM8_IP2XpUqIOdfw2-u-a69fV3dPuzl8cFP1D6b_95CYdD9M0tDKbEwYvvFLJPzlLg6GeKUtyD942mRNyRtRM2RAmk7Cab8fA7UOQNjH7t2Qt1L0rAnl7GCfmsTishWO29NytCTICD9rcRauYCj9oXxOQRDuY"
                 alt="Lẵng mây Phú Vinh"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-2 left-2 px-2 py-0.5 bg-primary text-on-primary text-[10px] uppercase font-semibold rounded">
                 OCOP 4 Sao
               </span>
@@ -177,7 +177,7 @@ export function ThuCongShowcaseSection() {
                 data-alt="Artisan applying natural red color to a woodblock print in Đông Hồ village, handmade Dó paper coated with shimmering mother-of-pearl scallop shell powder"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWAsFb1-CLMPOIE-ZbEbMxsviaZEQzxcp7zBvuneH2vSOWsRpZXcjfSHIkMcGfqKL5_M33_ZArtxGU9nVTrKrvo9VyxVI8ReOfkLOgZKiYRS3c9Uzzw1ta2PV2tvwKu_Bt5OnTcN0zz1KJzTAVk4jY3qn9mVLjNAQ2EdD3wp1zd2jtWTT5n1p_THKK8tXsCXcOngkpfD8uWAwgDkS4DZhe2r7YYeOe3nW-k2O9Mjc"
                 alt="Tranh Đông Hồ"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-2 left-2 px-2 py-0.5 bg-primary text-on-primary text-[10px] uppercase font-semibold rounded">
                 OCOP 5 Sao
               </span>

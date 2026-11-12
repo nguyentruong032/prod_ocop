@@ -8,10 +8,12 @@ export function Footer() {
             <div className="flex items-center gap-space-sm">
               <a href="/" aria-label="Về trang chủ OCOP Việt Nam" className="flex items-center gap-space-sm">
                 <img
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="OCOP Việt Nam Điện tử"
                   className="h-10 md:h-12 w-auto object-contain"
                   style={{ height: '8.5rem' }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>

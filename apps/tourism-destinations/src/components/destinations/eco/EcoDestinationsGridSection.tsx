@@ -18,7 +18,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Ban Ang pine forest and organic strawberry cultivation gardens in Moc Chau highland Son La Vietnam. Strolling pathways under majestic pine trees and wooden greenhouses with plump ripe strawberries, crisp clean mountain atmosphere."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpNbIaPZhFJ3WdCNpqNWkqDmhfI-d-9eIv6g7pUFbMByOaxJwlI69pe90n18ofcINMViZdhsg9IuvoHt3aWu5EB8MhdObm_2GYTUqAuZgRqvFK9o0z1Pw3GgijeICcfpI7uYrox7NfhgSdqxvbEQb-dLwLg-S7oHAN9SYSqFJe9Gjq1zzDxUlGeVj4hsO8oMpG6BSVunqTX-UeU0h1K5bjC3qyU24MjPeCSsvSlic"
                   alt="Bản Áng"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     2N1Đ
@@ -73,7 +73,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Vast aromatic rose fields and floral greenhouses in Sa Dec flower village Dong Thap Vietnam. Vibrant damask and heritage roses in full bloom with local flower artisans tending plants under Mekong sunshine."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9DcjZM3GoI51aC6zxFRP3J5_EH-FNSkHpmIxoCIT2bs0TI8frjsZ7PYSw_wrdm78VF-L81j4LzcDCR0pqUnfOs4MYrbCLRyOmxFFpbdaS4T7BVao3UuePMJIS04tvHZvWwL-M-ZvWpndHpCzO0eIjzPBk1skFdPngYiciRaW_kLV45bH4DFu2JxQo5rBBMtcJwIVEhhJTvfCopIzbuLuv89y0Hde1_ffEpDjs-iA"
                   alt="Sa Đéc"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     Trong ngày
@@ -128,7 +128,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Traditional Tay ethnic stilt house village in Quynh Son Bac Son Lang Son surrounded by lush emerald green limestone karst peaks and golden ripe paddy fields in panoramic wide view."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8hrK9Mge51sEXZfpVU1OgiiwR9k6qiPYBHisJvoIPSmNMox5xNDHMRYC5ZM2ljF4BpzJwvslFUaZCVKdOQ12W015GaRdlzpfWy9frATYbKqi1B41EF26ahKJdF2Md6CDHzRDNOx213MZi_NRNoVhZFXmM8r_obTDUpHm5ZJ2MrLnvxUNU1W0K3gAiJXmWk1WAgCucemwPmmCT6waySrKuzwE5ix-xur-kEoZOunU"
                   alt="Quỳnh Sơn"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     2N1Đ
@@ -183,7 +183,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Ancient tea trees with thick mossy trunks clinging to high limestone mountains in Suoi Giang Van Chan Yen Bai. Local H'Mong artisans demonstrating manual pan firing of tea over wood ember fires."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRUa-AQ1No5r5TtsgS4B2d_hWDUinoBOZ2iTW6qCo9XWu03NcbujR0ScVjhc7HLoYK_4pt5BVd4uTde1h0l6g4DA4LlyapxsaCTvK8K7FxiD4vwh_lSrfSklAtyrnzmsa8DuXhbnkw4lhfQ8bLR8J7f8IfkqebLqYfLp1jGiJhFVYoL6ejmPVNn7vS48MASMTJGEn5ffMtGil6Sg62dMiSjz-mrh7I3coAsSAiWeU"
                   alt="Suối Giàng"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     3N2Đ
@@ -238,7 +238,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Eco-friendly shaded coffee plantation at Aeroco Coffee farm Buon Ma Thuot Dak Lak. Multi-tier forest farming with ripe coffee, fruit trees, bees pollinating flowers, clean rustic agricultural tourism."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOKjMnV_gQxqbP2zsHvom8QMBAPzjA1RkYO-Np5LJ8stx6BL0i05-WZDVoA-sSLhCIKHWqy_EBm3CBrzdg_wuErSKD2fu6KsQxdezaEHnHn9bxikrpxqY_22jhAZoQbDGGBcgbZtn5NiWYOUZgv7O3_ciValpCSZGE7RGPONOhw7aiIDGYAb5wql1Igl5FsWiz07d0umS-XkOQXkS0VSq7ZYiSKE0g9IKtTzHiBxI"
                   alt="Aeroco Coffee"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     2N1Đ
@@ -293,7 +293,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Bac Lieu coastal bird sanctuary with flocks of white egrets nesting in mangrove canopy alongside artisanal solar sea salt crystallizing flat beds under warm sunny skies."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjClU0jp0ef-ipArvpHSzViIEjphTuTpjcvz2uqYD3G9Pj68FDEye-ySAHrbv82-JuEHNeinaAU3j9GBY2BBRTo13firqUjxGnP1u4WmScvgWPhy0nfUr9IoCU_ppzgv_sSrVqR_ZZoGmHkKc8a0zZv6-YKMUDrw2mTdEl2e-hpsvFm3ZxSOU1uXEx39j4K92VoRzz71DB7cLOaI-8LVgV0KabU9TfVEh5O9k8uiQ"
                   alt="Vườn chim Bạc Liêu"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     Trong ngày
@@ -348,7 +348,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Dense primeval U Minh Melaleuca wetland forest in Ca Mau. Experienced beekeepers wearing mesh veils inspecting natural honeycombs dripping with amber wild honey on slanted wooden rafters deep in swamp woods."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy5iGk3tBcLYnuPrcd887fDNodzLbXxtBZnmflvjyH7-HqNXEGKb3IT78ZIs_uC9j5KpXNKlijETlbp61P2bFVc95bGJZ1eR-VmIKQBHPEE8KHEOocpcdlqtUPe8FonMsEHcHMPoaYkoC8HrxxQIt1cQtgWfo5LH_P-jd8Ksn0OBpXCrOYkxe9j5b9FdgTWYJp9qFuLNJMo9CPFeEmkrSvBHZFRL_JgwGLh5x-PyA"
                   alt="U Minh Hạ"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     2N1Đ
@@ -403,7 +403,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="Expansive night-blooming dragon fruit plantation illuminated by thousands of warm LED light bulbs creating a magical glowing night farm landscape in Cho Gao Tien Giang Vietnam."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL7BPD-wQmv1hc_BePefol5WpnnvByOSMURGuDg-IxZSFbZFnOqVlW0sxOD9eifr7PmJGZlFFLFoEcd4gw-DJTGWQ42L2FfuWrttYq-6x3l0D44En4XVW5He54uN2yhx4FsGM_1A9jVp3urLFTIn5Tm6CqcCcuqxqWP63dI1elkbUXNSOTIgnVNZE-RSxO2ydWkbjKuH9JQEJeyddcDrbQXfOJtxfr7wW0UGXKxOU"
                   alt="Chợ Gạo"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     Trong ngày
@@ -458,7 +458,7 @@ export function EcoDestinationsGridSection() {
                   data-alt="The southernmost tip of Vietnam at Cape Ca Mau with stilt houses above coastal mangrove wetlands where local farmers farm ecological organic black tiger prawns under thick mangrove roots."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpznCzooIQKSP0XRxmWJA3vcTSgUrV3TT5gc4q991c0vT_qFQtsha6gvsHZQF2cPuZoKZxL4l5nxLni-pif3Ix53LAdyeu2GpjboyzIcKd4LihoJaTsE40IIJD865W71QXFAtVwBwsTJ17B3NFoCcxeB3JX9ngKKbsOyPrRPW5ChrYCGDUW9jzL0iumIuCEhtny1leEe8RFwE18cZwLk5d_f_wmd0d0Vssdp148nY"
                   alt="Đất Mũi"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 flex gap-1.5">
                   <span className="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                     3N2Đ

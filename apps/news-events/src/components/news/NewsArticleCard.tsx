@@ -14,7 +14,7 @@ export function NewsArticleCard({ title, excerpt, date, readTime, category, auth
   return (
     <article className="bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
       <div className="aspect-video w-full overflow-hidden bg-surface-container">
-        <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={image} alt={alt} />
+        <img className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src={image} alt={alt}  loading="lazy" decoding="async"/>
       </div>
       <div className="p-space-lg flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-2">

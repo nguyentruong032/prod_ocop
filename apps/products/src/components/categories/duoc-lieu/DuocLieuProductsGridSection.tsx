@@ -176,7 +176,7 @@ export const DuocLieuProductsGridSection: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     alt={item.alt}
                     src={item.image}
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute top-3 left-3 flex gap-1.5">
                     {item.isFiveStar ? (
                       <span className="px-2 py-0.5 rounded bg-[#C89B3C] text-surface-container-lowest font-label-sm text-label-sm font-bold flex items-center gap-0.5 shadow">

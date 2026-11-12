@@ -165,7 +165,7 @@ export function StarCategorizedProductsGridSection() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 src={prod.image}
                 alt={prod.alt}
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-2.5 left-2.5 bg-[#C89B3C] text-white text-[11px] font-bold px-2 py-0.5 rounded shadow">
                 {prod.stars}
               </div>

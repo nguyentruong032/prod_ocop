@@ -26,7 +26,7 @@ export function LeadInvestigativeSection() {
                 data-alt="Editorial still life photograph showcasing authentic Vietnamese OCOP specialty goods on a rustic weathered dark wood table. Glass bottles of traditional Phu Quoc fish sauce with rope-tied necks, a rustic ceramic jar of wild forest honey with a wooden dipper and honeycomb, fresh whole star anise in a woven bamboo basket, cinnamon bark rolls, and dark roasted Arabica coffee beans in a vintage ceramic crock. Warm cinematic chiaroscuro lighting, earthy tones of deep terracotta, amber gold, and forest green."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYbc2t0xx0iJL1cGXt_WqhYixlwRWQ3CXeKb8Le6q-ahqAR72Lr294L0rMhZDffv5nQLSNU34frIE_M7pgQ6NckiR-85x3ph0gwZawAzL_VDksf1-U5gS2Na2wnXSC78_nSLd6yUPpRnsR0d3UHGFtMCR5FBzBzStuK-B-sCEuLCIFRHA4ikY06tLpHhOVyBpOoePW9PtlyMe1eKkfFnyHxj8agi1aoTLwU6on4II"
                 alt="Nông sản OCOP Việt Nam"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
               <div className="absolute top-space-md left-space-md flex flex-wrap gap-2">
                 <span className="px-space-sm py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1">

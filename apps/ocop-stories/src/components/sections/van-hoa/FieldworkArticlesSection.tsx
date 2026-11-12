@@ -182,7 +182,7 @@ export function FieldworkArticlesSection() {
                   data-alt={art.dataAlt}
                   src={art.imgSrc}
                   alt={art.title}
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-3 left-3 flex gap-2">
                   <span className="px-2.5 py-1 rounded bg-surface-container-lowest/90 backdrop-blur font-label-sm text-label-sm text-primary font-semibold">
                     {art.province}

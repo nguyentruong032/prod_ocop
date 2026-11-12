@@ -38,7 +38,7 @@ export function Products() {
               <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 data-alt="Artisanal loose leaf green tea leaves dried to perfection on authentic wooden tray with porcelain teacup in Tan Cuong Thai Nguyen tea hills background, natural soft lighting"
                 data-img-src="image" data-img-alt="headline"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZg4eHHL-Oh28ibFos0gPvVhmiL4R3TZDOk1-y7wTnpdxMJwo6TUwjxGNmAAsxr5bcv2KaK1mThBBgmZHxNOWHojD_Y9PpwSk7kun0yH0g1gF-vD-kqyV2SAOpLIsukdPetLMDR41g3tQS0uvuoY1ENAu3fBUtrozsxXvEFse0vQmRnNq-0Nn0Foo0fxGnxCR1z-B-EpJon2EIwIhHmpXB1R8OJj0PUKo8cNdkgo" alt="Trà Đinh Ngọc Tân Cương" />
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZg4eHHL-Oh28ibFos0gPvVhmiL4R3TZDOk1-y7wTnpdxMJwo6TUwjxGNmAAsxr5bcv2KaK1mThBBgmZHxNOWHojD_Y9PpwSk7kun0yH0g1gF-vD-kqyV2SAOpLIsukdPetLMDR41g3tQS0uvuoY1ENAu3fBUtrozsxXvEFse0vQmRnNq-0Nn0Foo0fxGnxCR1z-B-EpJon2EIwIhHmpXB1R8OJj0PUKo8cNdkgo" alt="Trà Đinh Ngọc Tân Cương"  loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-primary text-[#c89b3c] font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
                 <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                   star
@@ -67,7 +67,7 @@ export function Products() {
               <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 data-alt="Traditional wooden fish sauce barrel vats in Phu Quoc island factory, artisan holding clear amber fish sauce in glass flask, warm artisanal rustic cellar lighting"
                 data-img-src="image" data-img-alt="headline"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN9Jj4ZMQELsX8Ii10OfkJmfNhtIo28EehXMLa3pgJZpNUhHkdqpm3Jz8grSjevMSJ-wecMaTLqrnSNvzG5Jc7WiZijWB_SCxhXdcKA86H9U31NkXkxjhAoyqz0G8hwkWB5P5RjSZ1DFUPnypDKPeI0E-RAY2xuv7_c0yS-uRZkwDLgDgxtqqGObiP-Sv8tLAGYeAwxVIOE-sBQDxVtXXPKMFLexNG1yElcXfX470" alt="Nước mắm Cốt Khải Hoàn 43°N" />
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN9Jj4ZMQELsX8Ii10OfkJmfNhtIo28EehXMLa3pgJZpNUhHkdqpm3Jz8grSjevMSJ-wecMaTLqrnSNvzG5Jc7WiZijWB_SCxhXdcKA86H9U31NkXkxjhAoyqz0G8hwkWB5P5RjSZ1DFUPnypDKPeI0E-RAY2xuv7_c0yS-uRZkwDLgDgxtqqGObiP-Sv8tLAGYeAwxVIOE-sBQDxVtXXPKMFLexNG1yElcXfX470" alt="Nước mắm Cốt Khải Hoàn 43°N"  loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-primary text-[#c89b3c] font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
                 <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                   star
@@ -96,7 +96,7 @@ export function Products() {
               <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 data-alt="Raw pure mint honey honeycomb and glass jar on stone background amidst purple mint flowers in Dong Van Karst Plateau Ha Giang Vietnam, soft natural mountain light"
                 data-img-src="image" data-img-alt="headline"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9H4shWXKL58ZBWGY66jltbMjcDjKuP6h3T90ZOQO_rshI_K-Gy1juBXsNJAmVJzOxfjktLKYHq4LP-F7WlLeDEyX6kjsOsYYWm2fUS9SnlXrvqekLSlGvuEtRkXjFi_WIaS4uds-2VfbqxX_Fsw7MEQJCNvziRFNVDeB-4DxD-vpii2uLaPAV2Dq_gOUfkxI5qRYZ4sSH4ol8vSBGyRE2RgCXfalZOwNEx8yejQc" alt="Mật ong Bạc Hà Cao nguyên đá" />
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9H4shWXKL58ZBWGY66jltbMjcDjKuP6h3T90ZOQO_rshI_K-Gy1juBXsNJAmVJzOxfjktLKYHq4LP-F7WlLeDEyX6kjsOsYYWm2fUS9SnlXrvqekLSlGvuEtRkXjFi_WIaS4uds-2VfbqxX_Fsw7MEQJCNvziRFNVDeB-4DxD-vpii2uLaPAV2Dq_gOUfkxI5qRYZ4sSH4ol8vSBGyRE2RgCXfalZOwNEx8yejQc" alt="Mật ong Bạc Hà Cao nguyên đá"  loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-primary text-[#c89b3c] font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
                 <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                   star
@@ -125,7 +125,7 @@ export function Products() {
               <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 data-alt="Traditional wood-fired Phu Lang ceramic glazed vase with natural ash glaze sitting on rustic potter workshop bench, earthy terracotta and earthen tones with authentic texture"
                 data-img-src="image" data-img-alt="headline"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVAmt1t6f6KrmJqdNkRSK9-zWIGLN9munCAarsnVXUK1FFz3Ec1nAxVfNW4xMOx2m21mRB12TTxS0TQCO53XutEGP3M0sVnGESt9qLdZhvjIcR6plWAjzbd4L1mep8dTzC8ruq9hAm6gEGasVyh9G_1JRE3kPYQFaU8JpgV3ltqxA34whzyqKYcAHbUengbvCeb90hfA9iNvF48hKLs6DTmMEAiwKRZt_HC3R72N8" alt="Gốm men tro Phù Lãng" />
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVAmt1t6f6KrmJqdNkRSK9-zWIGLN9munCAarsnVXUK1FFz3Ec1nAxVfNW4xMOx2m21mRB12TTxS0TQCO53XutEGP3M0sVnGESt9qLdZhvjIcR6plWAjzbd4L1mep8dTzC8ruq9hAm6gEGasVyh9G_1JRE3kPYQFaU8JpgV3ltqxA34whzyqKYcAHbUengbvCeb90hfA9iNvF48hKLs6DTmMEAiwKRZt_HC3R72N8" alt="Gốm men tro Phù Lãng"  loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-primary text-[#c89b3c] font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
                 <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                   star

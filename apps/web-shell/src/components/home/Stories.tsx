@@ -22,7 +22,7 @@ export function Stories() {
               <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 data-alt="Elderly Vietnamese artisan tea master carefully roasting fresh tea leaves by hand over a traditional cast iron wok with warm glowing firewood embers, Tan Cuong Thai Nguyen authentic documentary portrait"
                 data-img-src="image" data-img-alt="headline"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbcSvT6wzf5dGT-zwtx5-BiDFP77jMdvMBVXaaUFUnEFySbUKrmgksRzqoHX2iMGzmhfNg1kw8-5wigxLWQqTmrv5qFib3hTiPm3VsQtdbxwniB6gdgpw9YPppVcxG9Msys3OuJKYym0-qnJRvJkVceTANCLzBWxyNtdMXqa3u6pXp952xO91u181FCRe1T9UjxdBB4vsT--TquA7qK3bZvKZTPYkUunJlW0zO8vk" alt="Giữ lửa nghề sao chè truyền thống" />
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbcSvT6wzf5dGT-zwtx5-BiDFP77jMdvMBVXaaUFUnEFySbUKrmgksRzqoHX2iMGzmhfNg1kw8-5wigxLWQqTmrv5qFib3hTiPm3VsQtdbxwniB6gdgpw9YPppVcxG9Msys3OuJKYym0-qnJRvJkVceTANCLzBWxyNtdMXqa3u6pXp952xO91u181FCRe1T9UjxdBB4vsT--TquA7qK3bZvKZTPYkUunJlW0zO8vk" alt="Giữ lửa nghề sao chè truyền thống"  loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <span className="absolute bottom-4 left-4 px-3 py-1 rounded bg-primary/90 text-surface-container-lowest font-label-sm text-label-sm font-medium" data-field="category">
                 Văn hóa & Tinh hoa bản địa · Thái Nguyên
@@ -93,7 +93,7 @@ export function Stories() {
                 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   data-alt="Vinh Long red terracotta brick kiln towers glowing along Co Chien river canal, traditional artisan shaping red clay pottery with smoke rising in evening light"
                   data-img-src="image" data-img-alt="headline"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvMm5-n987KKipgAbJ8WLcsuUuEyVO5hwp609-LQlzsMTMtmNq6gFi45P4uV9_WSls9qWxVLSFnZ3IRKwUi5t4oQFGD9kG2YqFJB10fmg6hrxD2tDFK6RMAXoQ4mKrTdetfgxGDAjU_1gmAmxOb7ejsH7c9wF8oTZXkIuLUJ7oiFoUdmX2bLOoFPl9oO7zvoLY8vKLScVcv8y8kaANZPggtfBADZzvxlupQd-87k" alt="Thanh âm gốm đỏ Vĩnh Long" />
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvMm5-n987KKipgAbJ8WLcsuUuEyVO5hwp609-LQlzsMTMtmNq6gFi45P4uV9_WSls9qWxVLSFnZ3IRKwUi5t4oQFGD9kG2YqFJB10fmg6hrxD2tDFK6RMAXoQ4mKrTdetfgxGDAjU_1gmAmxOb7ejsH7c9wF8oTZXkIuLUJ7oiFoUdmX2bLOoFPl9oO7zvoLY8vKLScVcv8y8kaANZPggtfBADZzvxlupQd-87k" alt="Thanh âm gốm đỏ Vĩnh Long"  loading="lazy" decoding="async"/>
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-surface-container-lowest/90 text-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                     <span className="material-symbols-outlined text-[26px]" style={{ fontVariationSettings: "'FILL' 1" }}>

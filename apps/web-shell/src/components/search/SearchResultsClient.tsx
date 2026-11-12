@@ -114,7 +114,7 @@ export function SearchResultsClient() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     alt="Mộc bản đặc sản trà Đinh Ngọc Tân Cương"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx4pHkEIejrXl3C5CYl5aS-9BO_91NyqLkDof403kMhQO_dTSmPa4lYDfzg4p-GNb5j9KZDX99YLRkzztR1lbbf6llnfs8TBGKpQijSKBG2Bk_jGHUSQyjsUeVvZcjvUl1jpbYDQBNIpwQKAGND-pCKLziv98o9lRJ9E_YgInhgoXq-XeGeAVVEyjPc_QGIM5OxNCdsHQlrvHix2Mbh6OzF4UyJ4abEUVNJhS4fwI"
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#1F4D3A] text-[#C89B3C] shadow-sm font-label-sm text-label-sm font-semibold">
                     <span className="material-symbols-outlined text-[15px]" style={{ fontVariationSettings: "'FILL' 1" }}>
                       star
@@ -155,7 +155,7 @@ export function SearchResultsClient() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     alt="Nghệ nhân cao tuổi sao chè thủ công trên chảo gang đỏ lửa"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3CCgASuElO6Cr8EUgNTa_Cz32OVuxkLUyiM4s-33u8gi-QNzT6D9Kxq1-keckkP-uNv33txEIPZoEOzNd9-_QpXQ1gZ5AlaAuViudguPS3e2Wlt2-_cK-Y-a_-zxOlABCPoSGXne6YwT5-pMIapA2Uva4GJ9Vr8Xr94PSKBOPyR0oVB9GTEsOZZkTDe7rM9Mlg7Ndx4A4xjwqXkoJuTmocCq90hQeVatSUAERQuY"
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#984724] text-white shadow-sm font-label-sm text-label-sm font-semibold uppercase tracking-wider">
                     Ký sự Di sản
                   </div>
@@ -233,7 +233,7 @@ export function SearchResultsClient() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     alt="Toàn cảnh những triền đồi chè Tân Cương xanh ngắt"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlSa7glfaNUyn6tyGsfwMDMDk6Mn2aNUPSqqhLt2ckCdwc7wd7olYlo66m3wU1YQ0aXhwzz4OdGtVL22aTEW__R19AUnSbJQnHeZsLkIkUdYzzqsXxPZwVaAKUrNgdnSIDb9iRl8ONxaMuQM-i4tQo1CMmpja2pUVYkIUEyDhvkUvuXJ4bItvWYmgIGGLyJubTkjGzoMrnKL58ly0Ui5IJDRiqqIihHDVU_prpQcA"
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#1F4D3A] text-white shadow-sm font-label-sm text-label-sm font-semibold uppercase tracking-wider">
                     Điểm đến &amp; Du lịch
                   </div>

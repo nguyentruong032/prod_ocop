@@ -203,7 +203,7 @@ export function EditorialArticlesGridSection() {
                     data-alt={art.alt}
                     src={art.image}
                     alt={art.title}
-                  />
+                   loading="lazy" decoding="async"/>
                   <span
                     className={`absolute top-3 left-3 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold ${art.tagColor}`}
                   >

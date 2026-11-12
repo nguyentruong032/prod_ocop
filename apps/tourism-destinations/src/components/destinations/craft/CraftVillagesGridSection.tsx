@@ -27,7 +27,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Nghệ nhân gốm Bát Tràng Hà Nội đang vuốt men rạn trên bàn xoay thủ công. Những lọ hoa men rạn men lam cổ truyền được xếp thẳng tắp trong xưởng gốm cổ kính, ánh sáng tự nhiên rọi qua khung cửa gỗ rêu phong, phản chiếu nét tĩnh lặng của không gian sáng tạo truyền thống."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1yJvyc1zvUsrtVSGieEULaCfmmfPcqz57ZKR2EOL-Jy-Q2HnBvZ8mDUQUN8wn0hQISJHSiJl-4FpPT1FYQURMoX3B-IgCCItuv41BGTbYQGoydrdV-kG7MG2RAeRhawLGNG2lI4l4xemJa8AyLJIVkLjsP8Sv3Zc3MXzq-yBOYMfE1NXX3SfMPOSGZ2R5k0pAHvu_LuU5dY_3aQCAO7dDEdQLuqdMDpKhKwkkbz4"
                   alt="Bát Tràng"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Đồng bằng sông Hồng
@@ -86,7 +86,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Cận cảnh đôi bàn tay của nữ nghệ nhân thêu tay làng Quất Động Thường Tín Hà Nội đang thoăn thoắt kéo sợi chỉ tơ nhiều màu trên khung thêu gỗ. Bức tranh thêu phong cảnh chùa Một Cột và rặng tre Việt Nam với chi tiết sắc nét, đường chỉ mịn như lụa vẽ, ánh sáng studio mềm mại."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ2LLphJc44wyCvB1_wdKRu6rdMTXPDyXdFNQbkoMLx9-3i8RNl705p0dQPXdK1ls5_yuwrBe7W_MFwHjov-RfeV3srMBvV49xwm27A665KHei1UJnFitcdTbWp0DworVr1dX7UxBVKCLAnIslXP12_kAWFc5NlHXJOSC30C2JFekxY-hBDpBupW3OCzlafBEc9Uz7iJnmzUNOoOscRxPfGpaeBExQ3x7ICfGfrGU"
                   alt="Quất Động"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Đồng bằng sông Hồng
@@ -145,7 +145,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Nghệ nhân làng đúc đồng Ngũ Xã Ba Đình Hà Nội đang gõ búa chạm khắc hoa văn rồng thời Lý trên mặt quả đại hồng chung bằng đồng đỏ. Lò than rực ánh lửa ấm, những pho tượng Phật đồng đen trầm mặc toát lên khí phách hào hoa kinh thành Thăng Long."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa0-xEtUvYDvfQUFl0NE5Y3hzKcB2zGpMhVIM0xBBWZF0s-jJw1EI8KDup9ylEPGhCl7Z0sNBWbvV3jDUxb2fy2MDtCsVd3AVjM92rqbylfXV8WzgArE02Yz_ZTw1prwygbP5g7yQReCBn_hIg5h3EaZHYavn_gOu-0pVEvkey12t2paur4yhXdJQKmRrYX6YOqEzrBxuLcEQ0PAVGmhqErS0mMGeJDwS6J3bc7ks"
                   alt="Ngũ Xã"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Đồng bằng sông Hồng
@@ -204,7 +204,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Phụ nữ Chăm làng dệt thổ cẩm Mỹ Nghiệp tỉnh Ninh Thuận đang ngồi dệt vải trên khung dệt gỗ cổ xưa trong ngôi nhà rường truyền thống. Những cuộn chỉ màu đỏ chàm vàng rực rỡ dệt nên họa tiết tháp Chăm, quả trám và rồng bay sinh động, nắng gió phương Nam rọi vào ấm áp."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrfJEveOI9zxGOs6hz567PKCuO4z19lJPLOpUXZLiwgvAhyoefXBoKcDO116wnEsJrHmVXNTddcEDLSOSlOdzy3OboyliSFpCpUKllj35chhqVldIH6BEAKQBTKwZWJhZeswwhkEbeExkZWjMZafgf3O-bYGFoYDuJqRuqTTlzMfzxGiZVRJYTlyx_CJw6c66a_nqo2Nn90TCNaSV0Fm5OxnLMIYxO0NYvGRLWyFU"
                   alt="Mỹ Nghiệp"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Nam Trung Bộ
@@ -263,7 +263,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Thợ chạm bạc làng Đồng Xâm Kiến Xương Thái Bình dùng đục nhỏ chạm khắc tỉ mỉ bức tranh tứ linh trên đĩa bạc mỹ nghệ nguyên chất. Ánh bạc trắng lấp lánh phản chiếu các chi tiết chạm lộng kênh bong kỳ công, không gian đậm chất làng quê đồng bằng châu thổ sông Hồng."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy5N172rTWOqSDkjspr2c3f8Z4YYPsBQo75NPjOu-Wft8Rht8rkCTi5cTO6QxbrkjmCdf3t8Ecrr55kvejCwfF-80q58G_JCVpXrx3NpKq92swAowr8Bhszh5AC4NvKKVo7dxQZ9NwP256fK60AO-_XGFNESR_0wfrYgmL3trj-31HHTYtcO8zGVQ46798bGR8jy7QoK9lQZBFl-2VBypECmIgyTv2gD2KmmL2Liw"
                   alt="Đồng Xâm"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Đồng bằng sông Hồng
@@ -322,7 +322,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Xưởng mộc truyền thống làng Kim Bồng Cẩm Kim Hội An Quảng Nam bên dòng sông Thu Bồn hiền hòa. Mạt cưa thơm nức mùi gỗ mít gỗ kiền kiền, nghệ nhân điêu khắc đang tạo hình các mảng chạm đầu rồng cho thuyền gỗ và nhà cổ Hội An, không khí lao động miệt mài."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu3jO4Eo-fyS37Pt2p82nYg0iyVjUdeQbk1kr_xYfkINPXenWFhO7NO4CLp1iSqDvhybpPIHo9yhVzCn7cQ1kvsyTN8LD20mOF-9wc8hOIPMFkKNs0qycsKCfYYQILf-Q4G80Y-Dey3p8kWi2Wx4kk6HKdIEZLhh-rQ2hHr8cjGBq6egmpeC3Meu3apal4Wnhsya2ZUvRmhVn5f1MVw6KSB0SrqWHPZwDs--N13r0"
                   alt="Kim Bồng"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Duyên hải Miền Trung
@@ -381,7 +381,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Tác phẩm điêu khắc đá cẩm thạch tinh xảo tại làng đá mỹ nghệ Non Nước dưới chân núi Ngũ Hành Sơn Đà Nẵng. Bức tượng Quan Âm Bồ Tát bằng đá trắng ngà mượt mà như ngọc, xung quanh là các tảng đá cẩm thạch thô và búa đục kim loại, nắng biển chiếu rực rỡ."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNlogQgIMhixb7Wx4tkJk9cormGLMFA3t5dQNcQRLP4_y2fArr_aR8BWaS0WoutWEgerZZUJo-9ioLh2XcgNs_yWCMlJG-bO0E-ktTuXWhPL6FUywYS5TrQ9qf870Gf9FF8JuJczeiERYwL67wTsgXMVpJ-YgnGXzz6czy2_fRQPTRQ3_bCIKLmLQBDUlsXc-BZquhiQM7qCPTWyPLqNYSqhlg0W2kISNZZTYJ9jQ"
                   alt="Non Nước"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     Nam Trung Bộ
@@ -440,7 +440,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Khung cảnh làng nghề bánh tráng Thuận Hưng Thốt Nốt Cần Thơ rực rỡ với hàng nghìn vỉ phên tre phơi bánh tráng trắng muốt trải dài dọc bờ kênh sông Hậu. Người thợ tráng bánh tay cầm gáo dừa múc bột gạo nghi ngút khói thơm, ánh ban mai Nam Bộ trong trẻo."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqS6gZsqyk1QUjnGq_kmCAX-sSoFxm6Cy37QwHtLq0AJ1C3odfaneBknMznbSatTPB_AYDrWvoRqp1Ga2jRmdVJV5E6aVfMY5YhByOfPlqQqlku8NBLxs16TIMaeMnYThClLijGNAk-mFVy3FpgFN2ee9Ti-7qVLths0SHvqlW7GuvB0yHXAcSAJBMAyKRBdHUSVzvhVZxzbqYVzzAj7_OnoqjVXftZvaipmswmAo"
                   alt="Thuận Hưng"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     ĐBSCL
@@ -499,7 +499,7 @@ export function CraftVillagesGridSection() {
                   data-alt="Làng hoa kiểng Sa Đéc Đồng Tháp với những giàn hoa cúc mâm xôi cúc vạn thọ trồng trên giàn tre bắc trên mặt nước phù sa. Người nông dân chèo xuồng ba lá chăm sóc hoa rực rỡ sắc vàng sắc hồng dưới ánh bình minh miền Tây trù phú, điểm đến du lịch OCOP sinh thái tuyệt mỹ."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgVGdrZwIpn8Jwc30RBEGOirFn4KC2DR3INGlT85VBOczJcj_sqa6kBl8ijnBhTMZeG6sJqb7Eos3nKRDxS5hWDN4GXaKA7VdRxmAJDYq0_k80XzoSUvO47FVgf8wgrG3wvRGcY-5ldzOYXIPhBykhATKcB5rHIrpQmz-X0ngfV377hT0zmDLQ2Ty4MGu4ya5GoLyH8Llj-4wVL1WSDSlB7A5kP7o7E2MJhc4zh5k"
                   alt="Sa Đéc"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-space-sm left-space-sm flex gap-space-xs">
                   <span className="bg-primary text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold uppercase">
                     ĐBSCL

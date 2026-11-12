@@ -14,7 +14,7 @@ export function TechnicalInvestigationSection() {
                   data-alt="Traditional dark green celadon ceramic teapot with handle and spout, small ceramic teacups resting on rustic textured wood plinth, handwoven bamboo winnowing tray filled with dried dark Shan Tuyet tea leaves next to handmade clay jars with cork stoppers, earthy warm terracotta background, moody museum-grade studio lighting, heritage Vietnamese tea craftsmanship"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmz3JmIbGrAdQrS0_mf203lNcdjZ0SN4xo-RDSNgGnDd-7Jx4bNIjDMj5Bc2m85lc02QThJywefCoDAJ5k3z_F8kdRGlduVKw-QYmQN8xYE9vWP7XQDLiIkUwkkSrTR7RGeA4hJgq5E6Gha6oIpXYQj9Pvz7H3ldQu2pm0a2gmo3kSPps-tImKbfTW6LbJO0oCq_Rej5ajvbIcUSMGFCrKN2iK5elvD_f2l3VXToY"
                   alt="Chè Shan Tuyết Tây Côn Lĩnh (Hà Giang)"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute bottom-3 left-3 right-3 p-space-sm rounded-lg bg-primary/90 backdrop-blur-md text-on-primary flex items-center justify-between text-body-sm font-body-sm">
                   <span className="flex items-center gap-space-xs">
                     <span className="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">spa</span>
@@ -33,7 +33,7 @@ export function TechnicalInvestigationSection() {
                     data-alt="Artisanal glass bottles of traditional amber Phu Quoc fish sauce with string ties and cork lids alongside cinnamon sticks and star anise in round bamboo steamer baskets on rustic dark wooden table, soft dramatic moody lighting"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKY8yZ7AhPW42Q4FjCZKEhfBmu-YXAxZ7YGtNvGViNjJhJI1OVuDLmk1qLodU4QPgW_PxWv3o4l4ZvYgj2aWKhSKEJoG78UFflwxYBesOtAXRZx4xC_yxeN_HS8f4_A0_tlSCRU1nL7cdOyhOTxdlK0gZmByN42UxxrIpen9d70nhMrVZgO4qCeUXMuNrpPtLfJ0aSZkNJ8TvNuIkLoMTcWYbuL78JeK0jrybvRws"
                     alt="Nước mắm Phú Quốc 35°N"
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-xs">
                     <span className="font-label-sm text-label-sm text-on-primary">Nước mắm Phú Quốc 35°N</span>
                   </div>

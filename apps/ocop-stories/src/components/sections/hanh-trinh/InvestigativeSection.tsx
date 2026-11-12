@@ -24,7 +24,7 @@ export function InvestigativeSection() {
                 data-alt="Young Vietnamese agricultural engineer examining organic macadamia nuts harvest in Dak Lak plantation during golden sunrise light, wearing work clothes and checking quality, cinematic documentary photography style with deep green canopy and rich terracotta soil tones"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRt_sKT3ddwWX2xrHSOJ1uiAQwU6vEmmWde8jnezkIMfQVsSNCiVVNBfoYYYlAq6pAR9r4ZxKzlwyvnp5v8mGVa0bu11HGr1i0vdCLD9qd8FSIyTjz-NteCbC9vpkd9tRs0Z_q40Q5THxjWezgXSZEGYkI07qUIjRu358SAox_9iCAUqp5GdiSD_u-3cGYK698cstZDDT7ICpAOG9iaThNw7KGBTamXcPNv6JqOks"
                 alt="Hành trình 7 năm của chàng kỹ sư 9x đưa hạt Mắc ca Đắk Lắk đạt chuẩn quốc tế"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
               <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider shadow-xs">

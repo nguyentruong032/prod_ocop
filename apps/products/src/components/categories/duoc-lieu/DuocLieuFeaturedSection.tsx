@@ -33,7 +33,7 @@ export const DuocLieuFeaturedSection: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 alt="Close up of genuine wild Ngoc Linh Ginseng root with red berries under humid primary mossy montane forest canopy in Kon Tum Vietnam"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCITlM97xozneBrACmmdltv5eU3OKTt1YK0h1FWobrqiYL3--jHZ7e-LbyVvZFopO0pDETkG1suyCkjVGms4-TNOK1FijQmvvMoJl8Ulk3RFB9FJXDbJ-UaY4dvwZoiSTS-guzfhK2GhSU90T9cXUZLII7JJKRVoLurehA6DFZxcESUvl1yAHIoBf0un4IhJKYhB_MkESkI_eH2W6WuX2Zq-1D6LL8EoQEKyJyPrj0"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
               <div className="absolute top-4 left-4 flex gap-2">
                 <span className="px-2.5 py-1 rounded bg-[#C89B3C] text-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider font-bold flex items-center gap-1 shadow">
@@ -82,7 +82,7 @@ export const DuocLieuFeaturedSection: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Traditional harvesting of aromatic cinnamon bark rolls in Tra Bong Quang Ngai misty mountains"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuARiUdPBp9Tdk79Gc1h2a3fBxrdlOAP4_Oa4eYJCAkltyMRfetfdapr0KIMa1ZBdd4AIIrFkLghiOGA8dhrTB6dllxJTkkLDcsuKy2aP0AQckLhN3FABdv7snGmX-jYZZxiuGj1feM2uyW33JxGiMsaZdiZFg3U2z40FnRtdSoi6jaTFnEdvORy6d5nf7Iy2P0iAnzTAYcyYdf4JxuUJoJsMyRhXZJs6ncE3u194P4"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                   5 Sao
                 </div>
@@ -119,7 +119,7 @@ export const DuocLieuFeaturedSection: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt="Pure mint flower honey jar with honey comb on karst plateau landscape of Dong Van Ha Giang"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjE5xG4nEOKuRrpI3jc-md0PNVP9i5mj7Z-4vLKiPwmcMCWg0G9gJI9gXMzd2PiU-jPUIJqzpUjD4AVRP8wupaWFyznEZUSeoK9Bqslhz2kEzycS0jfPkuQKkcFu-5FLmdy5ehNmYqCyljP6FqzEcgU5db4Vku4r_OuBBJU-eEFuh5JSeTup9Z0QASRqmeLuODGklOjpAKmEmga1bsm7YKUhwi87a-Lh3TzB0dfV4"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-[#C89B3C] text-surface-container-lowest font-label-sm text-label-sm font-bold">
                   5 Sao
                 </div>

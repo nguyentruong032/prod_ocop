@@ -126,7 +126,7 @@ export default function Destinations() {
               <div className="relative sm:w-1/2 min-h-[220px] overflow-hidden">
                 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt={featuredLocality.imageAlt}
-                  src={featuredLocality.imageSrc} />
+                  src={featuredLocality.imageSrc}  loading="lazy" decoding="async"/>
                 <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded bg-primary text-primary-fixed font-label-sm text-label-sm font-semibold">
                   {featuredLocality.badge}
                 </span>

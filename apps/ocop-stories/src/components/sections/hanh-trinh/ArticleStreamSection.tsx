@@ -126,7 +126,7 @@ export function ArticleStreamSection() {
                     data-alt={art.dataAlt}
                     src={art.imgSrc}
                     alt={art.title}
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute top-3 left-3">
                     <span className={`px-2.5 py-1 rounded ${art.tagBg} font-label-sm text-label-sm`}>
                       {art.tag}

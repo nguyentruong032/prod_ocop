@@ -34,7 +34,7 @@ export function NongSanFeaturedSection() {
                 data-alt="Dãy nhà thùng gỗ bời lời khổng lồ tại xưởng ủ chượp nước mắm truyền thống Phú Quốc, ánh sáng tự nhiên rọi qua khe cửa gỗ vào màu nước mắm nâu cánh gián sóng sánh trong vắt, tĩnh lặng trang nghiêm."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKVmocCvm3lDYtlcUDuVp2P3wEW3zgCmUZmvu3qGve2i1L5OcTOF5vJ0_73zzOGS8VWQzPLWowb12TTKZWJ_sZkXDrbohaghvxq31omIv1-e3-TBdph3ef88stZD-N3wlprMitzHxHPCG18SoZEcC4B3Pgxbe0DPxoGDbxqQ4l9_25vYCC-Sco-FVwqy6MQ9bPTKcmMvfYQNxxqNCTnhVkgoQiHtm_Z398u4j3V8c"
                 alt="Nước mắm Cốt Khải Hoàn 43°N"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary text-[#C89B3C] font-label-md text-label-md">
                 <span
                   className="material-symbols-outlined text-[16px]"
@@ -82,7 +82,7 @@ export function NongSanFeaturedSection() {
                 data-alt="Hũ thủy tinh chứa mật ong hoa bạc hà màu vàng chanh ánh xanh nhạt trong suốt, nền cao nguyên đá vôi Đồng Văn Hà Giang với sương mù và những bông hoa bạc hà tím dại mọc trên kẽ đá nứt nẻ."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHUmo1S7XG9BYpDCbf_HY4xhU3MXuWuT4cQc_VnXaCGmeV2iDRtns2ozfALaTlDOygbk2Eq6D0R7CxgJzt1TbsR0I_Z41owj05IujlgpYkoEdZ-g2FAlkoChaGdRbV0dl6SDMHZJFp3zrX77PTZImI5Vp42Mawd5kE547sa96AGOZfV1_aGNo0BRVhnRZJN5feTVurldgdK-BLk_jdrKowAfSqqtGpFl5eon11qG8"
                 alt="Mật ong hoa Bạc Hà Cao nguyên đá"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4 inline-flex items-center gap-1 px-2.5 py-1 rounded bg-primary text-[#C89B3C] font-label-md text-label-md">
                 <span
                   className="material-symbols-outlined text-[16px]"
@@ -128,7 +128,7 @@ export function NongSanFeaturedSection() {
                 data-alt="Hạt gạo Nàng Thơm Chợ Đào thon dài, đục ở tâm như hạt lựu, đựng trong bát gốm mộc mạc, hạt cơm chín bóng bẩy tỏa khói nghi ngút thơm lừng, ánh sáng ấm cúng bữa cơm quê Việt."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxTooXcJZJsTpPnUVkn6F5MB2NgZ5YGs-2mgocHWPer7ukGlXX3MBQI6P3hlupqYuEzXOhkP9EYrycrPwT0L6gLiI7z7eyga_6cCRPjFe2QU6i1RVSenZispDCwXFStSX8Er0Ty73jtgxl9_et7lbit2HTZojBgCjKze8pof3uYaxguYK9xyS5_xyHOwZ8HqPwRRTR4VfeasyhJxF72a4VCl8FJ8uTJYv7RaZxyFI"
                 alt="Gạo Nàng Thơm Chợ Đào"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4 inline-flex items-center gap-1 px-2.5 py-1 rounded bg-primary text-[#C89B3C] font-label-md text-label-md">
                 <span
                   className="material-symbols-outlined text-[16px]"
@@ -174,7 +174,7 @@ export function NongSanFeaturedSection() {
                 data-alt="Những quả mận hậu Mộc Châu sấy dẻo màu đỏ tím sậm phủ phấn tự nhiên xếp trên nia tre đan thủ công, đằng sau là thung lũng mận Nà Ka Sơn La xanh ngát bạt ngàn mây phủ."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCswOW9H_cAGW2ZcfdrVYZX28Rytew8VOvhly4QiGk9hK23FEvFEWZRydTGLgGW5bTYUNzNTb3kmVms7hgTpSBJoK-T90dhwMgORMsv4enbbYYmn4C-PW2TwPnEuhGrsUfqnrE8QNbMqHgmBl9CzBJ77gPcjLjXId9h07JQvw7PQLfKNr0mSzDjmdXDvwg8XloZXf1t84LbfGgW7Ren2SHgqeJpfv2-aPz8a9kixA"
                 alt="Mận hậu Sấy dẻo Mộc Châu"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4 inline-flex items-center gap-1 px-2.5 py-1 rounded bg-primary text-[#C89B3C] font-label-md text-label-md">
                 <span
                   className="material-symbols-outlined text-[16px]"

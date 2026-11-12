@@ -54,7 +54,7 @@ export function NewsEvents() {
                 data-img-alt="headline"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjWJD-yF4gcEoWQLa8ke94KI2E8FHei_Fsf8eo7AksYdXfDTOiXx8qM_RiozjYR4ci9khAUUTeadCKA3Svk3iMKQckQXowmEXPa-7LfXpS-PrTJVJFBryg94tPAerZSJ4Wnc1-nzDWOsWWH9h7hrh7vTmloq6CkQ1G4LSzPpTd08Qg9bp6R47OshHUKbge7Sd73cmXyEmMseiv5swOKkeL2m9oSn3IUzRMvT0STK8"
                 alt="Nghị quyết mới về gói tín dụng xanh"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-4 left-4 px-3 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold tracking-wider uppercase" data-field="category">
                 CHÍNH SÁCH BÁO TỰ
               </span>

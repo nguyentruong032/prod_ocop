@@ -148,7 +148,7 @@ export function NongSanProductsGridSection() {
               className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col"
             >
               <div className="relative h-52">
-                <img className="w-full h-full object-cover" src={prod.image} alt={prod.alt} />
+                <img className="w-full h-full object-cover" src={prod.image} alt={prod.alt}  loading="lazy" decoding="async"/>
                 <div className="absolute top-3 left-3 inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary text-[#C89B3C] font-label-sm text-label-sm">
                   <span
                     className="material-symbols-outlined text-[14px]"

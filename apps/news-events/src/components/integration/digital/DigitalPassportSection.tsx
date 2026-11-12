@@ -21,7 +21,7 @@ export function DigitalPassportSection() {
                 data-alt="Traditional artisan bottles of premium Phu Quoc fish sauce 35N and honey jars arranged on rustic weathered dark wood table with woven bamboo spice trays star anise and cinnamon sticks under warm moody chiaroscuro editorial lighting inspired by heritage Vietnamese artisanal archives"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAYHHY-meg5Szwiuvd08y23s1ys_E3zSg_hdHvxC3S37x5bV9KzhYo3m5pFSCfB-EFu9-oLGoItms6gSZkiP6ukxiO7LhpcK7Y4gVCQ2s1OiHylae5lFexLZ7qo3ovXFFFcki0brcwzB5tHA_HbIc_Dql2T4HEPIg7T24IUW9zrpT7uRxHLliR9kDpzoTiGL4ffjnBTTOsKM1AV4zELpYNk1B_yBxm-Q211cKyu8"
                 alt="Nước Mắm Phú Quốc 35°N"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
               {/* Digital Passport Verification Overlay Card */}
               <div className="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-space-md rounded-lg shadow-md flex items-center justify-between gap-space-sm">

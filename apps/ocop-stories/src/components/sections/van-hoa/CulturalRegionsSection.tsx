@@ -28,7 +28,7 @@ export function CulturalRegionsSection() {
                 data-alt="Spectacular ancient Shan Tuyet tea trees cloaked in mist high in the rocky peaks of Ha Giang, Northwest Vietnam. Hmong women in colorful indigo hemp clothes gathering silver tea buds, dramatic mountain ridges, ethereal emerald and silver lighting."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWGw8jQ2EOUrNcdFkqLNr9ZcYGTNtKCqrXPLp8WMUT29ymnEo70FqeyKvJ_ygDtkaAAAvfPx-IyCvKa56IBO23kWEqrowwjqhlARbw-hK_4NIYleI65MoTfGAiMeJW_risr-rPGhZxtEl4z5n7IXnvJB5OzsYk6Y4wrxcTBAU4onyNSiI3n-rCV7QRVNy7sXQby3Q0woODWZscFovKWCy218_j7gt3bi9BUVTaqf4"
                 alt="Tây Bắc & Đông Bắc"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-4 right-4">
                 <span className="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">
@@ -73,7 +73,7 @@ export function CulturalRegionsSection() {
                 data-alt="Traditional Red River Delta craftsman courtyard with red terracotta roof tiles, ceramic drying racks in Chu Dau or Bat Trang, ancient bronze bells and woven silk fabrics glistening in soft golden morning sunlight."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBkntqwQN6je777pJ1qD47VWPPwzhBi5l0LGYXc8Yi6MGJnsjz4IKbqMSDP8X5NeHp41864UxtEpsdDdmuzn-h0QFig8yzg8fWZOp-pi9OhFYZ__vG_y4VzbKMp6M-KZPvftcEl_HP_8Euqk3hmH7wYbP3VRpvo6icOxPEV5PVTAIkn53QEhJ4s6XZ5VPp28IdRh-OJWzAZx7wU8T-1AkbSBWZQcu14QTFHpx4ttY"
                 alt="Đồng Bằng Sông Hồng"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-4 right-4">
                 <span className="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">
@@ -118,7 +118,7 @@ export function CulturalRegionsSection() {
                 data-alt="Sun-drenched Central Vietnam coastal salt fields reflecting sky next to green basalt hills of the Central Highlands, coffee blossoms blooming, hand-carved wooden musical instruments of Ba Na ethnic artisans in deep earth tones."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXt0oOMvQXRi9b5rfSgNCkZO8iggRLhN_6QafxUbGW-gZjeBtFfphmk6WdRVR7sZcOrxaEJmVUuy0lEhJa0HvEjc-3DzIaDmPkIBY4VZt1XAR3Bw9UMeZKUw2vIdbobj0tgRFKvsDrVCQNonVdXiKmaNQk3n188-IiofwwbcqlzXpi5YENpB3QJALfGXHGO9ps-ph5EOcr926wZlrRfsBVCg558423GYg13gRzWio"
                 alt="Miền Trung & Tây Nguyên"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-4 right-4">
                 <span className="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">
@@ -163,7 +163,7 @@ export function CulturalRegionsSection() {
                 data-alt="Lush green waterways of the Mekong Delta with wooden sampans navigating mangrove forests, mangrove honey collectors with smoky earthen smokers, lotus fields in Dong Thap under warm tropical afternoon sun."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb89CcMWerDUVmuDL-ATHUZjOBommvEhMH_VR1dcB-L5I9z9vzUG3hHwxzjrp7W8kPFqWskpmgKGBLdA-pPCI2HRuyTPoaXIae0w4GG2C5jWPYo0oqQWAoxjoQL7rEDOnF2B512JIcQQeOFms63r5ejI2rAb0cdLI78lkRoAYIy0mzNNmhovOgou1_AXvPru4xfAl_lERkAdDKrjRtVg7L089p7JxnAUf1pq-T5VI"
                 alt="Đồng Bằng Sông Cửu Long"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-4 right-4">
                 <span className="font-label-sm text-label-sm text-tertiary-fixed font-semibold uppercase">

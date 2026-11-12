@@ -35,7 +35,7 @@ export function FeaturedFiveStarSpotlightSection() {
               data-alt="Exquisite loose-leaf Vietnamese Tan Cuong green tea meticulously displayed on dark textured slate pottery"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyAT21mFT9AQQvAqOADcAsd8a62cnjoaye81yWNwGf05BTDs5AZ6qZC1-HKuBqPkXYsqqnoSZvX6g6NcKvrz4t8L68vixYB4VtTdNIa7B_-8Ey7flZxZL_JZFAeQN8gLrdIP-0HdlXdeshYe-JQF3Kh8n-qNpbUtqEWWUGJdtm3q5a3i7EuyHhYeg6Yurq82iolM4jXNXnYqIj2TXk34jwo6K_9DZkBXZJ9P-TijQ"
               alt="Trà Đinh Ngọc Tân Cương"
-            />
+             loading="lazy" decoding="async"/>
             <span className="absolute top-3 left-3 bg-[#1b4332] text-[#f9fbfa] text-[11px] font-bold px-2 py-1 rounded shadow">
               ★★★★★ 5 SAO
             </span>
@@ -80,7 +80,7 @@ export function FeaturedFiveStarSpotlightSection() {
               data-alt="Traditional artisan fish sauce from Phu Quoc resting inside a handcrafted vintage glass bottle"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsTRmQZTk3qBJ0va-9KvezGSmFvRShdrhgEl7XuXWdu6gxrT46xwEYWLW9Cvp0SJsb6rmsHCFhevLMaGGHeckylvObYpvn18MpGFR2l_-eMO6CydF5EHyu_hv66GfRna_iCEO-D_G3vATGCgPqZu6MDbOB2zRgJPf3tjgUONgqGV1uIpbTSYTOtoGxwh39hVH7_x6KDQx1FQtJD4xphpbjrfFc7XCxEa724RXMJVs"
               alt="Nước Mắm Cốt Khải Hoàn 43°N"
-            />
+             loading="lazy" decoding="async"/>
             <span className="absolute top-3 left-3 bg-[#1b4332] text-[#f9fbfa] text-[11px] font-bold px-2 py-1 rounded shadow">
               ★★★★★ 5 SAO
             </span>
@@ -125,7 +125,7 @@ export function FeaturedFiveStarSpotlightSection() {
               data-alt="Rare whole Ngoc Linh wild ginseng root resting cleanly on aged raw timber bark"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjKc_11N_ljQNd2lCoclXOMdG0vmuF90I44-bwOj7eVAml9SoXW_EBVSw25hmTik_Wb4M88q3EQIw8qMiO_bKg69FbfP3bg3FrSC4j1pPJ-1r9zIgQdK2iA9xicNtXW7_rVHoVfNz-r6SIcDebCVn_UfWidsvAVmc1pzF__Q-vhi4IG6ONKUu2dEO6MtetunC34L0bMAi4qHErt5NjSegbYtuxBklNGPk4C5wF-DU"
               alt="Sâm Ngọc Linh K5 Trầm"
-            />
+             loading="lazy" decoding="async"/>
             <span className="absolute top-3 left-3 bg-[#1b4332] text-[#f9fbfa] text-[11px] font-bold px-2 py-1 rounded shadow">
               ★★★★★ 5 SAO
             </span>
@@ -170,7 +170,7 @@ export function FeaturedFiveStarSpotlightSection() {
               data-alt="Premium long translucent grains of ST25 Vietnamese fragrant rice neatly poured into a handcrafted rustic ceramic bowl"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu69b-hMjmteG8JkO3-VC9xVGfWFnYEWlHyy4rR1IkYK8CDMpAh-id6JGVu3SwTnnMTwm80ETddDmZV-k2jwhBwc-ZeuFIxr01dFT3QFj-1l82uXjOn1hpB5H4hMMoDvsiFRexVeZZY6tySuHxtSPUXw0eMPKD9nwtoWQuvcEbGhxm_pPLs1g6LKWFrBsAJdUfpc8cKlmm07lKF9s4NeBA9d9SiG-l8HuFr2F8Qcw"
               alt="Gạo ST25 Lúa Tôm Ông Cua"
-            />
+             loading="lazy" decoding="async"/>
             <span className="absolute top-3 left-3 bg-[#1b4332] text-[#f9fbfa] text-[11px] font-bold px-2 py-1 rounded shadow">
               ★★★★★ 5 SAO
             </span>

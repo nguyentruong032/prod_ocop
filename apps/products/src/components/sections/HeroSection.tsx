@@ -75,6 +75,7 @@ export function HeroSection() {
                 className="w-full h-full object-cover"
                 loading="eager"
                 fetchPriority="high"
+                decoding="async"
               />
               {/* Floating badge on image */}
               <div className="absolute bottom-6 left-6 right-6 lg:left-6 lg:right-auto lg:w-72">

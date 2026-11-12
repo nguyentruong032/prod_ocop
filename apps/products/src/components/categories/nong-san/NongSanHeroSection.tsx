@@ -54,6 +54,9 @@ export function NongSanHeroSection() {
                 data-alt="Bức ảnh chụp góc rộng cánh đồng lúa chín vàng óng ả tại thung lũng Mường Lò Yên Bái trong sương sớm mai, những người nông dân nón lá đang gặt lúa thủ công, ánh nắng vàng rực rỡ, bố cục tạp chí di sản nông thôn ấm áp cổ điển."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2pt_HaG1Q5q_I5wF4JC3dIc8EOe63IqbwotFJL4Ono4qfmh0e1C3O-5-odZ1f4QlUEVN-gOApinktxcKiImMDsLxutR8nMSZMF-TrhKZGhQqX5UZTLOg1LWiiTz-uNTUKjJ4_EiCNmlajvoAB-qQYVPPdxMKF5C8m-voNK1P4YKkjkXoP3YzamYTu8YswSKedJ-Jq7R8aiGd4j1dPaOGWutZOS99K9fYLyjcYLwo"
                 alt="Lúa Nàng Thơm Chợ Đào"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent flex flex-col justify-end p-6 text-on-primary">
                 <span className="font-label-sm text-label-sm uppercase tracking-widest text-tertiary-fixed">

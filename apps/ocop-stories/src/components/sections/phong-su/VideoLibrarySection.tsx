@@ -190,7 +190,7 @@ export function VideoLibrarySection() {
                     data-alt={v.dataAlt}
                     src={v.imgSrc}
                     alt={v.title}
-                  />
+                   loading="lazy" decoding="async"/>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
                   <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/60 text-white font-mono text-[10px]">
                     4K ULTRA HD

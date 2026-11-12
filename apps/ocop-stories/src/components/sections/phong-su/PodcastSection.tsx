@@ -118,7 +118,7 @@ export function PodcastSection() {
                   <span className="font-mono text-body-sm text-on-surface-variant">{p.dateText}</span>
                 </div>
                 <div className="relative w-full h-44 rounded-lg overflow-hidden mb-4">
-                  <img className="w-full h-full object-cover" data-alt={p.dataAlt} src={p.imgSrc} alt={p.title} />
+                  <img className="w-full h-full object-cover" data-alt={p.dataAlt} src={p.imgSrc} alt={p.title}  loading="lazy" decoding="async"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
                   <div className="absolute bottom-3 left-3 right-3 text-white">
                     <span className="font-label-sm text-[11px] text-tertiary-fixed-dim uppercase tracking-wider">

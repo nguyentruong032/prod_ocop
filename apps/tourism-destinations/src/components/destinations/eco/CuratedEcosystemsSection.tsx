@@ -23,7 +23,7 @@ export function CuratedEcosystemsSection() {
                   data-alt="Magnificent high-mountain terraced rice fields in Mu Cang Chai and Hoang Su Phi during harvest season. Golden yellow paddy steps cascading down majestic mist-shrouded peaks under soft autumn rays, traditional rural Vietnam."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxXOyCIQkqtZioYxRHAuW8U2Vo4HXpnkZfRqG35oDUrQkyCJLufofgK1N0Juutw5s1BnQam--qnMBhZqCOqZeh8AIbb1PWm6_0BV9InnztzVPI0dsBfBlDrWGEq6Gw1F21ZbLpAA6U1Qmjv8dkt2mIQVGHqjVdW0HQIZuTf8Uitk0Vb7w4BvPiwbSSZnqhK1MpHlrCnpYGdUzqdnGFHEm9k2xNDLULDqG3HSoMSWE"
                   alt="Miền Non Cao"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                   Độ cao &gt;1.200m
                 </span>
@@ -54,7 +54,7 @@ export function CuratedEcosystemsSection() {
                   data-alt="Ancient Red River Delta village architecture in Duong Lam and Bat Trang. Ancient moss-covered laterite brick walls, traditional village communal houses, ceramic kilns and banyan trees reflecting cultural heritage of Northern Vietnam."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAd6ynR367Lm7ZBUUA9n09nr0aaO1o8qW7tieBMAgqJF-513Xv-bI0s4v_4nTMaS_IObC142AVJaiIkOez8JY-LsDcS0c1nvkTw75otTfboBaQDXF44558WdZKgUJnbZerAexTrnscJ0wf8Pu1MRP85Q0SnDsTp9ST7wxkjHOp6wCpnGA8svFHEdwlk0FIwWBnICfovoMxifXJGn5ecGEagajnbDS8mW01cSOO_7g"
                   alt="Đồng Bằng Phù Sa"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                   Lưu vực sông Hồng
                 </span>
@@ -85,7 +85,7 @@ export function CuratedEcosystemsSection() {
                   data-alt="Sprawling red basalt soil organic coffee farm and agroforestry cacao plantation in Buon Ma Thuot Dak Lak Central Highlands. Ripe red coffee cherries glistening under canopy shade trees, rich red earth terrain, Vietnam highland culture."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtjOMEpwjIRVGkdOWkNlL36A7DdhfEZarPomluVzoh-KGSzjjdHgUVKJ8Smk8v8cypZsZ4Ysd-ysrQ6XaSJaF92jPv6WA70R_pNcYcqoGFmgxZmdS-aAR3lh3udDUKyPFYpkAwmE2HqA6OAYBW5JoGncK-bKXPcxq7qA3NVOWf1kFmRVjwwyr5jbtenwJjXnHPgZKZbNCdb4m4VS_CmmKjdadfVw_O64fDbf6ss_U"
                   alt="Cao Nguyên Đại Ngàn"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                   Đất đỏ Bazan
                 </span>
@@ -116,7 +116,7 @@ export function CuratedEcosystemsSection() {
                   data-alt="Rich alluvial Mekong Delta orchard waterways in Cai Be Ben Tre and Ca Mau mangrove forest. Wooden boats loaded with tropical fruits gliding along water palm lined canals, vibrant green foliage and reflection of tranquil rivers."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjybIhdjkSBTAzWmvnotzL38vuJ-Lh7jj3zDrMIsLwoClYEebTnzdsg2TukiAwgQED6kKiAutuk37Th7HbGC2Vf8Xx_ZVumP1yIJTZnKypXJ_00oAclsdUgOshgbaumoutdqNIcZiOO-D3HSyvI0xzbUXtUQpFvsYwMc0Wn2XLbvPMI5cFDikEbydO4fx3GBfa75frbOy0g53m7GRA0XaV95i6szNZ0RHV-zl4PLE"
                   alt="Miệt Vườn &amp; Rừng Ngập Mặn"
-                />
+                 loading="lazy" decoding="async"/>
                 <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm">
                   Rừng ngập &amp; Sông rạch
                 </span>

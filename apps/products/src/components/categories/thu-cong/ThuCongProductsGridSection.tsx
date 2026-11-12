@@ -164,7 +164,7 @@ export function ThuCongProductsGridSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   src={prod.image}
                   alt={prod.alt}
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-3 left-3">
                   <span
                     className={`px-2 py-0.5 ${

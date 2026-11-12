@@ -28,7 +28,7 @@ export function MarketDeepDiveSection() {
                 data-alt="Báo chí tư liệu chụp Diễn đàn Kinh tế Quốc gia và Hội nghị Xúc tiến Thương mại OCOP với các đại biểu bộ ngành, quan chức ngoại giao và đại diện thương mại quốc tế ngồi tại bàn hội nghị lớn, phông nền cờ đỏ sao vàng cùng ánh sáng báo chí chân thực."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIPhXujlDBg8v2ulLomNWno51GDUKsG3GM_33FR5ua05eX8Xk5h5ZMsJ8uz-EZjhXSov3s5vbi7TSo5Do21KqMSfa9VijfzIXYFou4fEdm-uc5Uu1SHxdVe8mqKy7vKfogYhr7uBBerY3jJNGm2cOGmptTFlyQ0n-HKNIAVvN8d7AhVFcQ4p98nBEZVskEsK_DVmS1u1ttR-qEE1eIuUfbeaKRWAZuTq5KrmzDUY0"
                 alt="Diễn đàn Kinh tế Quốc gia và Hội nghị Xúc tiến Thương mại OCOP"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-4 left-4 bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded shadow">
                 HỒ SƠ HIỆP ĐỊNH THƯƠNG MẠI
               </div>
@@ -60,7 +60,7 @@ export function MarketDeepDiveSection() {
                   data-alt="Tĩnh vật mộc mạc chụp các sản phẩm nông sản gia vị OCOP xuất khẩu gồm chai nước mắm Phú Quốc truyền thống nút bấc buộc dây thừng gai, lọ mật ong rừng Đắk Lắk, quế chi, hoa hồi sấy khô trên đĩa tre đan mộc mạc ánh sáng tự nhiên trầm ấm."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC82HKd2p0VEcHMKArLjHc30OqkVRsEcuoeS-ubg17kaPZVUf2tzOJws0woT7wzAg692ZgJ1js9V5RNbTWGUQd20Hcnm3q-NRmRaXH52EQ8KsfX4jZNKvmV3WDXGDjwsRH4pkZcQCRaa9d3oH-jjBxMddn-0SKVZR6uAcjwpVPpokGM1I_QJmx9lnhsBrWUuHKSLVqh0VcTF920YEH8acNUsoHNUxsIccjvmXSfKqA"
                   alt="Nông sản gia vị OCOP xuất khẩu"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="space-y-1">
                   <div className="font-label-md text-label-md text-primary font-bold">Nghiên cứu ca điển hình:</div>
                   <p className="font-body-sm text-body-sm text-on-surface-variant">

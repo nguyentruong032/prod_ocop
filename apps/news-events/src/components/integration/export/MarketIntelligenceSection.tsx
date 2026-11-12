@@ -29,7 +29,7 @@ export function MarketIntelligenceSection() {
                 data-alt="Tư liệu cánh đồng chè hữu cơ trên núi cao mù sương Tây Bắc cùng nghệ nhân nông nghiệp kiểm tra búp non đạt chuẩn xuất khẩu Châu Âu ánh sáng ban mai."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU0Dko3JUEw6rm6yWLRWEVklFMQXjqoI8exFGGKhRK6aeOcGWB5R28slf5zmX5a-t_kkZM3pucBVnEPg46Xzj7J6BESZtT1PVtNV0F-fxc068oEAiL2kc_FVUVXDgjV9iMWc2wuDoVAaTylt2yklFY8Trz7yMyRcxtQUOkDX2bRFoR2DeiUeHm8VV5sQWsEEJ-Nz2SvQ5tC1y8GbYa2Hz6tzxI8uwkMuoiXgBfBd4"
                 alt="Cánh đồng chè hữu cơ trên núi cao"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-3 left-3 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded">
                 Thị trường Anh (UK)
               </span>
@@ -65,7 +65,7 @@ export function MarketIntelligenceSection() {
                 data-alt="Khu xưởng sản xuất gốm mỹ nghệ truyền thống với nghệ nhân chuốt gốm thủ công men tro cổ kính của làng gốm Chu Đậu phục vụ xuất khẩu thị trường Nhật Bản."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJXaTIbfBbOE7wTUbCHukrRltyjDRoRomSxgdDUdeN1l_WBIDS6vU60eqz1qC80huRQ74xxAg3rMsLp5sMQmIGcS0w647CHPcZBISKuZyRDqFHN7xeD9rVGJuitnbsuMLIAnOLI2q-qoET64P-35nLZBrw0rf7CoRdfUqkOCNSv0Je-bnNcEQSzftO2VeCEr5zsobHYOnxiT0LhVSXwgPboEC8oqmSLmSVOgOB74c"
                 alt="Khu xưởng sản xuất gốm mỹ nghệ Chu Đậu"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-3 left-3 bg-secondary text-on-secondary font-label-sm text-label-sm px-2 py-0.5 rounded">
                 Thị trường Nhật Bản
               </span>
@@ -101,7 +101,7 @@ export function MarketIntelligenceSection() {
                 data-alt="Nông dân thu hái hồ tiêu hữu cơ trên giàn cao tại Phú Quốc nắng vàng rực rỡ, quả tiêu căng bóng hạt đỏ và đen chọn lọc đóng gói chân không."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtxCpc-_fNo1yKaBiW8YqhSjgMNcOIhnkEUwB0ss9HWokaWtUmZccDcsla9DVCFZ0LmeVuvvd2uawgYFUWKmp5CFHNyGK45ez9uVrKeOFb-AMQ0V51kdz-D5BFv3vgYGNOYOyVGi1YaWCcOhho8jxy9lWyc1H0vXpC6e46KdLCMdLyx5_u4MSVm1Rs-g-Job-wx3igDZ8uYBCXTIueNOE5lzQEPkBRnRK3xjJp9gQ"
                 alt="Thu hái hồ tiêu Phú Quốc"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-3 left-3 bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded">
                 Thị trường Hoa Kỳ
               </span>
@@ -137,7 +137,7 @@ export function MarketIntelligenceSection() {
                 data-alt="Chế biến hạt điều rang muối thủ công tại Bình Phước đóng gói hộp thiếc cao cấp trang trí hoa văn dân gian đạt chứng chỉ Halal quốc tế."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_V_dt_ewu-F6QOsG6PXZgxcMwpSNPZg2Dum2TvGKb146K9xdqUFIZOAMfLE_VpIW3bBgWnPfGDgv7dSkm4b1kAqxF-MXjA24p6ihO4Nvca6HRXzMUepTXP9BAeTHgKCGF8-V_4tLWMn76x0hoekbku24vnXIBbf-fKxZzol9n39mo43OotmJmaQSqFXm-YAI_xlIUGljVoN0gRqAeeXdXa03GbKDTy33U9GZVbZA"
                 alt="Chế biến hạt điều Bình Phước"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-3 left-3 bg-primary-container text-primary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded">
                 Thị trường Trung Đông
               </span>
@@ -174,7 +174,7 @@ export function MarketIntelligenceSection() {
                 data-alt="Chai rượu vang sim rừng Phú Quốc và mật hoa dừa Trà Vinh trưng bày trang trọng tại triển lãm công nghiệp thực phẩm quốc tế ở Paris Pháp."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCueE2VmFGZIki8JIbmOAGpwswdG9WicLp5EG2CXAKfQPrm7AJ-HSEUMKws0KVExzgJkHc4o-h3Chy8fp1VQYWoZP1A_ls_p4ZUr8Ln7CIO8qTUytqSGdfoBp3ql9p_Zw91hffMyiXV4Vwew50rZ1hd_rOS-z5tQAD5AKh-UfEvWH4MrZPk_AxrbzHksYRnWYurCwa8cs-LLBFrYyxYnUZcsM4n-buUwmXUYfXmou4"
                 alt="Rượu vang sim rừng Phú Quốc và mật hoa dừa Trà Vinh"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-3 left-3 bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded">
                 Thị trường Pháp (France)
               </span>
@@ -211,7 +211,7 @@ export function MarketIntelligenceSection() {
                 data-alt="Phòng thí nghiệm kiểm định nông sản hiện đại kiểm tra dư lượng dược chất trong sâm Ngọc Linh và đông trùng hạ thảo bằng thiết bị HPLC chính xác cao."
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuByn8AAB2jXbdVnSKV4ofi-AyqfO2f374bFdYir1X5B1UMeovf07LZrjdNeI9Ho4lHSudv0gZADFFx2YYF26R1pap9BX-65Ymnj_B8soYpQKeVlHbVshPq5-77QwyJQGJrFIxA_GoWrPT7elMaHV-8d9Q3g2AzAfncDaj26J2cB1-MOaGv-ItV8dTgXe3ZodcflJigupLApcU3GarEHUfF8OVxYau7sZkdsmQvfoH4"
                 alt="Kiểm định sâm Ngọc Linh"
-              />
+               loading="lazy" decoding="async"/>
               <span className="absolute top-3 left-3 bg-secondary text-on-secondary font-label-sm text-label-sm px-2 py-0.5 rounded">
                 Thị trường Hàn Quốc
               </span>

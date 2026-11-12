@@ -54,7 +54,7 @@ export function Header() {
       <header className="sticky top-0 z-50 w-full bg-surface-container-lowest shadow-sm border-b border-[#e8efea]">
         <div className="max-w-[1360px] mx-auto px-gutter-mobile md:px-gutter-tablet lg:px-margin h-20 flex items-center justify-between border-b border-[#e8efea]/60">
           <a href="/" aria-label="Về trang chủ OCOP Việt Nam" className="flex items-center gap-space-md group shrink-0">
-            <img src="/logo.png" alt="OCOP Việt Nam Điện tử" style={{ height: '18rem' }} className="w-auto object-contain shrink-0" />
+            <img src="/logo.webp" alt="OCOP Việt Nam Điện tử" style={{ height: '18rem' }} className="w-auto object-contain shrink-0" loading="eager" fetchPriority="high" decoding="async" />
           </a>
           <div className="flex-1"></div>
           <div className="flex items-center gap-space-md">

@@ -26,7 +26,7 @@ export function RepresentativeProvincesGrid() {
                   data-alt="Traditional lacquerware and ceramic artisans working in Bat Trang ancient craft village Hanoi with sunlit drying terracotta vessels and atmospheric river mists"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdvcBru0hYtWxHSyunb1uTYjKRaRUCvP_xAA7k_J3pOh--yE74dHvaXnYcdibYpT--k307dqKWEzyX_qIMUeV8fzeOK1SNXGgWsjJJS4WedZ6--tWTPeGv6jakeu6sPDWu2yYCpF4pwA5SrSy5hF1_MvAnfCWhQxdllwFGGKD24cWS-KRPKgqWIqFPSiIk3ndrou-Gzjj-QoFfus4w8itS05mLVytiy_NJF_R2jMQ"
                   alt="Hà Nội"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
                   Đồng bằng sông Hồng
                 </div>
@@ -63,7 +63,7 @@ export function RepresentativeProvincesGrid() {
                   data-alt="Terraced green tea plantations in Tan Cuong Thai Nguyen under serene morning light with mist floating over reservoir lake and local tea farmers"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0kfvBMAmgKZbUaplIoHqgXvfkkNUuAk1tycAA5F5EHnMEqmjuoSs6TPb_OuvlRa1ZfVaVGbTurBu6Z__UOqSCmSqazXXndBZbX3sumgGLmgYtWkn85Qzi1xNts4q4kGPAHp5s50Nh8z0uvpAQvjxcqL_-uvPmndg6xHayV4s0oRh5xfARKJsGfoLk9n8amSgkCQeDskEtWVus6gJsbLoRb8Nt13BHlinEWMvPgfI"
                   alt="Thái Nguyên"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
                   Trung du Miền núi phía Bắc
                 </div>
@@ -100,7 +100,7 @@ export function RepresentativeProvincesGrid() {
                   data-alt="Artisanal pottery spinning wheel in Thanh Ha pottery village Quang Nam alongside silkworm weaving looms in Ma Chau with warm earthy terracotta lighting"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW-Iz-aGSdI9XuZTDyTCjoSQHNMjDn1uKYt1k1kP5L-nhN9yw2M4W11-vmBP8HujnLFpAt84om7-iy8HoMjPmZBE_CCD_A6vbwcJ018CXKNQaBdEDOinrFsK11YgNbQzGs_K8sHYiC8NSyY9oEezLoKjdTrs4zowAeiMOkeOgotbxAtsKEdmMM3LlWtG7tDzu_wEl5N97rmAT4WdJf2DhGj7SDuXVOifeOhu8E1fA"
                   alt="Quảng Nam"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
                   Bắc Trung Bộ &amp; Duyên hải
                 </div>
@@ -137,7 +137,7 @@ export function RepresentativeProvincesGrid() {
                   data-alt="Sun-dried ripe red coffee cherries spread over raised drying tables in Buon Ma Thuot Dak Lak basalt plateau with long wooden Ede communal houses in background"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVzFtq7jN_mCNnLDxXcbmVt8w0U2R0cHr9tMTlaLjNKcIBRsMSCRO_tpQeRipHVBNCZj1Sp3H9K2DQ2RcUy84qmr5JO4q2T0e_V7X5q4aKe7SJ0usuvSbPI3f7IJP2Jj0zEQgPc3hBzvZUBBnI8lak4l8tTA4gh5dpiXgT1kNaXBvd3QKk0MqPFU0BYlOW3QuHF4AbwODcLpTa_oOlkwuq-e3MFeyrRUMSb_10-5M"
                   alt="Đắk Lắk"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
                   Tây Nguyên
                 </div>
@@ -174,7 +174,7 @@ export function RepresentativeProvincesGrid() {
                   data-alt="Lush green coconut canal waterways in Ben Tre Mekong Delta with artisanal workers handcrafting coconut shell crafts and organic macapuno wax coconut confectionery"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5TsJG20U3tSoNb7JTIGegBTiGnvI0ldHcCIzeptjLMtBpI44q_MhCFzGWYXE3tBPMURdppJP4jgtPWsLnj6mpVbLwA193_Ei1YhcxH57h9CGcTPuGdDRMZwxRlSEgOf-rly56p9sB2DsvQW-3_IOSjSM1tWDfcMciR7AEbfgONrvf8OmOmJRVaJ9Ui54y77pFWCaf6SKhVvJCo1IboMhNim1OR80EPxJzoiiLJ_Y"
                   alt="Bến Tre"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
                   Đồng bằng Sông Cửu Long
                 </div>
@@ -211,7 +211,7 @@ export function RepresentativeProvincesGrid() {
                   data-alt="Vast mangrove forest waterways in Nam Can Ca Mau Vietnam with wooden fishing boats harvesting eco-certified black tiger prawns and giant sea mud crabs under coastal sunset"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtpLUKHykgjftw4LtwAlKQ9AdroBquUMEtU0cjzaT-Y1V9h5mn4QUOjwEUA4U97Jy_5zDQHOQT5o07r98g8IUnsgkw0-qNHyYXiMH3ZqV8u7TRDblD4WpmpBJUdo4l4nF3EP3EkIv3HDgn6UhOr0izVdgn3XP_3A62cU1vsQM7JAEMIxLDlPlLdFbWuNnZpRr3kDTB7F-WRRk1t-G5XLa574XN4ZE1ZlonvFTjEMw"
                   alt="Cà Mau"
-                />
+                 loading="lazy" decoding="async"/>
                 <div className="absolute top-2 left-2 px-space-xs py-0.5 bg-primary text-on-primary rounded text-label-sm font-label-sm">
                   Đồng bằng Sông Cửu Long
                 </div>

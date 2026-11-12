@@ -158,7 +158,7 @@ export default function Integration() {
               <div className="relative w-full h-44 overflow-hidden">
                 <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   alt={marketDossier.imageAlt}
-                  src={marketDossier.imageSrc} />
+                  src={marketDossier.imageSrc}  loading="lazy" decoding="async"/>
                 <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold" data-field="category">
                   {marketDossier.category}
                 </span>

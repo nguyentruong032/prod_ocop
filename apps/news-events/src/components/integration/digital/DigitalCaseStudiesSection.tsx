@@ -32,7 +32,7 @@ export function DigitalCaseStudiesSection() {
                 data-alt="Expansive misty terraced tea hills of Tan Cuong Thai Nguyen under gentle sunrise with modern solar-powered weather monitoring IoT sensors placed along organic rows of vibrant emerald green tea leaves"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4GxIwWVrqsK8nGJ0og7cu-20qfrjhEZa2PiXjHspNJEJIWWZf90Xnm_8uRrQC_JoTanRSO3X-mMZETgTw8r7GRBie5dXZ0o-aQROjFufHdxE8VbrK2DytoKuGWKJW_P5aqPt5NhPof5sRvBa_lvgUkX-z1vr2vdBydrkZUjQCZvCJoXYDJh4lW3wVEA9k7-0ith7K7Vv9liH4VDWeIKh5WhuEdKMXFhQ-pLobyNs"
                 alt="Đồi chè Tân Cương Thái Nguyên"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold text-primary">
                 Thái Nguyên
               </div>
@@ -76,7 +76,7 @@ export function DigitalCaseStudiesSection() {
                 data-alt="High tech rural agricultural cooperative livestream studio set up in Dak Lak Central Highlands surrounded by raw roasted macadamia nuts and artisanal jars where young Vietnamese farmers host international live sales"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_1RHF-3dQb22316agJyrtsV2yoUcXJEE0rxEvuvXEIZDB9BPqRFQ3ENh9SCUTdYXGxCj_8u346g2rBgs9Y18nLRya5Bq1s8xxke1n7qNvitJ_MPQ8M6J4v3ATMHNeZ78E3xCLf-oEUh2Sz4AzBTUzaae-5ukr_Q5DhJiwyKBXJYq7Xj1m-W-ZTCSm5Elyy15d7xlM4p86HFPspc69ic5NPKf_QuNyJgFCfj2De0s"
                 alt="HTX Mắc ca Đắk Lắk"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold text-primary">
                 Đắk Lắk
               </div>
@@ -122,7 +122,7 @@ export function DigitalCaseStudiesSection() {
                 data-alt="Close up detailed view of a customer smartphone scanning an embedded NFC security tag on the artisanal glass neck of traditional Vietnamese fish sauce bottle resting on wooden barrel in heritage aging cellar"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0caszidj_SEXwq6wmRDwBq_tg6Kuzvvx6bOxiH1QXNhiTI2rPs1FsO1kHvfY-ZVdHsPG5yEB59bGV04Jj_0ia63DLYa1XmsazEjfapTxOQNLJ8yEdbESbdJmLN3xHv5KwNtdL6k7n58vpGawZ2rtIaM8fHW5rzvT32Zp1dXoN6oPMZmNTaK3LKFO4GPg0dzFPADWwXqxZ8L6yOWWeQF0wgSZFYWP66nhMO9li25g"
                 alt="Nước mắm Khải Hoàn NFC"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute top-3 left-3 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold text-primary">
                 Kiên Giang
               </div>

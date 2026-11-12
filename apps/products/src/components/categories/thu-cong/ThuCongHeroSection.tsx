@@ -51,6 +51,9 @@ export function ThuCongHeroSection() {
                 data-alt="Close up photograph of a Vietnamese artisan shaping a clay vase on a pottery wheel in Phù Lãng village, natural warm light streaming from a workshop window, earthy terracotta tones, dust motes floating in air, traditional wooden tools in background"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdHo9ZTlJdw2AEzHpnHtnWupMtACnD0X2obwDpw3N-Tips48uxmnqAlBAWnO7n5hpLQar7a5QIfW-qFjWHVXjb-bwjOd5VwcX0aHlximQowM2ROPDkKlkhTzZS1coKu6UfRqY86xr7ENpk_4-3fM84e-z1PjJ_hfrDFR436p8ma2VKjl9nElzcOhPoMBVwwMVplgjCkkKVbt_YC2_HzlNkAFd2GTWVTU1UIqTxcVU"
                 alt="Nghệ nhân gốm Phù Lãng"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 text-on-primary">

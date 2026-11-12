@@ -34,7 +34,7 @@ export const DuocLieuStoriesSection: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 alt="Portrait of an elderly Red Dao ethnic woman healer with traditional embroidered headdress preparing wild herbal bath leaves"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL2XAYBIyUPB8r3nDgZJ4rjKjFVdbkbRHhSQNbJDDAUp01YY7HDZHXRXYRllwJD36Saj0VrXAf3Qv5KIxABXcymiSWBxawZKBgbPluE3q6vQ2lPmTFTcOFCCcx1b_q_Juzhi6il6P8XhBVrAZiiGtTgY0Isz40xJ7mvGCNUUk-htHCpT4m4J-kzYdBetP5Ke_i3X8RRbgQ68rosc0C2KwbcgIm303s24IWYbe27HE"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-primary/90 text-on-primary font-label-sm text-label-sm">
                 Tri thức người Dao Đỏ
               </div>
@@ -67,7 +67,7 @@ export const DuocLieuStoriesSection: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 alt="Middle aged Xo Dang indigenous forest ranger walking through misty primary mountain rainforest tending to small flowering ginseng plants"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmcSAh26rNBQh6uQKW_LWzmTqHHiDkDEasph1ZUkuYaji5nqpNhhaWbbPkeLt1yl6DMqehb-TJTuJM8T5q7dpS9YqvGH_zutTa13Twj-lUGx2agqkYtrPQvFYFTGzKE-6c7jwPaP3KgLfi-hu1HIX9X56dOO0MN4eQYfZIoMOR7wbzn4pH_GZmkUmBRE1utH6SkLPbZ4WHcSsH2cDLzTHqLhDJbjGdY8VeKpqYdfo"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#B85D3B] text-surface-container-lowest font-label-sm text-label-sm">
                 Đại ngàn Tây Nguyên
               </div>
@@ -100,7 +100,7 @@ export const DuocLieuStoriesSection: React.FC = () => {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 alt="Cor ethnic artisan shaving and peeling huge ancient cinnamon tree bark in central highland forest"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLyolSiPxFvl1RQE0QT535RMokxRX64FBmA6WG6gPeO-0Dey9l6PHzQUjsLgfovY2FBMHyxhaQl8CFJJeCHstqUUfGdC5tIxJWRxQMRxMwCrGSsPhkElplhoAdJI_LF90Sb5cpWFCP0Jk3JXX9ukcpInYAQKshxrhhA2-BTpNtIgMBbeXo44aNyc3ymZveI4LkLznRVHN3aIpHnXyBQACJ9B7kjnCWD5SQQBSjQtE"
-              />
+               loading="lazy" decoding="async"/>
               <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-[#1F4D3A] text-on-primary font-label-sm text-label-sm">
                 Văn hóa người Cor
               </div>

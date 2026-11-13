@@ -2,12 +2,14 @@ export async function verifyTurnstileToken(
   token: string | null | undefined,
   remoteIp?: string,
 ): Promise<{ success: boolean; error?: string }> {
-  const secretKey = process.env.TURNSTILE_SECRET_KEY;
+const secretKey = process.env.TURNSTILE_SECRET_KEY;
 
-  // In local development or testing without configured Turnstile secret, pass token
-  if (!secretKey) {
-    return { success: true };
+if (!secretKey) {
+  if (process.env.NODE_ENV !== "production") {
+    return { success: true }; // [DEV] chỉ bỏ qua ở local
   }
+  return { success: false, error: "Hệ thống xác minh bảo mật chưa được cấu hình." };
+}
 
   if (!token) {
     return { success: false, error: "Vui lòng xác minh bảo mật Turnstile." };

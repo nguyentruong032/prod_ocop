@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="h-full" lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#ffb599", "surface-container": "#e7eeff", "tertiary-container": "#533600", "on-surface-variant": "#414844", "on-secondary-fixed-variant": "#79300f", "surface-dim": "#d0daf0", "primary": "#012d1d", "tertiary-fixed": "#ffddb1", "error-container": "#ffdad6", "surface-container-high": "#dee8ff", "on-primary-fixed": "#002114", "surface": "#f9f9ff", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#a5d0b9", "secondary-container": "#fd966d", "on-tertiary": "#ffffff", "error": "#ba1a1a", "surface-container-highest": "#d9e3f9", "outline-variant": "#c1c8c2", "surface-container-low": "#f0f3ff", "on-primary-container": "#86af99", "inverse-on-surface": "#ebf1ff", "on-secondary": "#ffffff", "on-surface": "#121c2c", "on-tertiary-fixed": "#291800", "on-error": "#ffffff", "on-tertiary-container": "#ce9e54", "on-primary-fixed-variant": "#274e3d", "surface-variant": "#d9e3f9", "secondary": "#984724", "on-error-container": "#93000a", "background": "#f9f9ff", "inverse-primary": "#a5d0b9", "surface-tint": "#3f6653", "on-tertiary-fixed-variant": "#614000", "on-background": "#121c2c", "on-secondary-container": "#752d0b", "on-secondary-fixed": "#370e00", "primary-container": "#1b4332", "tertiary-fixed-dim": "#f2be71", "surface-bright": "#f9f9ff", "on-primary": "#ffffff", "outline": "#717973", "tertiary": "#372200", "primary-fixed": "#c1ecd4", "secondary-fixed": "#ffdbce", "inverse-surface": "#273141" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "gutter-tablet": "1.25rem", "margin-tablet": "2rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin": "4rem" }, "fontFamily": { "title-editorial": ["Noto Serif"], "label-sm": ["Be Vietnam Pro"], "quote-display": ["Noto Serif"], "body-md": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "headline-sm": ["Noto Serif"], "headline-md": ["Noto Serif"], "lead-paragraph": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "headline-lg-mobile": ["Noto Serif"], "display-hero": ["Noto Serif"], "headline-lg": ["Noto Serif"], "display-hero-mobile": ["Noto Serif"], "body-lg": ["Be Vietnam Pro"] }, "fontSize": { "title-editorial": ["19px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "quote-display": ["24px", { "lineHeight": "38px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "38px", "fontWeight": "600" }], "lead-paragraph": ["20px", { "lineHeight": "34px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "38px", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["17px", { "lineHeight": "30px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  </header>
+  <main class="w-full  bg-surface min-h-[calc(100vh-28rem)]">
+    <!-- THANH SUB-HEADER CHUYÊN MỤC KIỂU BÁO NÔNG NGHIỆP & MÔI TRƯỜNG -->
+    <div class="bg-white pt-3 pb-0">
+      <div class="max-w-[1360px] mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+        <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 border-b-2 border-gray-200">
+
+          <a href="/ocop-hoi-nhap/index.html" data-subnav="parent"
+            class="text-lg md:text-xl font-bold text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-[#2C5E2E] whitespace-nowrap transition-colors">
+            OCOP Hội nhập
+          </a>
+
+          <nav class="flex items-center gap-x-5 overflow-x-auto no-scrollbar">
+            <a href="/ocop-hoi-nhap/xuat-khau-va-thi-truong-quoc-te/index.html" data-subnav="item"
+              class="subnav-link text-[13px] font-medium text-gray-700 hover:text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-transparent hover:border-[#2C5E2E] whitespace-nowrap transition-all">
+              Xuất khẩu & thị trường quốc tế
+            </a>
+            <a href="/ocop-hoi-nhap/tieu-chuan-va-chung-nhan-quoc-te/index.html" data-subnav="item"
+              class="subnav-link text-[13px] font-medium text-gray-700 hover:text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-transparent hover:border-[#2C5E2E] whitespace-nowrap transition-all">
+              Tiêu chuẩn & chứng nhận quốc tế
+            </a>
+            <a href="/ocop-hoi-nhap/chuyen-doi-so-OCOP/index.html" data-subnav="item"
+              class="text-lg md:text-xl font-bold text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-[#2C5E2E] whitespace-nowrap transition-colors">
+              Chuyển đổi số OCOP
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full">
+      <!-- Sub-navigation Bar (Pills Navigation for OCOP Hội Nhập) -->
+      <section class="w-full bg-surface-container-lowest shadow-sm">
+
+      </section>
+      <!-- Editorial Lead Header & Live Indicator -->
+      <section class="w-full bg-surface py-space-xl">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <!-- Breadcrumb & Metadata Badge -->
+          <div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-lg">
+            <div class="flex items-center gap-space-sm">
+              <span
+                class="px-space-sm py-0.5 rounded bg-primary-container/15 text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+                Báo chí Dữ liệu Chuyên sâu • Kỷ yếu 2026
+              </span>
+              <span class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+                <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+                Hệ sinh thái IoT 63 Tỉnh Thành
+              </span>
+            </div>
+            <div class="text-on-surface-variant font-label-sm text-label-sm italic">
+              Cập nhật ngày 24/02/2026 | Trung tâm Dữ liệu Nông thôn mới Quốc gia
+            </div>
+          </div>
+          <!-- Main Headline Title & Lead Paragraph -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+            <div class="lg:col-span-8 space-y-space-md">
+              <h1 class="font-display-hero text-headline-lg md:text-display-hero text-primary tracking-tight">
+                Số hóa Chuỗi Giá trị OCOP: Từ Minh bạch Nguồn gốc đến Thương mại Điện tử Xuyên biên giới
+              </h1>
+              <p class="font-lead-paragraph text-lead-paragraph text-on-surface-variant leading-relaxed">
+                Làn sóng chuyển đổi số đang tái định hình diện mạo nông sản Việt Nam. Bằng việc kết hợp giao thức chuỗi
+                khối (Blockchain), trạm quan trắc vi khí hậu IoT và Hộ chiếu Sản phẩm Số (DPP), các hợp tác xã bản địa
+                tự tin bước ra vũ đài thương mại điện tử quốc tế, xóa bỏ ranh giới địa lý để đưa tinh hoa làng nghề tiếp
+                cận trực tiếp thị trường toàn cầu.
+              </p>
+            </div>
+            <!-- Real-time Metrics Card -->
+            <div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-md space-y-space-md">
+              <div class="flex items-center justify-between pb-space-xs">
+                <span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Chỉ số Số hóa
+                  Toàn quốc</span>
+                <span class="material-symbols-outlined text-secondary">analytics</span>
+              </div>
+              <div class="space-y-space-md">
+                <!-- Stat 1 -->
+                <div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+                  <div>
+                    <div class="font-headline-md text-headline-md text-primary font-bold">12.480+</div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Mã QR truy xuất nguồn gốc động
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-primary-container text-[28px]">qr_code_2</span>
+                </div>
+                <!-- Stat 2 -->
+                <div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+                  <div>
+                    <div class="font-headline-md text-headline-md text-secondary font-bold">452</div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Gian hàng chính hãng Amazon, Shopee
+                      &amp; TikTok</div>
+                  </div>
+                  <span class="material-symbols-outlined text-secondary text-[28px]">storefront</span>
+                </div>
+                <!-- Stat 3 -->
+                <div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+                  <div>
+                    <div class="font-headline-md text-headline-md text-primary font-bold">85,6%</div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant">Hợp tác xã áp dụng Nhật ký điện tử
+                    </div>
+                  </div>
+                  <span class="material-symbols-outlined text-primary-container text-[28px]">fact_check</span>
+                </div>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                <span class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+                  Dữ liệu Bộ NN&amp;PTNT
+                </span>
+                <span class="text-secondary font-semibold">Tăng 34% cùng kỳ 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Deep Dive Spotlight Feature: Nước Mắm Phú Quốc & Digital Passport -->
+      <section class="w-full bg-surface-container-lowest py-space-xl shadow-sm">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <!-- Section Tag -->
+          <div class="flex items-center gap-space-sm pb-space-md">
+            <span class="w-2.5 h-2.5 bg-secondary rounded-full"></span>
+            <span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Tiêu điểm Phóng
+              sự Độc quyền</span>
+          </div>
+          <!-- Feature Split Box -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl bg-surface-container-low rounded-xl p-space-lg md:p-space-xl shadow-sm items-center">
+            <!-- Visual Presentation Left -->
+            <div class="lg:col-span-6 relative">
+              <div class="relative overflow-hidden rounded-xl shadow-lg aspect-[4/3]">
+                <img class="w-full h-full object-cover"
+                  data-alt="Traditional artisan bottles of premium Phu Quoc fish sauce 35N and honey jars arranged on rustic weathered dark wood table with woven bamboo spice trays star anise and cinnamon sticks under warm moody chiaroscuro editorial lighting inspired by heritage Vietnamese artisanal archives"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAYHHY-meg5Szwiuvd08y23s1ys_E3zSg_hdHvxC3S37x5bV9KzhYo3m5pFSCfB-EFu9-oLGoItms6gSZkiP6ukxiO7LhpcK7Y4gVCQ2s1OiHylae5lFexLZ7qo3ovXFFFcki0brcwzB5tHA_HbIc_Dql2T4HEPIg7T24IUW9zrpT7uRxHLliR9kDpzoTiGL4ffjnBTTOsKM1AV4zELpYNk1B_yBxm-Q211cKyu8">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+                <!-- Digital Passport Verification Overlay Card -->
+                <div
+                  class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-space-md rounded-lg shadow-md flex items-center justify-between gap-space-sm">
+                  <div class="flex items-center gap-space-sm">
+                    <div
+                      class="w-12 h-12 bg-primary-container text-on-primary rounded flex items-center justify-center font-headline-sm text-headline-sm">
+                      <span class="material-symbols-outlined">dataset</span>
+                    </div>
+                    <div>
+                      <div class="font-label-md text-label-md text-primary font-bold">Nước Mắm Phú Quốc 35°N</div>
+                      <div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                        <span class="">Mã Hash: 0x8a92...f41b</span>
+                        <span class="material-symbols-outlined text-[13px] text-primary">check_circle</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                      OCOP 5 Sao
+                    </span>
+                    <div class="font-label-sm text-label-sm text-outline mt-1">12 Tháng Ủ Chượp</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Narrative Content Right -->
+            <div class="lg:col-span-6 space-y-space-md">
+              <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-secondary text-[16px]">history_edu</span>
+                <span class="">Chuyên đề: Công nghệ Bảo tồn Di sản</span>
+                <span class="">•</span>
+                <span class="">Thời lượng đọc: 7 phút</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-sm md:text-headline-lg text-primary tracking-tight">
+                Từ chiếc tem giấy đến Hộ chiếu Số Sản phẩm (Digital Product Passport): Hành trình đưa chai nước mắm
+                truyền thống lên nền tảng đám mây toàn cầu
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Trước đây, chai nước mắm truyền thống của bà con Phú Quốc chỉ mang một nhãn giấy dán thủ công, dễ bị làm
+                giả hoặc đánh tráo thông tin khi bước qua các cửa khẩu quốc tế. Hôm nay, mỗi giọt mắm 35°N được gắn chip
+                định danh NFC và mã hóa trên mạng lưới Blockchain phi tập trung.
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Người tiêu dùng tại Paris hay Tokyo chỉ cần một chạm từ điện thoại để tra cứu: mẻ cá cơm than đánh bắt
+                tại tọa độ nào trên vịnh Thái Lan, tỷ lệ muối Bà Rịa nguyên chất, nhật ký 12 tháng ủ chượp trong thùng
+                gỗ bời lời và kết quả kiểm nghiệm hàm lượng axit amin độc lập từ viện Pasteur.
+              </p>
+              <!-- Interactive Process Snapshot -->
+              <div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+                <div class="bg-surface-container-lowest p-space-sm rounded-lg text-center shadow-xs">
+                  <span class="material-symbols-outlined text-primary text-[22px]">sailing</span>
+                  <div class="font-label-md text-label-md text-primary font-bold mt-1">Tọa độ Đánh bắt</div>
+                  <div class="font-label-sm text-label-sm text-outline">Kinh độ &amp; Vĩ độ Vùng biển</div>
+                </div>
+                <div class="bg-surface-container-lowest p-space-sm rounded-lg text-center shadow-xs">
+                  <span class="material-symbols-outlined text-primary text-[22px]">inventory_2</span>
+                  <div class="font-label-md text-label-md text-primary font-bold mt-1">Gỗ Thùng Chượp</div>
+                  <div class="font-label-sm text-label-sm text-outline">Gỗ Quao &amp; Bời Lời 12M</div>
+                </div>
+                <div class="bg-surface-container-lowest p-space-sm rounded-lg text-center shadow-xs">
+                  <span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+                  <div class="font-label-md text-label-md text-secondary font-bold mt-1">Tem Chip NFC</div>
+                  <div class="font-label-sm text-label-sm text-outline">Chống giả tuyệt đối 1:1</div>
+                </div>
+              </div>
+              <div class="pt-space-sm flex items-center gap-space-md">
+                <a class="px-space-md py-space-sm rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all flex items-center gap-1 shadow-sm"
+                  data-path="ho-so-nuoc-mam-phu-quoc" href="#">
+                  <span class="">Đọc toàn văn hồ sơ số hóa</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+                <a class="px-space-md py-space-sm rounded bg-surface-container-lowest text-secondary font-label-md text-label-md hover:bg-surface-container transition-all flex items-center gap-1 shadow-xs"
+                  data-path="xem-nhat-ky-blockchain" href="#">
+                  <span class="material-symbols-outlined text-[16px]">token</span>
+                  <span class="">Kiểm chứng Ledger</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4 Pillar Tech Cards: Bốn Trụ cột Công nghệ Trọng điểm -->
+      <section class="w-full bg-surface py-space-xl">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <!-- Section Header -->
+          <div class="max-w-3xl space-y-space-xs pb-space-lg">
+            <div class="flex items-center gap-space-xs">
+              <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+              <span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Khung Hạ tầng
+                Chuyển đổi Số</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-sm md:text-headline-lg text-primary tracking-tight">
+              Bốn Trụ cột Công nghệ Trọng điểm cho Nông sản OCOP Toàn quốc
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Hệ sinh thái kỹ thuật số được thiết kế riêng biệt để tương thích với quy mô của các Hợp tác xã, tổ hợp tác
+              và chủ thể kinh tế địa phương.
+            </p>
+          </div>
+          <!-- Grid of 4 Pillars -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+            <!-- Pillar 1: Blockchain & IoT -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div class="space-y-space-md">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide">Trụ cột
+                    01</span>
+                  <h3 class="font-headline-sm text-title-editorial text-primary mt-1 font-bold">
+                    Truy xuất nguồn gốc Blockchain &amp; IoT Vườn trồng
+                  </h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Trạm cảm biến vi khí hậu đo ẩm độ đất, cường độ nắng và lượng mưa thời gian thực. Mọi dữ liệu nhật ký
+                  bón phân hữu cơ được đồng bộ lên chuỗi khối, không thể chỉnh sửa hay tẩy xóa.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md bg-surface-container-low/50 p-space-sm rounded">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="">Công nghệ ứng dụng:</span>
+                  <span class="font-semibold text-primary">Sub-GHz IoT, Polygon PoS</span>
+                </div>
+              </div>
+            </div>
+            <!-- Pillar 2: Cross-border E-commerce -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div class="space-y-space-md">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">shopping_cart_checkout</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide">Trụ cột
+                    02</span>
+                  <h3 class="font-headline-sm text-title-editorial text-primary mt-1 font-bold">
+                    Thương mại Điện tử Xuyên biên giới
+                  </h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Xây dựng kênh phân phối trực tiếp D2C (Direct-to-Consumer) trên Amazon Global Selling, Alibaba B2B và
+                  TikTok Shop Southeast Asia. Giúp chủ thể OCOP làm chủ kho ngoại quan FBA và chuỗi logistics lạnh.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md bg-surface-container-low/50 p-space-sm rounded">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="">Thị trường ưu tiên:</span>
+                  <span class="font-semibold text-secondary">Bắc Mỹ, EU, Nhật Bản</span>
+                </div>
+              </div>
+            </div>
+            <!-- Pillar 3: VR/AR Heritage Storytelling -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div class="space-y-space-md">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">view_in_ar</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide">Trụ cột
+                    03</span>
+                  <h3 class="font-headline-sm text-title-editorial text-primary mt-1 font-bold">
+                    Kể chuyện Thương hiệu &amp; VR/AR Di sản Bản địa
+                  </h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Quét 3D không gian xưởng gốm Chăm Bàu Trúc, vườn quế Trà Bồng hay đồi chè cổ thụ Suối Giàng. Trải
+                  nghiệm tương tác sống động tái hiện tri thức bản địa thông qua camera điện thoại của du khách.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md bg-surface-container-low/50 p-space-sm rounded">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="">Nền tảng trực quan:</span>
+                  <span class="font-semibold text-primary">WebXR &amp; Không gian 3D</span>
+                </div>
+              </div>
+            </div>
+            <!-- Pillar 4: Smart Cooperative ERP -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+              <div class="space-y-space-md">
+                <div
+                  class="w-12 h-12 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+                  <span class="material-symbols-outlined text-[26px]">account_tree</span>
+                </div>
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide">Trụ cột
+                    04</span>
+                  <h3 class="font-headline-sm text-title-editorial text-primary mt-1 font-bold">
+                    Quản trị HTX Thông minh &amp; ERP Tinh gọn
+                  </h3>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Giải pháp số hóa kế toán hợp tác xã nông nghiệp theo chuẩn Thông tư mới, kiểm soát kho lạnh bảo quản
+                  sâu, tự động hóa đơn từ hóa đơn điện tử và dự báo sản lượng thu hoạch bằng mô hình AI phân tích ảnh vệ
+                  tinh.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md bg-surface-container-low/50 p-space-sm rounded">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="">Độ tinh gọn:</span>
+                  <span class="font-semibold text-secondary">Cloud SaaS HTX 4.0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Case Studies: Điển cứu Chuyển đổi số Thành công -->
+      <section class="w-full bg-surface-container-lowest py-space-xl">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg">
+            <div>
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Hồ sơ Điển
+                  hình Thực tế</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-sm md:text-headline-lg text-primary tracking-tight mt-1">
+                Nghiên cứu Tình huống: Ba Câu chuyện Đổi mới Thành công
+              </h2>
+            </div>
+            <p class="text-on-surface-variant font-body-sm text-body-sm max-w-md">
+              Các mô hình HTX nông nghiệp kiểu mới tiên phong vượt qua rào cản kỹ thuật số, tạo cú hích doanh thu và
+              nâng tầm định giá sản vật địa phương.
+            </p>
+          </div>
+          <!-- 3 Case Study Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+            <!-- Case 1: HTX Trà Tân Cương -->
+            <article
+              class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+              <div class="relative h-48 overflow-hidden">
+                <img class="w-full h-full object-cover"
+                  data-alt="Expansive misty terraced tea hills of Tan Cuong Thai Nguyen under gentle sunrise with modern solar-powered weather monitoring IoT sensors placed along organic rows of vibrant emerald green tea leaves"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4GxIwWVrqsK8nGJ0og7cu-20qfrjhEZa2PiXjHspNJEJIWWZf90Xnm_8uRrQC_JoTanRSO3X-mMZETgTw8r7GRBie5dXZ0o-aQROjFufHdxE8VbrK2DytoKuGWKJW_P5aqPt5NhPof5sRvBa_lvgUkX-z1vr2vdBydrkZUjQCZvCJoXYDJh4lW3wVEA9k7-0ith7K7Vv9liH4VDWeIKh5WhuEdKMXFhQ-pLobyNs">
+                <div
+                  class="absolute top-3 left-3 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold text-primary">
+                  Thái Nguyên
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px]">star</span>
+                  OCOP 5 Sao
+                </div>
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-semibold">Tự động hóa Nông trường</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1">
+                    HTX Trà Tân Cương: Số hóa Vùng Chè 100 Héc-ta
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                    Tích hợp 24 trạm vi khí hậu không dây và camera quang phổ. Quy trình làm héo, diệt men, vò và sấy
+                    được ghi chép bằng cảm biến nhiệt, giúp chất lượng mẻ chè đinh đồng đều 99,4%.
+                  </p>
+                </div>
+                <div class="pt-space-sm space-y-space-xs">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="">Hiệu quả gia tăng:</span>
+                    <span class="font-bold text-primary">+42% Doanh thu xuất EU</span>
+                  </div>
+                  <a class="font-label-md text-label-md text-secondary font-semibold hover:underline flex items-center gap-1"
+                    data-path="ho-so-tra-tan-cuong" href="#">
+                    Xem toàn văn báo cáo trường hợp <span
+                      class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- Case 2: Mắc ca Đắk Lắk -->
+            <article
+              class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+              <div class="relative h-48 overflow-hidden">
+                <img class="w-full h-full object-cover"
+                  data-alt="High tech rural agricultural cooperative livestream studio set up in Dak Lak Central Highlands surrounded by raw roasted macadamia nuts and artisanal jars where young Vietnamese farmers host international live sales"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_1RHF-3dQb22316agJyrtsV2yoUcXJEE0rxEvuvXEIZDB9BPqRFQ3ENh9SCUTdYXGxCj_8u346g2rBgs9Y18nLRya5Bq1s8xxke1n7qNvitJ_MPQ8M6J4v3ATMHNeZ78E3xCLf-oEUh2Sz4AzBTUzaae-5ukr_Q5DhJiwyKBXJYq7Xj1m-W-ZTCSm5Elyy15d7xlM4p86HFPspc69ic5NPKf_QuNyJgFCfj2De0s">
+                <div
+                  class="absolute top-3 left-3 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold text-primary">
+                  Đắk Lắk
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px]">star</span>
+                  OCOP 4 Sao
+                </div>
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-semibold">Thương mại Đa kênh Trực
+                    tiếp</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1">
+                    HTX Mắc ca Đắk Lắk: Livestream Triệu View Xuyên Biên Giới
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                    Đào tạo 15 bạn trẻ người Êđê trở thành người kể chuyện nông sản. Các phiên phát sóng trực tiếp bằng
+                    3 thứ tiếng (Việt, Anh, Trung) ngay tại vườn thu hút hơn 2 triệu lượt xem và bán sạch 35 tấn hạt sấy
+                    nứt.
+                  </p>
+                </div>
+                <div class="pt-space-sm space-y-space-xs">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="">Tốc độ tiêu thụ:</span>
+                    <span class="font-bold text-secondary">35 tấn nông sản/chiến dịch</span>
+                  </div>
+                  <a class="font-label-md text-label-md text-secondary font-semibold hover:underline flex items-center gap-1"
+                    data-path="ho-so-mac-ca-dak-lak" href="#">
+                    Xem toàn văn báo cáo trường hợp <span
+                      class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <!-- Case 3: Nước mắm Khải Hoàn NFC -->
+            <article
+              class="bg-surface-container-low rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+              <div class="relative h-48 overflow-hidden">
+                <img class="w-full h-full object-cover"
+                  data-alt="Close up detailed view of a customer smartphone scanning an embedded NFC security tag on the artisanal glass neck of traditional Vietnamese fish sauce bottle resting on wooden barrel in heritage aging cellar"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0caszidj_SEXwq6wmRDwBq_tg6Kuzvvx6bOxiH1QXNhiTI2rPs1FsO1kHvfY-ZVdHsPG5yEB59bGV04Jj_0ia63DLYa1XmsazEjfapTxOQNLJ8yEdbESbdJmLN3xHv5KwNtdL6k7n58vpGawZ2rtIaM8fHW5rzvT32Zp1dXoN6oPMZmNTaK3LKFO4GPg0dzFPADWwXqxZ8L6yOWWeQF0wgSZFYWP66nhMO9li25g">
+                <div
+                  class="absolute top-3 left-3 bg-surface-container-lowest/90 px-space-xs py-0.5 rounded font-label-sm text-label-sm font-semibold text-primary">
+                  Kiên Giang
+                </div>
+                <div
+                  class="absolute bottom-3 right-3 bg-primary-container text-on-primary px-space-xs py-0.5 rounded font-label-sm text-label-sm flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px]">star</span>
+                  OCOP 5 Sao
+                </div>
+              </div>
+              <div class="p-space-lg flex-1 flex flex-col justify-between space-y-space-md">
+                <div>
+                  <span class="font-label-sm text-label-sm text-secondary font-semibold">Chống giả Mạo Công nghệ
+                    cao</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mt-1">
+                    Nước Mắm Khải Hoàn: Triển Khai Tem Chống Giả NFC Mã Hóa
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                    Ứng dụng chip vi mạch siêu mỏng trên nắp chai. Khi chai bị mở ra, mạch điện tử tự đứt, ngăn chặn
+                    triệt để hành vi tái sử dụng vỏ chai chính hãng để chứa nước mắm pha tạp chất kém chất lượng.
+                  </p>
+                </div>
+                <div class="pt-space-sm space-y-space-xs">
+                  <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="">Tỷ lệ bảo vệ nhãn:</span>
+                    <span class="font-bold text-primary">100% Không thể làm giả</span>
+                  </div>
+                  <a class="font-label-md text-label-md text-secondary font-semibold hover:underline flex items-center gap-1"
+                    data-path="ho-so-khai-hoan-nfc" href="#">
+                    Xem toàn văn báo cáo trường hợp <span
+                      class="material-symbols-outlined text-[15px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- News Grid: Lưới 6 Bài viết & Cẩm nang Công nghệ Nông nghiệp Số -->
+      <section class="w-full bg-surface py-space-xl">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex items-center justify-between pb-space-lg">
+            <div>
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                <span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Cẩm nang &amp;
+                  Báo chí Chuyên đề</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-sm md:text-headline-lg text-primary tracking-tight mt-1">
+                Tri thức Số hóa cho Kinh tế Hợp tác xã
+              </h2>
+            </div>
+            <a class="hidden sm:inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold hover:underline"
+              data-path="tat-ca-bai-viet-cong-nghe" href="#">
+              <span class="">Xem tất cả bài viết</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </a>
+          </div>
+          <!-- 6-Article Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            <!-- Article 1 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="px-space-xs py-0.5 rounded bg-surface-container-low font-semibold text-primary">Cẩm nang
+                    Livestream</span>
+                  <span class="">18/02/2026</span>
+                </div>
+                <h3
+                  class="font-title-editorial text-title-editorial text-primary hover:text-secondary transition-colors">
+                  <a data-path="bai-viet-livestream-nong-san" href="#" class="">Nghệ thuật Livestream Bán Nông sản OCOP:
+                    Từ Kịch bản Đồng ruộng đến Đơn hàng Xuyên lục địa</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Tổng hợp bộ công cụ chuẩn bị ánh sáng tự nhiên, góc máy cận cảnh độ tươi ngon của trái cây và cách
+                  thức xây dựng sự tin cậy từ những câu chuyện lam lũ chân thật của nông dân.
+                </p>
+              </div>
+              <div
+                class="pt-space-md mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline">
+                <span class="">Tác giả: ThS. Hoàng Mạnh Quân</span>
+                <span class="">5 phút đọc</span>
+              </div>
+            </article>
+            <!-- Article 2 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span
+                    class="px-space-xs py-0.5 rounded bg-surface-container-low font-semibold text-secondary">E-Commerce
+                    B2B</span>
+                  <span class="">15/02/2026</span>
+                </div>
+                <h3
+                  class="font-title-editorial text-title-editorial text-primary hover:text-secondary transition-colors">
+                  <a data-path="bai-viet-alibaba-xuat-khau" href="#" class="">Hướng dẫn Xây dựng Gian hàng Quốc tế Chuẩn
+                    B2B trên Alibaba cho Hợp tác xã Vừa &amp; Nhỏ</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Quy chuẩn hình ảnh bao bì, bảng phân tích kiểm định dư lượng hóa chất độc hại SGS và kỹ năng thương
+                  thảo điều kiện FOB/CIF trực tuyến với các nhà nhập khẩu Nhật Bản và Bắc Âu.
+                </p>
+              </div>
+              <div
+                class="pt-space-md mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline">
+                <span class="">Tác giả: Ban Xúc tiến Thương mại</span>
+                <span class="">8 phút đọc</span>
+              </div>
+            </article>
+            <!-- Article 3 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="px-space-xs py-0.5 rounded bg-surface-container-low font-semibold text-primary">An ninh
+                    Dữ liệu</span>
+                  <span class="">12/02/2026</span>
+                </div>
+                <h3
+                  class="font-title-editorial text-title-editorial text-primary hover:text-secondary transition-colors">
+                  <a data-path="bai-viet-an-ninh-mang-htx" href="#" class="">Quản trị Rủi ro An ninh Mạng và Bảo vệ Mã
+                    Định danh Sản phẩm OCOP trên Không gian Số</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Các thủ đoạn sao chép mã QR động, làm giả chứng thư xuất xứ số và biện pháp phòng vệ nhiều lớp cho máy
+                  chủ cơ sở dữ liệu vùng trồng thuộc các liên hiệp HTX.
+                </p>
+              </div>
+              <div
+                class="pt-space-md mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline">
+                <span class="">Tác giả: KS. Trần Quốc Hùng</span>
+                <span class="">6 phút đọc</span>
+              </div>
+            </article>
+            <!-- Article 4 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="px-space-xs py-0.5 rounded bg-surface-container-low font-semibold text-primary">Logistics
+                    Lạnh</span>
+                  <span class="">09/02/2026</span>
+                </div>
+                <h3
+                  class="font-title-editorial text-title-editorial text-primary hover:text-secondary transition-colors">
+                  <a data-path="bai-viet-cold-chain-iot" href="#" class="">Chuỗi Cung ứng Lạnh (Cold Chain) Thông minh:
+                    Cứu cánh cho Trái cây Đặc sản Nhiệt đới</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Giải pháp tích hợp cảm biến nhiệt độ vào từng container vận chuyển thanh long, bưởi da xanh và sầu
+                  riêng, giúp kiểm soát tỷ lệ hao hụt sau thu hoạch dưới 3,5%.
+                </p>
+              </div>
+              <div
+                class="pt-space-md mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline">
+                <span class="">Tác giả: TS. Đặng Minh Châu</span>
+                <span class="">7 phút đọc</span>
+              </div>
+            </article>
+            <!-- Article 5 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="px-space-xs py-0.5 rounded bg-surface-container-low font-semibold text-secondary">Pháp lý
+                    &amp; Tiêu chuẩn</span>
+                  <span class="">05/02/2026</span>
+                </div>
+                <h3
+                  class="font-title-editorial text-title-editorial text-primary hover:text-secondary transition-colors">
+                  <a data-path="bai-viet-dpp-chau-au" href="#" class="">Hộ chiếu Số Sản phẩm Châu Âu (EU DPP): Nông sản
+                    Việt Cần Chuẩn bị Những Gì?</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Phân tích các yêu cầu bắt buộc sắp áp dụng của Liên minh Châu Âu về tính minh bạch chuỗi cung ứng, dấu
+                  chân carbon và hồ sơ trách nhiệm xã hội gắn liền mã số lô hàng.
+                </p>
+              </div>
+              <div
+                class="pt-space-md mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline">
+                <span class="">Tác giả: Nhóm Nghiên cứu OCOP EU</span>
+                <span class="">9 phút đọc</span>
+              </div>
+            </article>
+            <!-- Article 6 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                  <span class="px-space-xs py-0.5 rounded bg-surface-container-low font-semibold text-primary">Tài chính
+                    Nông thôn</span>
+                  <span class="">01/02/2026</span>
+                </div>
+                <h3
+                  class="font-title-editorial text-title-editorial text-primary hover:text-secondary transition-colors">
+                  <a data-path="bai-viet-fintech-ocop" href="#" class="">Fintech Nông nghiệp: Hóa giải Cơn khát Vốn Mở
+                    rộng Vùng trồng Nhờ Dữ liệu Đơn hàng</a>
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 leading-relaxed">
+                  Mô hình thế chấp tài sản số và dòng tiền trực tuyến qua sàn thương mại giúp các HTX bản địa tiếp cận
+                  nguồn vốn vay ưu đãi không cần tài sản đảm bảo hữu hình.
+                </p>
+              </div>
+              <div
+                class="pt-space-md mt-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline">
+                <span class="">Tác giả: Vũ Thị Phương Thảo</span>
+                <span class="">6 phút đọc</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive Program Registration: Khung Đăng ký 100 HTX Chuyển đổi số -->
+      <section class="w-full bg-primary-container text-on-primary py-space-xl">
+
+      </section>
+    </div>
+  </main>
+  <script src="/navigation-active.js"></script>
+
+</body>
+
+</html>

@@ -8,15 +8,19 @@ import type { ReactNode } from 'react';
 // ============================================
 
 export interface SEOData {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  canonicalUrl?: string;
   metaTitle: string;
   metaDescription: string;
   metaKeywords?: string[];
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  ogType?: 'website' | 'article' | 'product';
+  ogType?: 'website' | 'article' | 'product' | 'event' | 'video' | string;
   twitterCard?: 'summary' | 'summary_large_image';
-  canonicalUrl?: string;
   structuredData?: Record<string, unknown>;
 }
 
@@ -208,38 +212,87 @@ export interface PageData {
 // ============================================
 
 export interface ProductSpecs {
-  weight?: string[];
+  weight?: string[] | string;
   origin?: string;
   harvestSeason?: string;
   materials?: string[];
   dimensions?: string;
+  expiry?: string;
+  storage?: string;
+  packaging?: string;
+  [key: string]: string | string[] | number | boolean | undefined;
+}
+
+export interface ProducerContact {
+  phone?: string;
+  email?: string;
+  address?: string;
+  website?: string;
+}
+
+export interface ProducerInfo {
+  id?: string;
+  name: string;
+  type?: string;
+  logo?: string;
+  verified?: boolean;
+  certification?: string[];
+  contact?: ProducerContact;
+  address?: string;
+  phone?: string;
+  email?: string;
+  website?: string;
+  [key: string]: string | number | boolean | string[] | ProducerContact | undefined;
+}
+
+export interface ProductSpecification {
+  key: string;
+  value: string;
 }
 
 export interface Product {
   id: string;
   slug: string;
   name: string;
-  stars: 3 | 4 | 5;
+  stars?: 3 | 4 | 5 | string;
   category: string;
   subCategory?: string;
-  province: string;
+  province?: string;
   district?: string;
-  producer: string;
-  producerType: 'Hợp tác xã' | 'Doanh nghiệp' | 'Hộ gia đình' | 'Cá nhân';
+  producer?: string | ProducerInfo;
+  producerType?: 'Hợp tác xã' | 'Doanh nghiệp' | 'Hộ gia đình' | 'Cá nhân' | string;
+  shortDescription?: string;
   description: string;
   ingredients?: string[];
   process?: string[];
   certifications?: string[];
   awards?: string[];
+  exportMarkets?: string[];
   nutritionInfo?: string;
   storage?: string;
-  price?: string;
-  images: string[];
+  price?: string | number;
+  priceUnit?: string;
+  oldPrice?: string | number;
+  reviewCount?: number;
+  images: (string | MediaAsset)[];
   videoUrl?: string;
   specs?: ProductSpecs;
+  specifications?: ProductSpecification[];
   seo: SEOData;
   relatedProducts?: string[];
   location?: LocationData;
+  origin?: string | LocationData;
+  rating?: number;
+  viewCount?: number;
+  tags?: string[];
+  title?: string;
+  featured?: boolean;
+  isFeatured?: boolean;
+  isNew?: boolean;
+  isBestseller?: boolean;
+  inStock?: boolean;
+  inventoryCount?: number;
+  publishedAt?: string;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -526,10 +579,19 @@ export interface EventLocation {
   };
 }
 
+export interface EventRegistration {
+  required?: boolean;
+  url?: string;
+  deadline?: string;
+  capacity?: number;
+  fee?: number;
+  feeDescription?: string;
+}
+
 export interface Event {
   id: string;
   slug: string;
-  type: EventType;
+  type?: EventType | string;
   status: EventStatus;
   title: string;
   headline?: string; // Legacy support
@@ -537,29 +599,39 @@ export interface Event {
   endDate?: string; // ISO date
   startTime?: string; // HH:mm
   endTime?: string; // HH:mm
-  location: EventLocation;
+  timezone?: string;
+  location?: EventLocation;
   // Flattened location properties for backward compatibility with components
-  venue: string;
+  venue?: string;
   address?: string;
-  province: string;
+  province?: string;
   district?: string;
-  shortDescription: string;
+  coordinates?: { lat: number; lng: number };
+  shortDescription?: string;
   description: string; // HTML content
   // Alias for description for backward compatibility
   content: string;
   thumbnail?: MediaAsset;
   image?: string; // Legacy support
+  featuredImage?: string;
+  images?: (string | MediaAsset)[];
   isOnline?: boolean;
   isFree?: boolean;
   organizer?: string;
+  coOrganizers?: string[];
+  sponsors?: string[];
   contactEmail?: string;
   contactPhone?: string;
   registrationUrl?: string;
+  registration?: EventRegistration;
   website?: string;
-  targetAudience?: string;
+  targetAudience?: string | string[];
   speakers?: string[];
   capacity?: number;
+  expectedAttendees?: number;
   tags?: string[];
+  eventType?: string;
+  summary?: string;
   seo: SEOData & {
     metaTitle?: string;
     metaDescription?: string;
@@ -615,23 +687,41 @@ export interface SearchSuggestionsResponse {
 // ============================================
 
 export interface RegistrationSubmission {
-  eventSlug: string;
+  id?: string;
   fullName: string;
   email: string;
   phone: string;
+  entityType?: 'Hợp tác xã' | 'Doanh nghiệp' | 'Hộ gia đình' | 'Cá nhân' | string;
+  entityName?: string;
+  taxCode?: string;
+  productName?: string;
+  productCategory?: string;
+  province?: string;
+  district?: string;
+  ward?: string;
+  description?: string;
+  website?: string;
+  certifications?: string[];
+  exportMarkets?: string[];
+  status?: string;
+  submittedAt?: string;
+  updatedAt?: string;
+  eventSlug?: string;
   organization?: string;
   position?: string;
   notes?: string;
   consentMarketing?: boolean;
-  consentPrivacy: boolean;
+  consentPrivacy?: boolean;
 }
 
 export interface RegistrationResponse {
   success: boolean;
   message: string;
   registrationId?: string;
+  submissionId?: string;
+  trackingCode?: string;
   confirmationCode?: string;
-  errors?: Record<string, string>;
+  errors?: Record<string, string> | string[];
 }
 
 // ============================================
@@ -655,6 +745,7 @@ export interface ChuThe {
   hinhAnh?: string[];
   certifications?: string[];
   awards?: string[];
+  exportMarkets?: string[];
   location?: LocationData;
   seo: SEOData;
   createdAt?: string;
@@ -776,13 +867,18 @@ export interface ApiResponse<T> {
   };
 }
 
+export interface PaginationMeta {
+  page: number;
+  limit: number;
+  total: number;
+  totalPages: number;
+  hasNext?: boolean;
+  hasPrev?: boolean;
+}
+
 export interface PaginatedResponse<T> extends ApiResponse<T[]> {
-  meta: {
-    page: number;
-    limit: number;
-    total: number;
-    totalPages: number;
-  };
+  meta: PaginationMeta;
+  pagination?: PaginationMeta;
 }
 
 // ============================================

@@ -14,3 +14,6 @@ export { StatBadge, SpatialMetricsBar, KPICard } from './StatBadges';
 // Layout Components
 export { Header } from './layout/Header';
 export { Footer } from './layout/Footer';
+export { MobileMenuProvider, useMobileMenu } from './layout/MobileMenuContext';
+export { FontLoader } from './FontLoader';
+export { Providers } from './Providers';

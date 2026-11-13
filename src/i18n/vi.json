@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "Cổng thông tin điện tử OCOP Việt Nam",
+    "tagline": "Kết nối giá trị nông sản và văn hóa bản địa Việt Nam"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "news": "Tin tức & Sự kiện",
+    "news_policy": "Chính sách và cơ chế OCOP",
+    "news_trade": "Xúc tiến thương mại",
+    "news_local": "OCOP địa phương",
+    "integration": "OCOP Hội nhập",
+    "integration_export": "Xuất khẩu và thị trường quốc tế",
+    "integration_standards": "Tiêu chuẩn và chứng nhận quốc tế",
+    "integration_digital": "Chuyển đổi số OCOP",
+    "products": "Sản phẩm OCOP",
+    "products_agri": "Nông sản và thực phẩm",
+    "products_herbal": "Dược liệu và sản phẩm sức khỏe",
+    "products_craft": "Thủ công mỹ nghệ",
+    "products_stars": "Sản phẩm theo hạng sao",
+    "producers": "Chủ thể OCOP",
+    "stories": "Câu chuyện OCOP",
+    "stories_culture": "Văn hóa tinh hoa bản địa",
+    "stories_multimedia": "Phóng sự đa phương tiện",
+    "stories_journey": "Hành trình chủ thể OCOP",
+    "destinations": "Điểm đến du lịch",
+    "destinations_eco": "Du lịch sinh thái trải nghiệm OCOP",
+    "destinations_craft": "Làng nghề truyền thống",
+    "search": "Tìm kiếm tư liệu, bài viết...",
+    "submit": "Gửi bài / Hồ sơ OCOP",
+    "submit_short": "Gửi hồ sơ"
+  },
+  "common": {
+    "read_more": "Xem chi tiết",
+    "view_all": "Xem tất cả",
+    "back": "Quay lại",
+    "all": "Tất cả",
+    "province": "Tỉnh / Thành phố",
+    "stars": "Hạng sao",
+    "category": "Ngành hàng",
+    "empty_state": "Không tìm thấy dữ liệu phù hợp",
+    "empty_state_description": "Vui lòng thử lại với các tiêu chí tìm kiếm hoặc bộ lọc khác.",
+    "page": "Trang",
+    "prev_page": "Trang trước",
+    "next_page": "Trang sau",
+    "loading": "Đang tải dữ liệu...",
+    "draft_mode_notice": "Bạn đang xem bản nháp (Draft Mode)",
+    "draft_mode_exit": "Thoát bản nháp"
+  },
+  "footer": {
+    "about_title": "Về OCOP Việt Nam",
+    "about_text": "Chuyên trang thông tin điện tử OCOP Việt Nam - Nơi tập trung, chia sẻ và lan tỏa câu chuyện, sản phẩm, và giá trị OCOP đến cộng đồng.",
+    "contact_title": "Thông tin liên hệ",
+    "privacy_policy": "Chính sách bảo mật",
+    "terms_of_use": "Điều khoản sử dụng",
+    "copyright": "© 2026 OCOP Việt Nam. Mọi quyền được bảo lưu."
+  },
+  "home": {
+    "quick_links": "Truy cập nhanh",
+    "kpi_heading": "Dấu ấn Chương trình OCOP Quốc gia",
+    "featured_news": "Tin tức & Sự kiện tiêu điểm",
+    "featured_products": "Sản phẩm OCOP tiêu biểu",
+    "featured_stories": "Câu chuyện OCOP nổi bật",
+    "featured_destinations": "Điểm đến & Trải nghiệm",
+    "integration_heading": "Trụ cột Hội nhập OCOP",
+    "cta_heading": "Lan tỏa giá trị OCOP Việt Nam"
+  }
+}

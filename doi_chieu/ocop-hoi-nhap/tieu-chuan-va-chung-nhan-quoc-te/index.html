@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html class="h-full" lang="vi" style="position: relative;">
+
+</html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#ffb599", "surface-container": "#e7eeff", "tertiary-container": "#533600", "on-surface-variant": "#414844", "on-secondary-fixed-variant": "#79300f", "surface-dim": "#d0daf0", "primary": "#012d1d", "tertiary-fixed": "#ffddb1", "error-container": "#ffdad6", "surface-container-high": "#dee8ff", "on-primary-fixed": "#002114", "surface": "#f9f9ff", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#a5d0b9", "secondary-container": "#fd966d", "on-tertiary": "#ffffff", "error": "#ba1a1a", "surface-container-highest": "#d9e3f9", "outline-variant": "#c1c8c2", "surface-container-low": "#f0f3ff", "on-primary-container": "#86af99", "inverse-on-surface": "#ebf1ff", "on-secondary": "#ffffff", "on-surface": "#121c2c", "on-tertiary-fixed": "#291800", "on-error": "#ffffff", "on-tertiary-container": "#ce9e54", "on-primary-fixed-variant": "#274e3d", "surface-variant": "#d9e3f9", "secondary": "#984724", "on-error-container": "#93000a", "background": "#f9f9ff", "inverse-primary": "#a5d0b9", "surface-tint": "#3f6653", "on-tertiary-fixed-variant": "#614000", "on-background": "#121c2c", "on-secondary-container": "#752d0b", "on-secondary-fixed": "#370e00", "primary-container": "#1b4332", "tertiary-fixed-dim": "#f2be71", "surface-bright": "#f9f9ff", "on-primary": "#ffffff", "outline": "#717973", "tertiary": "#372200", "primary-fixed": "#c1ecd4", "secondary-fixed": "#ffdbce", "inverse-surface": "#273141" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1.25rem", "gutter-tablet": "1.25rem", "margin-tablet": "2rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin": "4rem" }, "fontFamily": { "title-editorial": ["Noto Serif"], "label-sm": ["Be Vietnam Pro"], "quote-display": ["Noto Serif"], "body-md": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"], "headline-sm": ["Noto Serif"], "headline-md": ["Noto Serif"], "lead-paragraph": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "headline-lg-mobile": ["Noto Serif"], "display-hero": ["Noto Serif"], "headline-lg": ["Noto Serif"], "display-hero-mobile": ["Noto Serif"], "body-lg": ["Be Vietnam Pro"] }, "fontSize": { "title-editorial": ["19px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "quote-display": ["24px", { "lineHeight": "38px", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "26px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-md": ["28px", { "lineHeight": "38px", "fontWeight": "600" }], "lead-paragraph": ["20px", { "lineHeight": "34px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "38px", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["17px", { "lineHeight": "30px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  </header>
+  <main class="w-full bg-surface min-h-[calc(100vh-28rem)]">
+    <!-- THANH SUB-HEADER CHUYÊN MỤC KIỂU BÁO NÔNG NGHIỆP & MÔI TRƯỜNG -->
+    <div class="bg-white pt-3 pb-0">
+      <div class="max-w-[1360px] mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+        <div class="flex flex-wrap items-baseline gap-x-6 gap-y-1 border-b-2 border-gray-200">
+
+          <a href="/ocop-hoi-nhap/index.html" data-subnav="parent"
+            class="text-lg md:text-xl font-bold text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-[#2C5E2E] whitespace-nowrap transition-colors">
+            OCOP Hội nhập
+          </a>
+
+          <nav class="flex items-center gap-x-5 overflow-x-auto no-scrollbar">
+            <a href="/ocop-hoi-nhap/xuat-khau-va-thi-truong-quoc-te/index.html" data-subnav="item"
+              class="subnav-link text-[13px] font-medium text-gray-700 hover:text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-transparent hover:border-[#2C5E2E] whitespace-nowrap transition-all">
+              Xuất khẩu & thị trường quốc tế
+            </a>
+            <a href="/ocop-hoi-nhap/tieu-chuan-va-chung-nhan-quoc-te/index.html" data-subnav="item"
+              class="text-lg md:text-xl font-bold text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-[#2C5E2E] whitespace-nowrap transition-colors">
+              Tiêu chuẩn & chứng nhận quốc tế
+            </a>
+            <a href="/ocop-hoi-nhap/chuyen-doi-so-OCOP/index.html" data-subnav="item"
+              class="subnav-link text-[13px] font-medium text-gray-700 hover:text-[#2C5E2E] pb-2 -mb-[2px] border-b-2 border-transparent hover:border-[#2C5E2E] whitespace-nowrap transition-all">
+              Chuyển đổi số OCOP
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col w-full">
+      <!-- Sub-navigation Bar (Pills Navigation for OCOP Hội Nhập) -->
+      <div class="w-full bg-surface-container-lowest/80 backdrop-blur-sm sticky top-28 z-40 shadow-sm">
+
+      </div>
+      <!-- Hero & Khung Tiêu chuẩn Chất lượng Toàn cầu -->
+      <section
+        class="w-full bg-gradient-to-b from-surface-container-low via-surface to-surface-container-lowest py-space-xl">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+            <div class="lg:col-span-8 space-y-space-md">
+              <h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+                Chuẩn hóa Chất lượng: Chiếc Vé Thông hành Đưa Sản phẩm OCOP Vươn Tầm Toàn cầu
+              </h1>
+              <p class="font-lead-paragraph text-lead-paragraph text-on-surface-variant leading-relaxed">
+                Chuyển giao từ tập quán sản xuất thủ công manh mún sang kỷ nguyên kiểm định dữ liệu độc lập. Để vượt qua
+                hàng rào kỹ thuật của Liên minh Châu Âu, Bắc Mỹ và các nền kinh tế Hồi giáo, mỗi giọt mật ong đại ngàn,
+                từng búp chè Shan Tuyết cổ thụ hay mẻ nước mắm truyền thống đều phải qua hàng trăm chỉ tiêu kiểm tra độc
+                lập tại phòng thử nghiệm đạt chuẩn ISO/IEC 17025.
+              </p>
+              <!-- Core Metrology Badges -->
+              <div class="pt-space-sm flex flex-wrap gap-space-sm">
+                <span
+                  class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+                  <span class="material-symbols-outlined text-[16px] text-secondary">science</span> Phổ sắc ký khí
+                  GC-MS/MS &amp; LC-MS/MS
+                </span>
+                <span
+                  class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+                  <span class="material-symbols-outlined text-[16px] text-primary">eco</span> Truy xuất nguồn gốc chuỗi
+                  khối (Blockchain)
+                </span>
+                <span
+                  class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm">
+                  <span class="material-symbols-outlined text-[16px] text-tertiary-container">policy</span> Quy định
+                  chống suy thoái rừng EUDR
+                </span>
+              </div>
+            </div>
+            <!-- 3 Vital Metrics Panel -->
+
+          </div>
+        </div>
+      </section>
+      <!-- Ký sự Phân tích Tiêu điểm (Focus Narrative / Technical Investigation) -->
+      <section class="w-full py-space-xl bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+          <div class="p-space-lg md:p-space-xl rounded-xl bg-surface-container-low shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+              <!-- Image Composition from Inspiration: Tea ceremony & Indigenous craft -->
+              <div class="lg:col-span-5 space-y-space-md">
+                <div class="relative rounded-xl overflow-hidden shadow-lg group">
+                  <img class="w-full h-[360px] object-cover group-hover:scale-105 transition-transform duration-700"
+                    data-alt="Traditional dark green celadon ceramic teapot with handle and spout, small ceramic teacups resting on rustic textured wood plinth, handwoven bamboo winnowing tray filled with dried dark Shan Tuyet tea leaves next to handmade clay jars with cork stoppers, earthy warm terracotta background, moody museum-grade studio lighting, heritage Vietnamese tea craftsmanship"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmz3JmIbGrAdQrS0_mf203lNcdjZ0SN4xo-RDSNgGnDd-7Jx4bNIjDMj5Bc2m85lc02QThJywefCoDAJ5k3z_F8kdRGlduVKw-QYmQN8xYE9vWP7XQDLiIkUwkkSrTR7RGeA4hJgq5E6Gha6oIpXYQj9Pvz7H3ldQu2pm0a2gmo3kSPps-tImKbfTW6LbJO0oCq_Rej5ajvbIcUSMGFCrKN2iK5elvD_f2l3VXToY">
+                  <div
+                    class="absolute bottom-3 left-3 right-3 p-space-sm rounded-lg bg-primary/90 backdrop-blur-md text-on-primary flex items-center justify-between text-body-sm font-body-sm">
+                    <span class="flex items-center gap-space-xs">
+                      <span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">spa</span>
+                      Chè Shan Tuyết Tây Côn Lĩnh (Hà Giang)
+                    </span>
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-secondary text-on-secondary font-label-sm text-label-sm">EU
+                      ORGANIC</span>
+                  </div>
+                </div>
+                <!-- Secondary Image Thumbnail for spice and harvest detail -->
+                <div class="grid grid-cols-2 gap-space-md">
+                  <div class="relative rounded-lg overflow-hidden shadow-sm h-32 group">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      data-alt="Artisanal glass bottles of traditional amber Phu Quoc fish sauce with string ties and cork lids alongside cinnamon sticks and star anise in round bamboo steamer baskets on rustic dark wooden table, soft dramatic moody lighting"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKY8yZ7AhPW42Q4FjCZKEhfBmu-YXAxZ7YGtNvGViNjJhJI1OVuDLmk1qLodU4QPgW_PxWv3o4l4ZvYgj2aWKhSKEJoG78UFflwxYBesOtAXRZx4xC_yxeN_HS8f4_A0_tlSCRU1nL7cdOyhOTxdlK0gZmByN42UxxrIpen9d70nhMrVZgO4qCeUXMuNrpPtLfJ0aSZkNJ8TvNuIkLoMTcWYbuL78JeK0jrybvRws">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-xs">
+                      <span class="font-label-sm text-label-sm text-on-primary">Nước mắm Phú Quốc 35°N</span>
+                    </div>
+                  </div>
+                  <div class="p-space-md rounded-lg bg-surface-container flex flex-col justify-between">
+                    <div>
+                      <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase">Chứng nhận</span>
+                      <div class="font-title-editorial text-title-editorial text-primary mt-space-xs">Chỉ dẫn Địa lý EU
+                        GI</div>
+                    </div>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+                      <span class="material-symbols-outlined text-[16px] text-primary">task_alt</span> 100% Không hóa
+                      chất bảo quản
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Longform Article Body -->
+              <div class="lg:col-span-7 space-y-space-md">
+                <div class="flex items-center gap-space-sm">
+                  <span
+                    class="px-space-sm py-0.5 rounded bg-secondary/15 text-secondary font-label-md text-label-md font-semibold">
+                    KÝ SỰ PHÂN TÍCH TIÊU ĐIỂM
+                  </span>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">timer</span> 8 phút đọc
+                  </span>
+                </div>
+                <h2 class="font-headline-md text-headline-md text-primary leading-tight">
+                  Vượt qua bài kiểm tra 500 chỉ tiêu dư lượng hóa chất: Hành trình chứng nhận hữu cơ EU Organic cho chè
+                  Shan Tuyết cổ thụ Hà Giang
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                  Ở độ cao trên 1.400 mét thuộc dãy Tây Côn Lĩnh, những cây chè cổ thụ hàng trăm năm tuổi ngậm sương mù
+                  quanh năm đã tạo nên nguồn nguyên liệu độc bản. Tuy nhiên, khi đối diện với phòng phân tích của tổ
+                  chức Control Union tại Hà Lan, câu chuyện thần bí về độ cao và sương gió phải nhường chỗ cho dữ liệu
+                  số: danh mục 517 hoạt chất thuốc bảo vệ thực vật, kim loại nặng Pb, Cd, As và độc tố nấm Aflatoxin.
+                </p>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 gap-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+                  <div class="space-y-space-xs">
+                    <div class="flex items-center gap-space-xs text-primary font-semibold font-body-md text-body-md">
+                      <span class="material-symbols-outlined text-[18px] text-secondary">assignment_turned_in</span>
+                      Khu vực đệm cách ly 1.5km
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Xóa bỏ nguy cơ nhiễm chéo từ các nương ngô sử dụng thuốc diệt cỏ thông qua thỏa thuận cộng đồng
+                      bản địa người Dao áo dài.
+                    </p>
+                  </div>
+                  <div class="space-y-space-xs">
+                    <div class="flex items-center gap-space-xs text-primary font-semibold font-body-md text-body-md">
+                      <span class="material-symbols-outlined text-[18px] text-secondary">biotech</span>
+                      Giới hạn định lượng &lt; 0.01 mg/kg
+                    </div>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Đáp ứng ngưỡng khắt khe nhất của Ủy ban Tiêu chuẩn Thực phẩm Codex và Quy định (EU) 2018/848 về
+                      sản phẩm hữu cơ.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                  <a class="px-space-lg py-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-all shadow-md inline-flex items-center gap-space-xs"
+                    href="#">
+                    <span class="material-symbols-outlined text-[18px]">article</span> Đọc toàn văn hồ sơ kiểm định
+                  </a>
+                  <a class="px-space-md py-space-sm rounded-lg text-secondary hover:bg-secondary/10 font-label-md text-label-md transition-colors inline-flex items-center gap-space-xs"
+                    href="#">
+                    <span class="material-symbols-outlined text-[18px]">download</span> Tải bản đối sánh 517 chỉ tiêu
+                    (.PDF)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Ma trận Hệ thống Tiêu chuẩn Quốc tế Phổ biến (Comprehensive Standards Matrix) -->
+      <section class="w-full py-space-xl bg-surface">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin space-y-space-xl">
+          <div class="max-w-3xl space-y-space-xs">
+            <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">
+              HỆ THỐNG QUY CHUẨN THÔNG HÀNH
+            </span>
+            <h2 class="font-headline-lg text-headline-lg text-primary">
+              Ma Trận Tiêu Chuẩn Quốc Tế Cho Từng Nhóm Sản Phẩm OCOP
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Mỗi thị trường mục tiêu đòi hỏi một bộ "hộ chiếu chất lượng" riêng biệt. Đây là ma trận 5 nhóm chuẩn mực
+              cốt lõi mà các chủ thể OCOP 4 sao và 5 sao bắt buộc phải nắm vững trước khi đàm phán hợp đồng thương mại
+              quốc tế.
+            </p>
+          </div>
+          <!-- 5 Standards Cards in Asymmetric Layout -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            <!-- Thẻ 1: Canh tác Nông nghiệp Tốt -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-space-md group hover:shadow-xl transition-all">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">agriculture</span>
+                  </span>
+                  <span
+                    class="px-space-sm py-0.5 rounded bg-primary-fixed-dim/30 text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">
+                    NÔNG SẢN TƯƠI
+                  </span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">
+                  Thực Hành Nông Nghiệp Tốt (GlobalG.A.P &amp; VietGAP nâng cao)
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Quy chuẩn về an toàn sinh học vùng trồng, bảo vệ người lao động, truy xuất nguồn gốc từ giống, phân
+                  bón và nguồn nước ngầm.
+                </p>
+                <div class="space-y-space-xs pt-space-xs">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Thị trường ưu tiên:</span>
+                    <span class="font-semibold text-primary">EU, Úc, Nhật Bản, Bắc Mỹ</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Thời hạn hiệu lực:</span>
+                    <span class="text-on-surface-variant">Tái đánh giá hàng năm (12 tháng)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm">
+                <span
+                  class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary group-hover:translate-x-1 transition-transform">
+                  Xem quy định kiểm toán điểm trồng <span
+                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+            <!-- Thẻ 2: Hữu cơ Quốc tế -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-space-md group hover:shadow-xl transition-all">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">nature</span>
+                  </span>
+                  <span
+                    class="px-space-sm py-0.5 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                    KHÔNG HÓA CHẤT
+                  </span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">
+                  Chứng Nhận Hữu Cơ Quốc Tế (USDA Organic, EU, JAS Organic)
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Tuyệt đối không sử dụng thuốc diệt cỏ, phân bón hóa học, hạt giống biến đổi gen (Non-GMO) và bức xạ
+                  ion hóa trong chu trình 3 năm chuyển đổi đất.
+                </p>
+                <div class="space-y-space-xs pt-space-xs">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Thị trường ưu tiên:</span>
+                    <span class="font-semibold text-primary">Hoa Kỳ, EU, Nhật Bản, Thụy Sĩ</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Giai đoạn chuyển đổi:</span>
+                    <span class="text-on-surface-variant">24 - 36 tháng lấy mẫu đất</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm">
+                <span
+                  class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary group-hover:translate-x-1 transition-transform">
+                  Danh mục hoạt chất cấm tuyệt đối <span
+                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+            <!-- Thẻ 3: Quản lý An toàn Thực phẩm Nhà xưởng -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-space-md group hover:shadow-xl transition-all">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">factory</span>
+                  </span>
+                  <span
+                    class="px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+                    CHẾ BIẾN SÂU
+                  </span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">
+                  An Toàn Nhà Xưởng Chế Biến (HACCP, ISO 22000, BRCGS, FSSC)
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Phân tích mối nguy và điểm kiểm soát tới hạn (CCP). Đảm bảo dây chuyền chiết rót, sấy khô, đóng gói
+                  tuân thủ phòng sạch và vệ sinh công nghiệp.
+                </p>
+                <div class="space-y-space-xs pt-space-xs">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Thị trường ưu tiên:</span>
+                    <span class="font-semibold text-primary">Toàn cầu &amp; Kênh siêu thị lớn</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Yêu cầu trọng yếu:</span>
+                    <span class="text-on-surface-variant">Kiểm soát CCP &amp; Hồ sơ lô mẻ</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm">
+                <span
+                  class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary group-hover:translate-x-1 transition-transform">
+                  Sơ đồ luồng di chuyển vô trùng <span
+                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+            <!-- Thẻ 4: Tiêu chuẩn Văn hóa & Xã hội -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-md flex flex-col justify-between space-y-space-md group hover:shadow-xl transition-all">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                    <span class="material-symbols-outlined text-[28px]">mosque</span>
+                  </span>
+                  <span
+                    class="px-space-sm py-0.5 rounded bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+                    ĐA DẠNG TÍN NGƯỠNG
+                  </span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">
+                  Văn Hóa &amp; Tôn Giáo (Chứng Nhận Halal, Kosher, Fairtrade)
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Không chứa cồn, dẫn xuất từ lợn; đảm bảo chuỗi cung ứng minh bạch không bóc lột sức lao động, bảo vệ
+                  giá thu mua tối thiểu cho nông dân nhỏ.
+                </p>
+                <div class="space-y-space-xs pt-space-xs">
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Thị trường ưu tiên:</span>
+                    <span class="font-semibold text-primary">Trung Đông, Malaysia, Indonesia, Israel</span>
+                  </div>
+                  <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface">
+                    <span class="">Cơ quan cấp phép:</span>
+                    <span class="text-on-surface-variant">JAKIM, MUI, Halal Center VN</span>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-space-sm">
+                <span
+                  class="inline-flex items-center gap-space-xs font-label-md text-label-md text-secondary group-hover:translate-x-1 transition-transform">
+                  Quy tắc chứng nhận Halal OCOP <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </div>
+            </div>
+            <!-- Thẻ 5: Tiêu chuẩn Môi trường & Bền vững (Spanning 2 columns on lg) -->
+            <div
+              class="lg:col-span-2 p-space-lg rounded-xl bg-gradient-to-br from-primary-container to-primary text-on-primary shadow-lg flex flex-col justify-between space-y-space-md">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-space-sm">
+                    <span
+                      class="w-12 h-12 rounded-lg bg-surface-container-lowest/15 flex items-center justify-center text-primary-fixed">
+                      <span class="material-symbols-outlined text-[28px]">forest</span>
+                    </span>
+                    <div>
+                      <span
+                        class="px-space-sm py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+                        QUY ĐỊNH MỚI 2025 - 2026
+                      </span>
+                      <div class="font-headline-sm text-headline-sm text-on-primary mt-space-xs">
+                        Trách Nhiệm Sinh Thái (Chứng Chỉ Rừng FSC, EUDR &amp; Dấu Chân Carbon)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+                  Theo quy định EUDR mới nhất, các sản phẩm cà phê, cao su, gỗ, quế, hồi OCOP xuất sang Liên minh Châu
+                  Âu phải chứng minh tọa độ địa lý (GPS Polygon) của từng thửa đất canh tác không gây mất rừng sau ngày
+                  31/12/2020. Đồng thời tính toán lượng phát thải khí nhà kính (Scope 1, 2, 3) trên từng đơn vị bao bì.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+                  <div class="p-space-sm rounded-lg bg-primary/40">
+                    <div class="font-label-md text-label-md text-primary-fixed-dim">Dữ liệu Geolocation</div>
+                    <div class="font-body-sm text-body-sm text-on-primary">Định vị vệ tinh thửa đất nông hộ</div>
+                  </div>
+                  <div class="p-space-sm rounded-lg bg-primary/40">
+                    <div class="font-label-md text-label-md text-primary-fixed-dim">Rừng Tự Nhiên</div>
+                    <div class="font-body-sm text-body-sm text-on-primary">100% không chuyển đổi rừng sau 2020</div>
+                  </div>
+                  <div class="p-space-sm rounded-lg bg-primary/40">
+                    <div class="font-label-md text-label-md text-primary-fixed-dim">Chứng chỉ FSC / PEFC</div>
+                    <div class="font-body-sm text-body-sm text-on-primary">Áp dụng cho dược liệu tán rừng</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-sm">
+                <span class="font-label-sm text-label-sm text-primary-fixed-dim italic">Bắt buộc đối với nhóm Cà phê
+                  &amp; Quế hồi xuất khẩu sang EU</span>
+                <a class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-bright transition-colors inline-flex items-center gap-space-xs"
+                  href="#">
+                  Tải Cẩm nang số hóa tọa độ EUDR <span
+                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hướng dẫn Lộ trình 6 Bước Đạt Chứng nhận Quốc tế cho HTX (Step-by-step Compliance Roadmap) -->
+      <section class="w-full py-space-xl bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin space-y-space-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="max-w-2xl space-y-space-xs">
+              <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">LỘ TRÌNH
+                THỰC THI CHUẨN HÓA</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary">
+                6 Giai Đoạn Vượt Qua Kỳ Đánh Giá Độc Lập
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Phương pháp luận đúc kết từ 320 hợp tác xã điểm, giúp các chủ thể OCOP tối ưu hóa chi phí và rút ngắn
+                thời gian chuẩn bị hồ sơ từ 18 tháng xuống còn 6-9 tháng.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+              Được bảo trợ bởi Hội đồng Khoa học OCOP
+            </div>
+          </div>
+          <!-- 6-Step Chronological Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            <!-- Bước 1 -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm relative overflow-hidden group">
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display-hero text-headline-md font-bold text-outline-variant group-hover:text-primary transition-colors">01</span>
+                <span
+                  class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Tháng
+                  1 - 2</span>
+              </div>
+              <h3 class="font-title-editorial text-title-editorial text-primary">Khảo sát &amp; Phân tích Nền Đất - Nước
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Lấy mẫu thổ nhưỡng và nguồn nước ngầm tại 100% diện tích dự kiến chứng nhận. Gửi mẫu về phòng kiểm định
+                đo lường hàm lượng Asen, Chì, Thủy ngân và tàn dư thuốc trừ cỏ gốc Clo hữu cơ.
+              </p>
+              <div class="pt-space-xs text-label-sm font-label-sm text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">checklist</span> Hồ sơ mẫu phân tích mẫu A/B
+              </div>
+            </div>
+            <!-- Bước 2 -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm relative overflow-hidden group">
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display-hero text-headline-md font-bold text-outline-variant group-hover:text-primary transition-colors">02</span>
+                <span
+                  class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Tháng
+                  3 - 4</span>
+              </div>
+              <h3 class="font-title-editorial text-title-editorial text-primary">Chuẩn Hóa Quy Trình SOP Canh Tác</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Biên soạn Quy trình Thao tác Chuẩn (SOP) bằng ngôn ngữ bình dị cho từng hộ thành viên. Thành lập vùng
+                đệm bảo vệ (Buffer Zone) tối thiểu 50-100m ngăn ô nhiễm chéo từ các hộ lân cận.
+              </p>
+              <div class="pt-space-xs text-label-sm font-label-sm text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">checklist</span> Bản đồ cắm mốc ranh giới
+              </div>
+            </div>
+            <!-- Bước 3 -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm relative overflow-hidden group">
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display-hero text-headline-md font-bold text-outline-variant group-hover:text-primary transition-colors">03</span>
+                <span
+                  class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Tháng
+                  4 - 5</span>
+              </div>
+              <h3 class="font-title-editorial text-title-editorial text-primary">Đào Tạo &amp; Số Hóa Nhật Ký Nông Hộ
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Thay thế sổ tay ghi chép giấy bằng ứng dụng nhật ký điện tử. Nông dân quét mã QR nhập liệu từng đợt cắt
+                tỉa, ủ phân hữu cơ vi sinh, bẫy bả sinh học kèm định vị thời gian thực (Timestamp).
+              </p>
+              <div class="pt-space-xs text-label-sm font-label-sm text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">checklist</span> 100% nông hộ có tài khoản số
+              </div>
+            </div>
+            <!-- Bước 4 -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm relative overflow-hidden group">
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display-hero text-headline-md font-bold text-outline-variant group-hover:text-primary transition-colors">04</span>
+                <span
+                  class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Tháng
+                  6</span>
+              </div>
+              <h3 class="font-title-editorial text-title-editorial text-primary">Kiểm Toán Nội Bộ &amp; Khắc Phục Điểm
+                Không Phù Hợp</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Ban Kiểm soát HTX tiến hành đánh giá chéo giả lập điều kiện của tổ chức quốc tế. Lập biên bản CAR
+                (Corrective Action Request) xử lý triệt để các tồn tại về kho chứa phân bón và bảo hộ lao động.
+              </p>
+              <div class="pt-space-xs text-label-sm font-label-sm text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">checklist</span> Báo cáo kiểm toán nội bộ đạt
+                &gt;95%
+              </div>
+            </div>
+            <!-- Bước 5 -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm relative overflow-hidden group">
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display-hero text-headline-md font-bold text-outline-variant group-hover:text-primary transition-colors">05</span>
+                <span
+                  class="px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Tháng
+                  7</span>
+              </div>
+              <h3 class="font-title-editorial text-title-editorial text-primary">Thử Nghiệm Phòng Lab Độc Lập Chỉ Định
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Lấy mẫu thành phẩm đại diện niêm phong gửi đến phòng lab quốc tế (Eurofins, SGS, Vinacontrol). Tiến hành
+                quét toàn diện dải hóa chất mục tiêu, vi sinh vật gây hại (Salmonella, E.coli).
+              </p>
+              <div class="pt-space-xs text-label-sm font-label-sm text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">checklist</span> Phiếu kết quả Certificate of
+                Analysis (CoA)
+              </div>
+            </div>
+            <!-- Bước 6 -->
+            <div
+              class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm relative overflow-hidden group">
+              <div class="flex items-center justify-between">
+                <span
+                  class="font-display-hero text-headline-md font-bold text-secondary group-hover:text-primary transition-colors">06</span>
+                <span
+                  class="px-space-sm py-0.5 rounded bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold">Cấp
+                  chứng nhận</span>
+              </div>
+              <h3 class="font-title-editorial text-title-editorial text-primary">Đánh Giá Chính Thức &amp; Cấp Chứng Thư
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Chuyên gia đánh giá hiện trường từ Bureau Veritas, SGS hoặc Control Union kiểm tra đột xuất tại vườn và
+                nhà máy. Chứng nhận quốc tế được cấp và đồng bộ mã tra cứu trên cổng dữ liệu OCOP.
+              </p>
+              <div class="pt-space-xs text-label-sm font-label-sm text-secondary font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">checklist</span> Tra cứu chứng nhận số toàn cầu
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Lưới Bài viết & Hướng dẫn Thực thi Kỹ thuật (Grid 6 Technical Articles) -->
+      <section class="w-full py-space-xl bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin space-y-space-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+            <div class="space-y-space-xs">
+              <span class="font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider">CẨM NANG
+                &amp; HƯỚNG DẪN KỸ THUẬT</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary">
+                Nghiên Cứu Chuyên Sâu Về Hàng Rào Kỹ Thuật Nông Sản
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                Các chuyên khảo được chấp bút bởi Hội đồng Thẩm định OCOP Quốc gia và đại diện các phòng thử nghiệm quốc
+                tế.
+              </p>
+            </div>
+            <div class="flex items-center gap-space-sm">
+              <button
+                class="px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+                Mới nhất
+              </button>
+              <button
+                class="px-space-md py-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-colors">
+                Đọc nhiều nhất
+              </button>
+            </div>
+          </div>
+          <!-- 6 Technical Editorial Articles Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            <!-- Bài 1 -->
+            <article
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md group hover:bg-surface-container transition-colors">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                  <span class="text-secondary font-semibold">KIỂM ĐỊNH BAO BÌ</span>
+                  <span class="">18/03/2026</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                  Kiểm soát vi nhựa và thôi nhiễm kim loại nặng trong bao bì đựng nông sản chế biến
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Hướng dẫn lựa chọn màng nhôm thực phẩm, thủy tinh trung tính và nhựa sinh học tự hủy đạt chứng chỉ FDA
+                  21 CFR và Chỉ thị EU 10/2011.
+                </p>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                <span class="">GS. Trần Đình Long</span>
+                <span class="flex items-center gap-1 font-semibold text-primary">Xem chi tiết <span
+                    class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+              </div>
+            </article>
+            <!-- Bài 2 -->
+            <article
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md group hover:bg-surface-container transition-colors">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                  <span class="text-secondary font-semibold">DƯ LƯỢNG HÓA CHẤT</span>
+                  <span class="">15/03/2026</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                  Giải bài toán Chlorpyrifos và Tricyclazole trên gạo đặc sản ST25 xuất khẩu
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Kinh nghiệm từ các tổ hợp tác Sóc Trăng trong việc xây dựng mô hình lúa - tôm hữu cơ tự nhiên, cách ly
+                  tuyệt đối nguồn nước mặt ô nhiễm.
+                </p>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                <span class="">ThS. Nguyễn Văn Hải (SGS)</span>
+                <span class="flex items-center gap-1 font-semibold text-primary">Xem chi tiết <span
+                    class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+              </div>
+            </article>
+            <!-- Bài 3 -->
+            <article
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md group hover:bg-surface-container transition-colors">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                  <span class="text-secondary font-semibold">THƯƠNG MẠI HỒI GIÁO</span>
+                  <span class="">12/03/2026</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                  Quy trình đánh giá Halal cho dây chuyền chế biến mật ong và siro thảo dược
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Những tiêu chí kỹ thuật về enzym phụ gia, quy trình tẩy rửa thiết bị không cồn và thủ tục tiếp đoàn
+                  kiểm định của cơ quan tôn giáo Malaysia JAKIM.
+                </p>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                <span class="">TS. Lê Mai Khanh</span>
+                <span class="flex items-center gap-1 font-semibold text-primary">Xem chi tiết <span
+                    class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+              </div>
+            </article>
+            <!-- Bài 4 -->
+            <article
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md group hover:bg-surface-container transition-colors">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                  <span class="text-secondary font-semibold">DẤU CHÂN CARBON</span>
+                  <span class="">08/03/2026</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                  Kiểm kê khí nhà kính ISO 14064 trong canh tác cà phê chè Arabica Cầu Đất
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Tính toán hệ số hấp thụ carbon của cây che bóng và các giải pháp tuần hoàn vỏ cà phê thành than sinh
+                  học (Biochar) để bù trừ lượng phát thải.
+                </p>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                <span class="">Viện Môi trường Nông nghiệp</span>
+                <span class="flex items-center gap-1 font-semibold text-primary">Xem chi tiết <span
+                    class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+              </div>
+            </article>
+            <!-- Bài 5 -->
+            <article
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md group hover:bg-surface-container transition-colors">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                  <span class="text-secondary font-semibold">TRUY XUẤT NGUỒN GỐC</span>
+                  <span class="">04/03/2026</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                  Ứng dụng GS1 Digital Link: Mã vạch thông minh thay thế mã vạch truyền thống
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Cho phép khách hàng tại Đức hoặc Hoa Kỳ quét mã sản phẩm OCOP xem ngay chứng chỉ phòng lab, hình ảnh
+                  vệ tinh vườn trồng và nhật ký thu hoạch.
+                </p>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                <span class="">Trung tâm Mã số Mã vạch QG</span>
+                <span class="flex items-center gap-1 font-semibold text-primary">Xem chi tiết <span
+                    class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+              </div>
+            </article>
+            <!-- Bài 6 -->
+            <article
+              class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between space-y-space-md group hover:bg-surface-container transition-colors">
+              <div class="space-y-space-sm">
+                <div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                  <span class="text-secondary font-semibold">PHÒNG TRÁNH NHIỄM CHÉO</span>
+                  <span class="">01/03/2026</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">
+                  Thiết kế nhà xưởng đạt chuẩn BRCGS cho sản phẩm mứt trái cây và nước ép
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Nguyên lý một chiều, phân tách vùng kiểm soát cao (High-care zone) và cách xử lý áp suất dương ngăn
+                  côn trùng xâm nhập vào khu vực đóng chai.
+                </p>
+              </div>
+              <div
+                class="pt-space-xs flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+                <span class="">Kỹ sư Vũ Thành Trung</span>
+                <span class="flex items-center gap-1 font-semibold text-primary">Xem chi tiết <span
+                    class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Cổng Hỏi - Đáp Kỹ thuật & Đăng ký Khảo sát Năng lực (Technical Helpdesk & Lab Diagnostic Portal) -->
+      <section class="w-full py-space-xl bg-surface-container-high/60">
+        <div class="max-w-7xl mx-auto px-gutter-mobile md:px-margin-tablet lg:px-margin">
+
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="/navigation-active.js"></script>
+
+</body>
+
+</html>

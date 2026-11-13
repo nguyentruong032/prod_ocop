@@ -149,7 +149,7 @@ export function generateProductSchema(product: Product): object {
     category: product.category,
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: product.stars.toString(),
+      ratingValue: product.stars?.toString() || '5',
       reviewCount: '0', // Would need actual reviews
       bestRating: '5',
       worstRating: '1',
@@ -157,8 +157,8 @@ export function generateProductSchema(product: Product): object {
     offers: {
       '@type': 'AggregateOffer',
       priceCurrency: 'VND',
-      lowPrice: extractLowPrice(product.price),
-      highPrice: extractHighPrice(product.price),
+      lowPrice: extractLowPrice(product.price != null ? String(product.price) : undefined),
+      highPrice: extractHighPrice(product.price != null ? String(product.price) : undefined),
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',

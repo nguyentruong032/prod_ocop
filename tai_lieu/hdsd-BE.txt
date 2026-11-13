@@ -1,0 +1,176 @@
+================================================================================
+HƯỚNG DẪN SỬ DỤNG TÀI LIỆU & BỘ PROMPT MẪU DÀNH RIÊNG CHO DEV BACKEND / CMS
+Dự án: Cổng thông tin điện tử OCOP Việt Nam (Phase 1 — Go-live: 07/12/2026)
+================================================================================
+
+I. BỘ FILE TÀI LIỆU DÀNH CHO DEV BACKEND / CMS
+--------------------------------------------------------------------------------
+Bạn chỉ sử dụng các file phiên bản 2.0 dưới đây (bỏ hoàn toàn các file bản 1.0 cũ):
+
+1. 00-TONG-QUAN.md        : Đọc đầu tiên để nắm phạm vi Phase 1, 12 quyết định
+                            kiến trúc (ARC-01..12), quy tắc lưu trữ 10 năm (cấm
+                            xóa cứng) và lịch trình G1 (16/11), G2 (25/11).
+2. AGENTS.md              : Quy ước cấu trúc thư mục src/, quy tắc code bất biến.
+                            (Bắt buộc đính kèm vào AI trong MỌI phiên làm việc).
+3. 02-CMS-BE.md           : Tài liệu thiết kế chính của bạn (Payload CMS 3.x tại
+                            /admin, 11 collections, 2 globals, phân quyền, hooks,
+                            tìm kiếm pg_trgm, 5 API công khai, jobs nền).
+4. 01-FE.md               : Chỉ dùng để đối chiếu mục 4 (hàm getDocPath) và
+                            mục 5-6 (tên tag cache) cho khớp với FE.
+5. 99-CHECKLIST-VERIFY.md : Dùng để tự kiểm tra trước khi tạo Pull Request.
+
+
+II. PHẠM VI CÔNG VIỆC CỦA DEV BACKEND / CMS (LƯU Ý QUAN TRỌNG)
+--------------------------------------------------------------------------------
+1. Bạn phụ trách 100% cả Backend, Database Schema LẪN Giao diện quản trị CMS (/admin):
+   - Dự án sử dụng Payload CMS 3.x chạy chung trong Next.js 16.2+ tại đường dẫn `/admin`.
+   - Khi bạn khai báo xong các file Collection (`src/collections/*.ts`) và Global
+     (`src/globals/*.ts`) theo đúng `02-CMS-BE.md`, Payload CMS sẽ TỰ ĐỘNG SINH RA
+     100% giao diện CMS tại `/admin` (đăng nhập, bảng danh sách, bộ lọc, trình
+     soạn thảo Lexical, upload ảnh, duyệt/từ chối bài gửi...).
+2. Bạn KHÔNG cần viết REST API CRUD cho các trang nội dung:
+   - Đội FE sẽ đọc dữ liệu trực tiếp qua Payload Local API.
+   - Bạn chỉ cần viết đúng **5 Custom Endpoints** tại `src/endpoints/` (theo mục 7.2
+     và 8.2 của `02-CMS-BE.md`) và 1 route nội bộ `/api/internal/revalidate`.
+3. Đầu ra bàn giao cho Dev FE:
+   - Sau khi tạo/cập nhật xong các collections và globals, bạn chạy lệnh:
+     `pnpm payload generate:types`
+   - Commit file `src/payload-types.ts` lên nhánh chung để Dev FE lấy kiểu dữ liệu
+     TypeScript sử dụng.
+
+
+III. BƯỚC CHUẨN BỊ REPO TRƯỚC KHI BẮT ĐẦU PHIÊN BE-1
+--------------------------------------------------------------------------------
+1. Đặt file `AGENTS.md` vào thư mục gốc của repo (`prod_ocop/AGENTS.md`) và copy
+   thêm 1 bản tên là `CLAUDE.md` (cùng nội dung) ở thư mục gốc.
+2. Không xóa thư mục `apps/` cũ của FE mà đổi tên thành `_legacy_apps/` (và đưa
+   `_legacy_apps` vào mảng `exclude` trong `tsconfig.json` + `.eslintignore`) để
+   đội FE giữ làm tư liệu chuyển đổi giao diện.
+3. Nguyên tắc dùng AI:
+   - KHÔNG bảo AI "làm toàn bộ file 02-CMS-BE.md" trong 1 lần (sẽ bị tràn token).
+   - Chia làm 4 phiên (`BE-1` -> `BE-4`) dưới đây. Mỗi phiên đính kèm `@AGENTS.md`
+     và `@02-CMS-BE.md`, copy đúng Prompt mẫu dán vào AI.
+
+
+================================================================================
+IV. BỘ CÂU LỆNH MẪU (PROMPT) COPY-PASTE THEO 4 PHIÊN CHO DEV BE
+================================================================================
+
+--------------------------------------------------------------------------------
+[PHIÊN BE-1] Khởi tạo khung Payload 3.x + Next.js 16 + Phân quyền + 4 bảng nền
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @02-CMS-BE.md @01-FE.md
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @02-CMS-BE.md (mục 1, 2, 3, và mục 4.1 -> 4.5).
+Thực hiện Lát cắt BE-1 gồm các việc sau:
+1. Cấu hình package.json, tsconfig.json, next.config.mjs (bọc withPayload, output: 'standalone', typescript.ignoreBuildErrors: false) và khung src/app/(payload)/admin/[[...segments]]/page.tsx + route API của Payload 3.x chạy trên Next.js 16.2+ và PostgreSQL.
+2. Tạo file hàm dùng chung src/lib/normalize.ts (slugify tiếng Việt bỏ dấu đ->d, normalize chuỗi tìm kiếm) kèm unit test, và src/lib/paths.ts (getDocPath đúng theo mục 4 của @01-FE.md, chỉ phụ thuộc doc.slug và doc.kind).
+3. Tạo đầy đủ các hàm phân quyền tại src/access/ (isAdmin, isEditorOrAbove, isStaff, isOwnDraft, publicReadPublished, contentAccess) và hàm commonContentFields() đúng theo mục 2 & mục 3 của @02-CMS-BE.md. Đảm bảo access.delete = () => false và hook blockContributorPublish chặn contributor xuất bản (ném APIError 403).
+4. Tạo 4 collection nền tại src/collections/:
+   - users (mục 4.1: role admin/editor/contributor, isActive, validate mật khẩu >= 12 ký tự, khóa sau 5 lần sai).
+   - media (mục 4.2: lưu vào process.env.MEDIA_DIR, kiểm tra magic bytes bằng file-type, đổi tên file uuid, bắt buộc alt khi là ảnh, delete: false).
+   - provinces (mục 4.4: name localized, slug, code, region BAC|TRUNG|NAM, sortOrder).
+   - tags (mục 4.5: name localized, slug).
+5. Đăng ký vào src/payload.config.ts (bật localization vi/en với defaultLocale: 'vi', tắt GraphQL) và viết script src/seed/index.ts tạo tài khoản admin đầu tiên + 34 tỉnh/thành từ src/seed/provinces.json.
+
+Không dùng any, không tắt kiểm tra kiểu. Sau khi tạo xong, liệt kê các file đã tạo và lệnh kiểm tra.
+"""
+
+* Kiểm tra xong Phiên BE-1:
+  - Chạy `pnpm payload generate:types` sinh ra `src/payload-types.ts` thành công.
+  - Mở `http://localhost:3000/admin` đăng nhập được, tạo thử user `contributor`, tải thử 1 ảnh lên `media` thành công.
+
+--------------------------------------------------------------------------------
+[PHIÊN BE-2] Tạo các bảng Tin tức/Bài viết, Sự kiện, Văn bản pháp lý & Bộ Hooks
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @02-CMS-BE.md
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @02-CMS-BE.md (mục 4.6, 4.7, 4.8, 4.13, 4.14, mục 5.3 và mục 6).
+Tiếp tục từ kết quả Phiên BE-1, thực hiện Lát cắt BE-2:
+1. Cấu hình trình soạn thảo Lexical (mục 5.3) và 4 custom blocks nhúng trong bài tại src/blocks/richtext/ (image, gallery, pullQuote, embedVideo chỉ cho phép YouTube/Vimeo). Không cho phép HTML thô.
+2. Viết bộ hooks tại src/hooks/:
+   - ensureSlug.ts (sinh slug tiếng Việt không dấu, tự thêm -2, -3 nếu trùng).
+   - slugRedirect.ts (khi bản đã published đổi slug -> tự tạo/cập nhật bản ghi trong redirects, chống redirect vòng).
+   - setPublishedAt.ts, computeReadingTime.ts (đếm từ cây Lexical), validateKindTopic.ts (kiểm tra cặp kind-topic hợp lệ của articles), setCreatedBy.ts.
+   - revalidate.ts (revalidateOnChange: gọi revalidateTag(tag, { expire: 0 }) theo đúng bảng quy ước tag mục 6; nếu process.env.IS_JOBS_WORKER === 'true' thì gọi thêm POST sang INTERNAL_WEB_URL + '/api/internal/revalidate' với header x-cron-secret).
+   - writeAudit.ts (ghi vào audit-logs, không lưu nội dung bài hay dữ liệu cá nhân).
+3. Tạo 5 collections tại src/collections/ và đăng ký vào payload.config.ts:
+   - articles (mục 4.6: gộp NEWS, STORY, INTEGRATION; kiểm tra chặt bảng kind - topic).
+   - events (mục 4.7: startAt, endAt >= startAt, agenda, không lưu trường status tĩnh).
+   - legal-documents (mục 4.8: documentNumber unique, level, docType, issuedDate, file PDF).
+   - redirects (mục 4.13) và audit-logs (mục 4.14: chỉ ghi bằng hook, cấm sửa/xóa).
+4. Chạy cập nhật kiểu payload-types.ts và viết unit test cho validateKindTopic, ensureSlug.
+"""
+
+* Kiểm tra xong Phiên BE-2:
+  - Tạo thử bài viết `NEWS`, `STORY`, `INTEGRATION` trong `/admin`, thử chọn sai `topic` của `kind` phải báo lỗi tiếng Việt.
+  - Đổi `slug` của bài đã Publish phải tự sinh bản ghi trong `redirects`.
+
+--------------------------------------------------------------------------------
+[PHIÊN BE-3] Tạo Chủ thể, Sản phẩm OCOP, Điểm đến, Landing Pages & 2 Globals
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @02-CMS-BE.md
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @02-CMS-BE.md (mục 4.9, 4.10, 4.11, 4.12 và mục 5.1, 5.2).
+Thực hiện Lát cắt BE-3:
+1. Tạo 4 collections tại src/collections/:
+   - producers (mục 4.9: Chủ thể OCOP, có join field products trỏ sang products.producer).
+   - products (mục 4.10: Sản phẩm OCOP 3-5 sao, category, producer, images tối đa 8, specs; có hook tự kế thừa province từ producer nếu để trống).
+   - destinations (mục 4.11: gộp DESTINATION, CRAFT_VILLAGE, ECO_TOUR với admin.condition hiển thị trường riêng theo từng kind).
+   - landing-pages (mục 4.12: 22 key cố định, heading, intro, heroImage, pinned đa hình tối đa 6 mục, body, seo).
+2. Tạo 10 blocks cho Trang chủ tại src/blocks/home/ (hero, quickLinks, kpiStats, featuredNews, featuredProducts, featuredStories, featuredDestinations, integrationPillars, ctaBanner, richText) có validate đường dẫn href an toàn.
+3. Tạo 2 globals tại src/globals/:
+   - site-settings (mục 5.1)
+   - home (mục 5.2, bật versions.drafts).
+4. Cập nhật src/seed/index.ts để khởi tạo tự động đủ 22 bản ghi landing-pages (theo danh sách key ở mục 4.12) cùng dữ liệu mặc định hợp lệ cho home và site-settings.
+5. Chạy `pnpm payload generate:types` để xuất file `src/payload-types.ts` đầy đủ giao cho Dev FE.
+"""
+
+* Kiểm tra xong Phiên BE-3:
+  - Chạy `pnpm seed` tạo đủ 34 tỉnh + 22 `landing-pages` + `home` + `site-settings`.
+  - Bàn giao file `src/payload-types.ts` đã cập nhật cho Dev FE.
+
+--------------------------------------------------------------------------------
+[PHIÊN BE-4] Gửi bài (Submissions), Tìm kiếm pg_trgm, 5 API công khai & Jobs nền
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @02-CMS-BE.md
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @02-CMS-BE.md (mục 4.3, 4.15, 4.16, mục 7, mục 8, mục 9, mục 10).
+Thực hiện Lát cắt BE-4 để hoàn tất Backend/CMS:
+1. Tạo collection `submission-files` (mục 4.3: lưu vào PRIVATE_UPLOAD_DIR ngoài Nginx, không có URL công khai) và `submissions` (mục 7.1: hook beforeValidate tự sinh trackingCode `OCOP-YYYYMMDD-XXXX` bằng crypto.randomInt).
+2. Viết hook `src/hooks/submissionWorkflow.ts` (mục 7.3):
+   - Khi chuyển status sang `APPROVED`: chạy trong 1 transaction tạo BẢN NHÁP (`_status: 'draft'`) ở collection đích, chuyển contentText sang Lexical bằng `textToLexical` (không diễn giải HTML), copy ảnh đính kèm sang `media`, ghi `convertedTo` và `audit-logs`. Nếu lỗi bất kỳ bước nào thì rollback.
+   - Khi chuyển sang `REJECTED`: bắt buộc có `rejectionCategory`, tính `purgeAt = now + retentionMonths` (3-6 tháng).
+3. Tạo collection `search-index` (mục 8.1) và hook `src/hooks/syncSearchIndex.ts` đồng bộ khi bản ghi công khai được publish/unpublish/archive, kèm script `pnpm reindex` và file migration tạo extension `pg_trgm` + GIN index (mục 8.2).
+4. Tạo 5 custom endpoints (mục 7.2 & 8.2):
+   - `POST /api/public/submissions` (kiểm Turnstile, giới hạn 5 lần/giờ/IP trong DB, kiểm magic bytes + dung lượng <= 20MB/file & tổng <= 50MB, tính sha256).
+   - `GET /api/public/submissions/track` (kiểm mã + khớp email/SĐT, sai trả 404 chung, không lộ ghi chú nội bộ).
+   - `GET /api/submission-files/:id/download` (chỉ editor+, ghi audit DOWNLOAD_ATTACHMENT).
+   - `GET /api/public/search` và `GET /api/public/search/suggest` (tìm không dấu trên search-index).
+   - `GET /api/public/health` (SELECT 1).
+   Và route nội bộ `POST /api/internal/revalidate` (kiểm tra header `x-cron-secret === process.env.CRON_SECRET`) phục vụ container `jobs`.
+5. Đăng ký 3 job nền (mục 10): `purgeRejectedSubmissions`, `anonymizeApprovedSubmissions`, `reportStaleSubmissions` và cấu hình preview URL cho admin (mục 9.3).
+"""
+
+* Kiểm tra xong Phiên BE-4:
+  - Gửi thử form qua `POST /api/public/submissions` nhận được `trackingCode`; duyệt `APPROVED` trong `/admin` thấy sinh ra bản nháp ở collection đích.
+  - Tìm kiếm `/api/public/search?q=tra+tan+cuong` trả về đúng kết quả `"Trà Tân Cương"`.
+
+
+================================================================================
+V. CHECKLIST TỰ KIỂM TRA CỦA DEV BE TRƯỚC KHI MỞ PULL REQUEST
+================================================================================
+1. `pnpm lint && pnpm type-check && pnpm build` chạy xanh 100% (`ignoreBuildErrors = false`).
+2. Không ai (kể cả `admin`) gọi `DELETE` xóa cứng được các bảng nội dung công khai và `media`.
+3. Tài khoản `contributor` không thể Publish bài (cả trên giao diện `/admin` lẫn gọi REST API).
+4. File đính kèm của người gửi bài nằm trong `/data/private`, không truy cập được qua URL tĩnh.
+5. Mọi thay đổi cấu trúc DB đều đã tạo migration (`pnpm payload migrate:create`) và commit vào `src/migrations/`.
+================================================================================

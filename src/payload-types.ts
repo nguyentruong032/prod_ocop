@@ -18,7 +18,7 @@ export interface Province {
   name: string;
   slug: string;
   code: string;
-  region: 'BAC' | 'TRUNG' | 'NAM';
+  region: "BAC" | "TRUNG" | "NAM";
   sortOrder?: number | null;
   createdAt?: string;
   updatedAt?: string;
@@ -35,7 +35,7 @@ export interface Tag {
 export interface User {
   id: string;
   email: string;
-  role: 'admin' | 'editor' | 'contributor';
+  role: "admin" | "editor" | "contributor";
   fullName?: string | null;
   isActive: boolean;
   createdAt?: string;
@@ -52,9 +52,10 @@ export interface Article {
   id: string;
   title: string;
   slug: string;
-  kind: 'NEWS' | 'STORY' | 'INTEGRATION';
+  kind: "NEWS" | "STORY" | "INTEGRATION";
   topic?: string | null;
-  _status?: 'draft' | 'published';
+  marketCode?: "EU" | "US" | "JAPAN" | "CHINA" | "HALAL" | null;
+  _status?: "draft" | "published";
   publishedAt?: string | null;
   coverImage?: Media | string | null;
   excerpt?: string | null;
@@ -73,7 +74,7 @@ export interface Event {
   id: string;
   title: string;
   slug: string;
-  _status?: 'draft' | 'published';
+  _status?: "draft" | "published";
   publishedAt?: string | null;
   startAt: string;
   endAt?: string | null;
@@ -99,7 +100,7 @@ export interface LegalDocument {
   issuedDate?: string | null;
   effectiveDate?: string | null;
   pdfFile?: Media | string | null;
-  _status?: 'draft' | 'published';
+  _status?: "draft" | "published";
   isFeatured?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -109,7 +110,7 @@ export interface Producer {
   id: string;
   name: string;
   slug: string;
-  type?: 'COOPERATIVE' | 'ENTERPRISE' | 'HOUSEHOLD' | null;
+  type?: "COOPERATIVE" | "ENTERPRISE" | "HOUSEHOLD" | null;
   province?: Province | string | null;
   address?: string | null;
   phone?: string | null;
@@ -118,7 +119,8 @@ export interface Producer {
   avatar?: Media | string | null;
   coverImage?: Media | string | null;
   bio?: string | null;
-  _status?: 'draft' | 'published';
+  seo?: SEOData | null;
+  _status?: "draft" | "published";
   isFeatured?: boolean | null;
   createdAt?: string;
   updatedAt?: string;
@@ -129,13 +131,15 @@ export interface Product {
   title: string;
   slug: string;
   stars: 3 | 4 | 5;
-  category: 'NONG_SAN_THUC_PHAM' | 'DUOC_LIEU_SUC_KHOE' | 'THU_CONG_MY_NGHE' | 'KHAC';
+  category:
+    "NONG_SAN_THUC_PHAM" | "DUOC_LIEU_SUC_KHOE" | "THU_CONG_MY_NGHE" | "KHAC";
   province?: Province | string | null;
   producer?: Producer | string | null;
   coverImage?: Media | string | null;
   gallery?: Array<{ image: Media | string; id?: string }> | null;
   excerpt?: string | null;
-  _status?: 'draft' | 'published';
+  content?: Record<string, unknown> | null;
+  _status?: "draft" | "published";
   isFeatured?: boolean | null;
   seo?: SEOData | null;
   createdAt?: string;
@@ -146,11 +150,43 @@ export interface Destination {
   id: string;
   title: string;
   slug: string;
-  kind: 'DESTINATION' | 'CRAFT_VILLAGE' | 'ECO_TOUR';
+  kind: "DESTINATION" | "CRAFT_VILLAGE" | "ECO_TOUR";
   province?: Province | string | null;
   coverImage?: Media | string | null;
+  gallery?: Array<{ image: Media | string; id?: string }> | null;
   excerpt?: string | null;
-  _status?: 'draft' | 'published';
+  content?: Record<string, unknown> | null;
+  address?: string | null;
+  latitude?: number | null;
+  longitude?: number | null;
+  // Craft village fields
+  craftGroup?:
+    | "GOM_SU"
+    | "DET_MAY"
+    | "MAY_TRE_DAN"
+    | "DIEU_KHAC"
+    | "KIM_HOAN"
+    | "KHAC"
+    | null;
+  ageYears?: number | null;
+  artisanCount?: number | null;
+  isNationalHeritage?: boolean | null;
+  // Eco tour fields
+  ecosystem?:
+    | "HIGHLAND_TEA_COFFEE"
+    | "RIVER_GARDEN_DELTA"
+    | "MEDICINAL_FOREST"
+    | "COASTAL_ISLAND"
+    | null;
+  durationDays?: number | null;
+  isFeaturedRoute?: boolean | null;
+  itinerary?: Array<{
+    day?: string | number | null;
+    title?: string | null;
+    description?: string | null;
+    id?: string;
+  }> | null;
+  _status?: "draft" | "published";
   isFeatured?: boolean | null;
   seo?: SEOData | null;
   createdAt?: string;
@@ -164,7 +200,7 @@ export interface LandingPage {
   intro?: string | null;
   heroImage?: Media | string | null;
   pinned?: Array<{
-    relationTo: 'articles' | 'products' | 'destinations' | 'events';
+    relationTo: "articles" | "products" | "destinations" | "events";
     value: Article | Product | Destination | Event | string;
   }> | null;
   body?: Record<string, unknown> | null;
@@ -203,7 +239,7 @@ export interface SiteSetting {
 }
 
 export type HeroBlock = {
-  blockType: 'hero';
+  blockType: "hero";
   eyebrow?: string | null;
   heading: string;
   subheading?: string | null;
@@ -213,7 +249,7 @@ export type HeroBlock = {
 };
 
 export type QuickLinksBlock = {
-  blockType: 'quickLinks';
+  blockType: "quickLinks";
   items?: Array<{
     icon?: string | null;
     label: string;
@@ -224,7 +260,7 @@ export type QuickLinksBlock = {
 };
 
 export type KpiStatsBlock = {
-  blockType: 'kpiStats';
+  blockType: "kpiStats";
   items?: Array<{
     value: string;
     label: string;
@@ -234,39 +270,39 @@ export type KpiStatsBlock = {
 };
 
 export type FeaturedNewsBlock = {
-  blockType: 'featuredNews';
+  blockType: "featuredNews";
   heading?: string | null;
-  mode?: 'auto' | 'pinned' | null;
+  mode?: "auto" | "pinned" | null;
   pinned?: Array<Article | string> | null;
   limit?: number | null;
 };
 
 export type FeaturedProductsBlock = {
-  blockType: 'featuredProducts';
+  blockType: "featuredProducts";
   heading?: string | null;
-  mode?: 'auto' | 'pinned' | null;
+  mode?: "auto" | "pinned" | null;
   pinned?: Array<Product | string> | null;
   limit?: number | null;
 };
 
 export type FeaturedStoriesBlock = {
-  blockType: 'featuredStories';
+  blockType: "featuredStories";
   heading?: string | null;
-  mode?: 'auto' | 'pinned' | null;
+  mode?: "auto" | "pinned" | null;
   pinned?: Array<Article | string> | null;
   limit?: number | null;
 };
 
 export type FeaturedDestinationsBlock = {
-  blockType: 'featuredDestinations';
+  blockType: "featuredDestinations";
   heading?: string | null;
-  mode?: 'auto' | 'pinned' | null;
+  mode?: "auto" | "pinned" | null;
   pinned?: Array<Destination | string> | null;
   limit?: number | null;
 };
 
 export type IntegrationPillarsBlock = {
-  blockType: 'integrationPillars';
+  blockType: "integrationPillars";
   items?: Array<{
     title: string;
     description?: string | null;
@@ -277,7 +313,7 @@ export type IntegrationPillarsBlock = {
 };
 
 export type CtaBannerBlock = {
-  blockType: 'ctaBanner';
+  blockType: "ctaBanner";
   heading: string;
   text?: string | null;
   cta?: { label: string; href: string } | null;
@@ -285,7 +321,7 @@ export type CtaBannerBlock = {
 };
 
 export type RichTextBlock = {
-  blockType: 'richText';
+  blockType: "richText";
   content?: Record<string, unknown> | null;
 };
 

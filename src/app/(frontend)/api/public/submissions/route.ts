@@ -1,3 +1,4 @@
+// [DEV] MOCK: xóa khi ghép BE-4
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { verifyTurnstileToken } from "@/lib/turnstile";
@@ -50,6 +51,10 @@ const MAX_FILE_SIZE = 20 * 1024 * 1024; // 20MB
 const MAX_TOTAL_SIZE = 50 * 1024 * 1024; // 50MB
 
 export async function POST(req: NextRequest) {
+  if (process.env.NODE_ENV === "production") {
+    return new NextResponse(null, { status: 404 });
+  }
+
   try {
     const formData = await req.formData();
 

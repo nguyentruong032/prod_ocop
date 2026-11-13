@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { listArticles } from "@/lib/data/articles";
 import { getLandingPage, listProvinces } from "@/lib/data/globals";
 import { IntegrationListView } from "@/components/features/integration/IntegrationListView";
+import { StandardsMatrixClient } from "@/components/features/integration/StandardsMatrixClient";
 import { buildMetadata } from "@/lib/seo";
 
 type Props = {
@@ -15,7 +16,7 @@ export async function generateMetadata({
   searchParams,
 }: Props): Promise<Metadata> {
   const [{ locale }, sp] = await Promise.all([params, searchParams]);
-  if (locale !== "vi") return {};
+  if (locale !== "vi" && locale !== "en") return {};
   const landing = await getLandingPage("integration-standards");
   return buildMetadata({
     title:
@@ -37,7 +38,7 @@ export default async function StandardsIntegrationPage({
   searchParams,
 }: Props) {
   const [{ locale }, sp] = await Promise.all([params, searchParams]);
-  if (locale !== "vi") notFound();
+  if (locale !== "vi" && locale !== "en") notFound();
 
   const [landing, provinces, result] = await Promise.all([
     getLandingPage("integration-standards"),
@@ -60,6 +61,7 @@ export default async function StandardsIntegrationPage({
       pageTitle="Tiêu chuẩn & Chứng nhận quốc tế"
       pageDescription="Chuẩn hóa chất lượng theo thông lệ quốc tế và bảo hộ quyền sở hữu trí tuệ nông sản."
       selectedProvince={sp.province}
+      headerContent={<StandardsMatrixClient />}
       breadcrumbItems={[
         { label: "OCOP Hội nhập", href: `/${locale}/ocop-hoi-nhap` },
         { label: "Tiêu chuẩn & Chứng nhận" },

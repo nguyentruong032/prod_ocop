@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export interface DestinationSubnavProps {
-  activeTab?: "all" | "eco" | "craft";
+  activeTab?: "all" | "eco" | "craft" | "map";
   locale?: string;
 }
 
@@ -25,6 +25,11 @@ export function DestinationSubnav({
       id: "craft",
       label: "Làng nghề truyền thống",
       href: `/${locale}/diem-den-du-lich/lang-nghe-truyen-thong`,
+    },
+    {
+      id: "map",
+      label: "Bản đồ GIS OCOP",
+      href: `/${locale}/diem-den-du-lich/ban-do-ocop-viet-nam`,
     },
   ];
 

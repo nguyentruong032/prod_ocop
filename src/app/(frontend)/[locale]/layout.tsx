@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Be_Vietnam_Pro, Noto_Serif } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { DraftBanner } from "@/components/ui/DraftBanner";
 import { getSiteSettings } from "@/lib/data/globals";
 import "../globals.css";
 
@@ -23,7 +24,7 @@ const notoSerif = Noto_Serif({
 export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
-  return [{ locale: "vi" }];
+  return [{ locale: "vi" }, { locale: "en" }];
 }
 
 export default async function FrontendLayout({
@@ -35,7 +36,7 @@ export default async function FrontendLayout({
 }) {
   const { locale } = await params;
 
-  if (locale !== "vi") {
+  if (locale !== "vi" && locale !== "en") {
     notFound();
   }
 
@@ -43,10 +44,11 @@ export default async function FrontendLayout({
 
   return (
     <html
-      lang="vi"
+      lang={locale}
       className={`${beVietnamPro.variable} ${notoSerif.variable}`}
     >
       <body className="min-h-screen flex flex-col font-sans bg-surface text-on-surface antialiased">
+        <DraftBanner />
         <Header />
         <main className="flex-1 w-full">{children}</main>
         <Footer settings={settings} />

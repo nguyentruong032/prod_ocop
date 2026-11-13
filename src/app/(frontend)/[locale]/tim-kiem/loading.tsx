@@ -1,0 +1,14 @@
+import React from "react";
+import { ListLoadingSkeleton } from "@/components/ui/ListLoadingSkeleton";
+
+export default function SearchLoading() {
+  return (
+    <ListLoadingSkeleton
+      columns={3}
+      cardCount={6}
+      showSubnav={false}
+      showFilterBar={true}
+      type="search"
+    />
+  );
+}

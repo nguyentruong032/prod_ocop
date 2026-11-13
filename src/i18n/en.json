@@ -1,6 +1,111 @@
 {
   "site": {
     "name": "Vietnam OCOP Portal",
-    "tagline": "Connecting the Value of Vietnamese Local Specialties and Culture"
+    "tagline": "Connecting the Value of Vietnamese Local Specialties and Cultural Heritage"
+  },
+  "nav": {
+    "home": "Home",
+    "news": "News & Events",
+    "news_policy": "OCOP Policies & Mechanisms",
+    "news_trade": "Trade Promotion",
+    "news_local": "Local OCOP",
+    "integration": "OCOP Integration",
+    "integration_export": "Export & International Markets",
+    "integration_standards": "Global Standards & Certifications",
+    "integration_digital": "OCOP Digital Transformation",
+    "products": "OCOP Products",
+    "products_agri": "Agricultural & Food Products",
+    "products_herbal": "Medicinal Herbs & Wellness",
+    "products_craft": "Handicrafts & Art",
+    "products_stars": "Products by Star Rating",
+    "producers": "OCOP Producers",
+    "stories": "OCOP Stories",
+    "stories_culture": "Indigenous Cultural Heritage",
+    "stories_multimedia": "Multimedia Reportages",
+    "stories_journey": "Producer Journeys",
+    "destinations": "Destinations",
+    "destinations_eco": "Eco-Tourism & Experiences",
+    "destinations_craft": "Traditional Craft Villages",
+    "destinations_map": "GIS OCOP Map",
+    "search": "Search archives, articles...",
+    "submit": "Submit Article / Dossier",
+    "submit_short": "Submit"
+  },
+  "common": {
+    "read_more": "Read More",
+    "view_all": "View All",
+    "back": "Back",
+    "all": "All",
+    "province": "Province / City",
+    "stars": "Star Rating",
+    "category": "Category",
+    "empty_state": "No matching records found",
+    "empty_state_description": "Please try searching with different keywords or filter criteria.",
+    "page": "Page",
+    "prev_page": "Previous",
+    "next_page": "Next",
+    "loading": "Loading data...",
+    "draft_mode_notice": "You are previewing Draft Mode",
+    "draft_mode_exit": "Exit Draft Mode"
+  },
+  "footer": {
+    "about_title": "About Vietnam OCOP",
+    "about_text": "Vietnam OCOP Electronic Portal - The national platform for sharing, promoting, and amplifying OCOP stories, products, and indigenous values.",
+    "contact_title": "Contact Information",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_use": "Terms of Use",
+    "copyright": "© 2026 Vietnam OCOP. All rights reserved."
+  },
+  "home": {
+    "quick_links": "Quick Links",
+    "kpi_heading": "National OCOP Program Highlights",
+    "featured_news": "Featured News & Events",
+    "featured_products": "Signature OCOP Products",
+    "featured_stories": "Featured OCOP Stories",
+    "featured_destinations": "Destinations & Experiences",
+    "integration_heading": "OCOP Global Integration Pillars",
+    "cta_heading": "Spreading Vietnamese OCOP Values"
+  },
+  "markets": {
+    "EU": "European Union (EU)",
+    "US": "United States",
+    "JAPAN": "Japan",
+    "CHINA": "China",
+    "HALAL": "Halal Markets"
+  },
+  "ecosystems": {
+    "HIGHLAND_TEA_COFFEE": "Highland Tea & Coffee",
+    "RIVER_GARDEN_DELTA": "River & Orchard Delta",
+    "MEDICINAL_FOREST": "Indigenous Medicinal Forests",
+    "COASTAL_ISLAND": "Coastal & Pearl Islands"
+  },
+  "craftGroups": {
+    "GOM_SU": "Ceramics & Pottery",
+    "DET_MAY": "Textiles & Brocade",
+    "MAY_TRE_DAN": "Bamboo & Rattan Weaving",
+    "DIEU_KHAC": "Art Sculptures & Carving",
+    "KIM_HOAN": "Jewelry & Silver Filigree",
+    "KHAC": "Other Traditional Crafts"
+  },
+  "search": {
+    "title": "Search & Explore OCOP",
+    "placeholder": "Search for products, stories, craft villages, producers...",
+    "button": "Search",
+    "no_results": "No matching results found",
+    "no_results_desc": "Please check spelling or search with broader keywords."
+  },
+  "submission": {
+    "page_title": "Submit OCOP Articles & Dossiers",
+    "tab_submit": "Submit Article / Inquiry & Contact",
+    "tab_track": "Track Dossier Status",
+    "success_title": "Submission Successful!",
+    "copy_code": "Copy Tracking Code",
+    "copied": "Copied!"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "The system encountered a temporary error. Please try again or return to the homepage.",
+    "retry": "Try again",
+    "home": "Back to Home"
   }
 }

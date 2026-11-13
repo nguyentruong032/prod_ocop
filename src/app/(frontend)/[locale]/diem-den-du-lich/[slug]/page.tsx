@@ -1,4 +1,5 @@
 import { notFound, permanentRedirect } from "next/navigation";
+import { draftMode } from "next/headers";
 import type { Metadata } from "next";
 import { getDestination, listDestinations } from "@/lib/data/destinations";
 import { DestinationDetailView } from "@/components/features/destinations/DestinationDetailView";
@@ -24,9 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DestinationDetailPage({ params }: Props) {
   const { locale, slug } = await params;
-  if (locale !== "vi") notFound();
+  if (locale !== "vi" && locale !== "en") notFound();
 
-  const destination = await getDestination(slug);
+  const isDraft = (await draftMode()).isEnabled;
+  const destination = await getDestination(slug, isDraft);
   if (!destination) {
     const redirectUrl = await lookupRedirect(`/${locale}/diem-den-du-lich/${slug}`);
     if (redirectUrl) permanentRedirect(redirectUrl);

@@ -50,6 +50,7 @@ export function buildMetadata({
     seo?.description || description || DEFAULT_DESCRIPTION;
 
   const canonicalUrl = `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  const cleanPath = path.replace(/^\/(vi|en)/, "");
   const ogImageUrl =
     getMediaUrl(seo?.ogImage) ||
     getMediaUrl(coverImage) ||
@@ -60,6 +61,11 @@ export function buildMetadata({
     description: finalDescription,
     alternates: {
       canonical: canonicalUrl,
+      languages: {
+        vi: `${SITE_URL}/vi${cleanPath}`,
+        en: `${SITE_URL}/en${cleanPath}`,
+        "x-default": `${SITE_URL}/vi${cleanPath}`,
+      },
     },
     robots: noIndex
       ? { index: false, follow: false }

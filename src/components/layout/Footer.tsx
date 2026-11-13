@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { SiteSetting } from "@/payload-types";
+import { NewsletterFormClient } from "@/components/ui/NewsletterFormClient";
 
 export interface FooterProps {
   settings?: SiteSetting | null;
@@ -42,7 +43,7 @@ export function Footer({ settings }: FooterProps) {
     <footer className="w-full bg-primary-container text-on-primary-fixed border-t border-surface-container">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1.5fr] gap-8 lg:gap-12 pb-10 border-b border-on-primary-container/20">
-          {/* Cột 1: Thông tin thương hiệu */}
+          {/* Cột 1: Thông tin thương hiệu & Bản tin */}
           <div className="flex flex-col gap-4 items-start">
             <Link
               href="/vi"
@@ -62,6 +63,15 @@ export function Footer({ settings }: FooterProps) {
             <p className="font-body-sm text-body-sm text-on-primary-container leading-relaxed max-w-md">
               {tagline}
             </p>
+
+            {/* Newsletter Subscription Box */}
+            <div className="w-full max-w-md pt-2">
+              <span className="block text-xs font-bold text-on-primary uppercase tracking-wider mb-2">
+                Đăng ký nhận bản tin OCOP tuần
+              </span>
+              <NewsletterFormClient />
+            </div>
+
             <div className="flex items-center gap-3 pt-2">
               {socialLinks.map((item, idx) => (
                 <a
@@ -128,6 +138,14 @@ export function Footer({ settings }: FooterProps) {
               </li>
               <li>
                 <Link
+                  href="/vi/diem-den-du-lich/ban-do-ocop-viet-nam"
+                  className="hover:text-on-primary transition-colors"
+                >
+                  Bản đồ GIS OCOP
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/vi/ocop-hoi-nhap"
                   className="hover:text-on-primary transition-colors"
                 >
@@ -186,7 +204,7 @@ export function Footer({ settings }: FooterProps) {
         {/* Dòng bản quyền & chính sách */}
         <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-body-sm text-on-primary-container/70">
           <p>{footerNote}</p>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center flex-wrap gap-4 sm:gap-6">
             <Link
               href="/vi/tin-tuc-su-kien/chinh-sach-va-co-che"
               className="hover:text-on-primary transition-colors"
@@ -198,6 +216,12 @@ export function Footer({ settings }: FooterProps) {
               className="hover:text-on-primary transition-colors"
             >
               Gửi bài viết
+            </Link>
+            <Link
+              href="/news-sitemap.xml"
+              className="hover:text-on-primary transition-colors"
+            >
+              Google News
             </Link>
             <Link
               href="/rss.xml"

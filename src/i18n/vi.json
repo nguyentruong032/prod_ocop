@@ -100,5 +100,11 @@
     "success_title": "Gửi hồ sơ thành công!",
     "copy_code": "Sao chép mã hồ sơ",
     "copied": "Đã sao chép!"
+  },
+  "error": {
+    "title": "Đã có lỗi xảy ra",
+    "description": "Hệ thống đang gặp sự cố gián đoạn tạm thời. Vui lòng thử lại sau giây lát hoặc quay về trang chủ.",
+    "retry": "Thử lại",
+    "home": "Về trang chủ"
   }
 }

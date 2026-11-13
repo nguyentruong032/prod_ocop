@@ -22,6 +22,7 @@ export interface IntegrationListViewProps {
   selectedProvince?: string;
   breadcrumbItems?: Array<{ label: string; href?: string }>;
   showPillarCards?: boolean;
+  headerContent?: React.ReactNode;
 }
 
 const PILLAR_OPTIONS = [
@@ -50,6 +51,7 @@ export function IntegrationListView({
   selectedProvince,
   breadcrumbItems,
   showPillarCards = false,
+  headerContent,
 }: IntegrationListViewProps) {
   const {
     docs: articles,
@@ -122,6 +124,8 @@ export function IntegrationListView({
             {description}
           </p>
         </header>
+
+        {headerContent}
 
         {/* 3 Pillar Cards (When on overview page) */}
         {showPillarCards && (

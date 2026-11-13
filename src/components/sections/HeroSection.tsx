@@ -1,14 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import { MediaImage } from '@/components/ui/MediaImage';
-import type { HeroBlock } from '@/payload-types';
+import React from "react";
+import Link from "next/link";
+import { MediaImage } from "@/components/ui/MediaImage";
+import type { HeroBlock } from "@/payload-types";
 
 export interface HeroSectionProps {
   block: HeroBlock;
 }
 
 export function HeroSection({ block }: HeroSectionProps) {
-  const { eyebrow, heading, subheading, image, primaryCta, secondaryCta } = block;
+  const { eyebrow, heading, subheading, image, primaryCta, secondaryCta } =
+    block;
 
   return (
     <section className="relative w-full overflow-hidden bg-primary text-on-primary">
@@ -54,7 +55,9 @@ export function HeroSection({ block }: HeroSectionProps) {
               className="px-6 py-3 rounded-lg bg-accent hover:bg-accent-hover text-primary font-semibold text-sm tracking-wide transition-all shadow-md flex items-center gap-2"
             >
               <span>{primaryCta.label}</span>
-              <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+              <span className="material-symbols-outlined text-[18px]">
+                arrow_forward
+              </span>
             </Link>
           )}
 

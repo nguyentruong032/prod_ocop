@@ -1,5 +1,5 @@
-import React from 'react';
-import type { KpiStatsBlock } from '@/payload-types';
+import React from "react";
+import type { KpiStatsBlock } from "@/payload-types";
 
 export interface KpiStatsSectionProps {
   block: KpiStatsBlock;
@@ -17,7 +17,7 @@ export function KpiStatsSection({ block }: KpiStatsSectionProps) {
           {items.map((stat, idx) => (
             <div
               key={stat.id || idx}
-              className={`flex flex-col items-center text-center px-4 ${idx > 0 ? 'pt-4 md:pt-0' : ''}`}
+              className={`flex flex-col items-center text-center px-4 ${idx > 0 ? "pt-4 md:pt-0" : ""}`}
             >
               <span className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-accent mb-2 tracking-tight">
                 {stat.value}

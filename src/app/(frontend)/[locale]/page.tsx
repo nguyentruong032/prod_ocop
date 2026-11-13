@@ -1,21 +1,29 @@
-import { notFound } from 'next/navigation';
-import type { Metadata } from 'next';
-import { getHome } from '@/lib/data/globals';
-import { BlockRenderer } from '@/components/sections/BlockRenderer';
-import { buildMetadata, buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/seo';
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getHome } from "@/lib/data/globals";
+import { BlockRenderer } from "@/components/sections/BlockRenderer";
+import {
+  buildMetadata,
+  buildOrganizationJsonLd,
+  buildWebSiteJsonLd,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/ui/JsonLd";
 
 interface PageProps {
   params: Promise<{ locale: string }> | { locale: string };
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { locale } = await params;
-  if (locale !== 'vi') return {};
+  if (locale !== "vi") return {};
 
   const home = await getHome();
   return buildMetadata({
-    title: 'Cổng thông tin điện tử OCOP Việt Nam',
-    description: 'Chuyên trang thông tin điện tử OCOP Việt Nam - Kết nối sản phẩm OCOP đạt chuẩn 3-5 sao, lan tỏa văn hóa và câu chuyện nông sản Việt.',
+    title: "Cổng thông tin điện tử OCOP Việt Nam",
+    description:
+      "Chuyên trang thông tin điện tử OCOP Việt Nam - Kết nối sản phẩm OCOP đạt chuẩn 3-5 sao, lan tỏa văn hóa và câu chuyện nông sản Việt.",
     path: `/${locale}`,
     seo: home.seo,
   });
@@ -23,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
-  if (locale !== 'vi') {
+  if (locale !== "vi") {
     notFound();
   }
 
@@ -33,14 +41,8 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
-      />
+      <JsonLd data={orgJsonLd} />
+      <JsonLd data={websiteJsonLd} />
       <BlockRenderer blocks={home.layout} />
     </>
   );

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 export interface SearchModalClientProps {
   isOpen: boolean;
@@ -16,33 +16,33 @@ interface SuggestionItem {
 
 export function SearchModalClient({ isOpen, onClose }: SearchModalClientProps) {
   const router = useRouter();
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState<SuggestionItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
       setTimeout(() => inputRef.current?.focus(), 50);
     } else {
-      document.body.style.overflow = '';
-      setQuery('');
+      document.body.style.overflow = "";
+      setQuery("");
       setSuggestions([]);
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
+      if (e.key === "Escape" && isOpen) {
         onClose();
       }
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
   // Debounce suggest API
@@ -56,7 +56,9 @@ export function SearchModalClient({ isOpen, onClose }: SearchModalClientProps) {
     setIsLoading(true);
     const timeout = setTimeout(async () => {
       try {
-        const res = await fetch(`/api/public/search/suggest?q=${encodeURIComponent(query.trim())}`);
+        const res = await fetch(
+          `/api/public/search/suggest?q=${encodeURIComponent(query.trim())}`,
+        );
         if (res.ok) {
           const data = await res.json();
           setSuggestions(Array.isArray(data) ? data : data.items || []);
@@ -101,7 +103,10 @@ export function SearchModalClient({ isOpen, onClose }: SearchModalClientProps) {
         className="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-2xl border border-surface-container overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <form onSubmit={handleSubmit} className="relative flex items-center border-b border-surface-container p-4">
+        <form
+          onSubmit={handleSubmit}
+          className="relative flex items-center border-b border-surface-container p-4"
+        >
           <span className="material-symbols-outlined text-[24px] text-outline ml-1 mr-3 shrink-0">
             search
           </span>
@@ -116,11 +121,13 @@ export function SearchModalClient({ isOpen, onClose }: SearchModalClientProps) {
           {query && (
             <button
               type="button"
-              onClick={() => setQuery('')}
+              onClick={() => setQuery("")}
               className="p-1 text-outline hover:text-on-surface mr-2"
               aria-label="Xóa từ khóa"
             >
-              <span className="material-symbols-outlined text-[20px]">clear</span>
+              <span className="material-symbols-outlined text-[20px]">
+                clear
+              </span>
             </button>
           )}
           <button
@@ -135,7 +142,9 @@ export function SearchModalClient({ isOpen, onClose }: SearchModalClientProps) {
         <div className="max-h-96 overflow-y-auto p-4">
           {isLoading && (
             <div className="py-6 text-center text-on-surface-variant text-sm font-body-sm flex items-center justify-center gap-2">
-              <span className="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+              <span className="material-symbols-outlined animate-spin text-[18px]">
+                progress_activity
+              </span>
               <span>Đang tìm kiếm gợi ý...</span>
             </div>
           )}
@@ -167,7 +176,13 @@ export function SearchModalClient({ isOpen, onClose }: SearchModalClientProps) {
 
           {!isLoading && query.trim() && suggestions.length === 0 && (
             <div className="py-8 text-center text-on-surface-variant font-body-sm">
-              <p className="text-sm">Nhấn <kbd className="px-1.5 py-0.5 rounded bg-surface-container font-mono text-xs">Enter</kbd> để tìm kiếm toàn bộ với từ khóa "{query}"</p>
+              <p className="text-sm">
+                Nhấn{" "}
+                <kbd className="px-1.5 py-0.5 rounded bg-surface-container font-mono text-xs">
+                  Enter
+                </kbd>{" "}
+                để tìm kiếm toàn bộ với từ khóa "{query}"
+              </p>
             </div>
           )}
 

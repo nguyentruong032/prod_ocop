@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import type { CtaBannerBlock } from '@/payload-types';
+import React from "react";
+import Link from "next/link";
+import type { CtaBannerBlock } from "@/payload-types";
 
 export interface CtaBannerSectionProps {
   block: CtaBannerBlock;
@@ -10,8 +10,8 @@ export function CtaBannerSection({ block }: CtaBannerSectionProps) {
   const { heading, text, cta } = block;
 
   const defaultCta = {
-    label: 'Gửi bài & Hồ sơ OCOP',
-    href: '/vi/gui-bai-ho-so-ocop',
+    label: "Gửi bài & Hồ sơ OCOP",
+    href: "/vi/gui-bai-ho-so-ocop",
   };
 
   const finalCta = cta || defaultCta;
@@ -40,7 +40,9 @@ export function CtaBannerSection({ block }: CtaBannerSectionProps) {
             className="px-8 py-3.5 rounded-lg bg-accent hover:bg-accent-hover text-primary font-bold text-sm tracking-wide transition-all shadow-md inline-flex items-center gap-2"
           >
             <span>{finalCta.label}</span>
-            <span className="material-symbols-outlined text-[18px]">post_add</span>
+            <span className="material-symbols-outlined text-[18px]">
+              post_add
+            </span>
           </Link>
           <Link
             href="/vi/chu-the-ocop"

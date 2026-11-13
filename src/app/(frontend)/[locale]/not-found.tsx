@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -16,21 +16,26 @@ export default function NotFound() {
             Trang bạn tìm không tồn tại hoặc đã thay đổi
           </h1>
           <p className="font-body-md text-on-surface-variant max-w-md mt-3 leading-relaxed text-sm md:text-base">
-            Đường dẫn có thể đã được chuyển đổi hoặc không còn khả dụng trên hệ thống OCOP Việt Nam.
+            Đường dẫn có thể đã được chuyển đổi hoặc không còn khả dụng trên hệ
+            thống OCOP Việt Nam.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/vi"
               className="h-11 px-6 rounded-lg bg-primary text-on-primary hover:bg-primary-action transition-colors inline-flex items-center gap-2 font-semibold text-sm shadow-sm"
             >
-              <span className="material-symbols-outlined text-[18px]">home</span>
+              <span className="material-symbols-outlined text-[18px]">
+                home
+              </span>
               <span>Về Trang chủ</span>
             </Link>
             <Link
               href="/vi/tim-kiem"
               className="h-11 px-6 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors inline-flex items-center gap-2 font-semibold text-sm border border-outline-variant/60"
             >
-              <span className="material-symbols-outlined text-[18px]">search</span>
+              <span className="material-symbols-outlined text-[18px]">
+                search
+              </span>
               <span>Tìm kiếm tư liệu</span>
             </Link>
           </div>

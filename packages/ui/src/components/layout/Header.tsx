@@ -49,8 +49,26 @@ export function Header() {
     }
   };
 
+  const speculationRules = {
+    prefetch: [
+      {
+        source: 'document',
+        where: {
+          href_matches: '/*',
+        },
+        eagerness: 'conservative',
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="speculationrules"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(speculationRules),
+        }}
+      />
       <header className="sticky top-0 z-50 w-full bg-surface-container-lowest shadow-sm border-b border-surface-light-green">
         <div className="max-w-[1360px] mx-auto px-gutter-mobile md:px-gutter-tablet lg:px-margin h-20 flex items-center justify-between border-b border-surface-light-green/60">
           <a href="/" aria-label="Về trang chủ OCOP Việt Nam" className="flex items-center gap-space-md group shrink-0">

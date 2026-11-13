@@ -1,0 +1,176 @@
+================================================================================
+HƯỚNG DẪN SỬ DỤNG TÀI LIỆU & BỘ PROMPT MẪU DÀNH RIÊNG CHO DEV FRONTEND
+Dự án: Cổng thông tin điện tử OCOP Việt Nam (Phase 1 — Go-live: 07/12/2026)
+================================================================================
+
+I. BỘ FILE TÀI LIỆU DÀNH CHO DEV FRONTEND
+--------------------------------------------------------------------------------
+Bạn chỉ sử dụng các file phiên bản 2.0 dưới đây (bỏ hoàn toàn các file bản 1.0 cũ):
+
+1. 00-TONG-QUAN.md        : Đọc đầu tiên để nắm phạm vi Phase 1, danh sách tính
+                            năng đẩy sang Phase 2 (như bản đồ GIS, tiếng Anh EN)
+                            và lịch trình G1 (16/11), G2 (25/11).
+2. AGENTS.md              : Quy ước cấu trúc thư mục src/, quy tắc code bất biến.
+                            (Bắt buộc đính kèm vào AI trong MỌI phiên làm việc).
+3. 01-FE.md               : Tài liệu thiết kế chính của bạn (Next.js 16.2+ App
+                            Router, Tailwind CSS v4, 31 route tiếng Việt, hàm đọc
+                            dữ liệu `src/lib/data/*` + `getCached`, 7 Client Components).
+4. 02-CMS-BE.md           : Chỉ dùng để tra cứu tên trường dữ liệu của các bảng
+                            (mục 2, mục 4, mục 5) khi cần.
+5. 99-CHECKLIST-VERIFY.md : Dùng để tự kiểm tra trước khi tạo Pull Request.
+
+
+II. PHẠM VI CÔNG VIỆC CỦA DEV FRONTEND (LƯU Ý QUAN TRỌNG)
+--------------------------------------------------------------------------------
+1. Bạn KHÔNG PHẢI làm giao diện màn hình quản trị CMS (`/admin`):
+   - Phần `/admin` do Payload CMS 3.x tự động sinh ra từ cấu hình của Dev BE.
+   - Bạn chỉ tập trung 100% vào giao diện **Website công khai cho người đọc** nằm
+     trong `src/app/(frontend)/*` và `src/components/*`.
+2. Bạn KHÔNG viết API và KHÔNG giữ mảng dữ liệu viết cứng:
+   - Toàn bộ dữ liệu trang được lấy trong Server Component qua các hàm tại
+     `src/lib/data/*` (gọi trực tiếp Payload Local API với `overrideAccess: false`,
+     bọc trong hàm `getCached` dùng `unstable_cache`).
+   - Sử dụng trực tiếp các kiểu dữ liệu từ file `src/payload-types.ts` do Dev BE
+     sinh ra (cấm tự viết lại `interface Article`, `interface Product` rời rạc).
+3. Cách tận dụng 21 trang giao diện demo có sẵn:
+   - Ở bước đầu tiên, KHÔNG xóa ngay thư mục `apps/` cũ mà đổi tên thành `_legacy_apps/`
+     (và đưa `_legacy_apps` vào `exclude` của `tsconfig.json` + `.eslintignore`).
+   - Khi làm tới cụm trang nào, bảo AI đọc file tương ứng trong `_legacy_apps/` để
+     giữ nguyên thiết kế/bố cục Tailwind nhưng chuyển thành Server Component sạch sẽ,
+     nhận dữ liệu động từ CMS, bỏ sạch link `.html` và ảnh `lh3.googleusercontent.com`.
+
+
+III. NGUYÊN TẮC VÀNG KHI SỬ DỤNG AI VIẾT CODE FE
+--------------------------------------------------------------------------------
+- TUYỆT ĐỐI KHÔNG bảo AI "hãy sửa toàn bộ 31 trang theo file 01-FE.md" trong 1 câu
+  lệnh duy nhất (AI sẽ bị tràn giới hạn đầu ra và làm hỏng giao diện).
+- Hãy chia thành 5 phiên (`FE-1` -> `FE-5`) theo đúng thứ tự bên dưới. Mỗi phiên
+  đính kèm `@AGENTS.md`, `@01-FE.md` và `@src/payload-types.ts`, rồi copy-paste
+  đúng Prompt mẫu.
+
+
+================================================================================
+IV. BỘ CÂU LỆNH MẪU (PROMPT) COPY-PASTE THEO 5 PHIÊN CHO DEV FE
+================================================================================
+
+--------------------------------------------------------------------------------
+[PHIÊN FE-1] Dựng khung (frontend), Tailwind v4, UI dùng chung & Trang chủ (/)
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @01-FE.md @src/payload-types.ts
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @01-FE.md (mục 1, 2, 3, 5, 6, 7, 8, 9).
+Thực hiện Lát cắt FE-1:
+1. Đảm bảo các app cũ đã được chuyển sang `_legacy_apps/` (nằm trong exclude của tsconfig.json) để chỉ dùng làm tư liệu lấy class/bố cục thiết kế.
+2. Thiết lập `src/app/(frontend)/globals.css` với Tailwind CSS v4 (`@import "tailwindcss"; @theme { ... }`) khai báo đầy đủ bảng màu ngữ nghĩa từ thiết kế hiện có, xóa quy tắc ẩn scrollbar. Chỉ import `globals.css` này trong `src/app/(frontend)/[locale]/layout.tsx` để không ảnh hưởng `/admin`.
+3. Tạo các thư viện nền tại `src/lib/`:
+   - `cache.ts` (`getCached` bọc `unstable_cache`), `media-loader.ts` (`ocopMediaLoader`), `seo.ts` (`buildMetadata` + JSON-LD helpers), `pagination.ts`, `i18n/vi.json`.
+   - `src/lib/data/globals.ts` (`getSiteSettings`, `getHome`, `getLandingPage(key)`, `listProvinces`) dùng Payload Local API với `overrideAccess: false`, `locale: 'vi'`, bọc `getCached` gắn đúng tag.
+4. Xây dựng `Header.tsx` (logo `h-12 w-auto`, 6 mục menu cố định theo mục 4, nút mở `SearchModalClient`, nút Gửi bài, không hiện nút EN), `Footer.tsx` (đọc dữ liệu từ `site-settings`), và nhóm component dùng chung tại `src/components/ui/` (`MediaImage`, `RichText` render cây Lexical + 4 block nhúng, `Breadcrumb`, `Badge`, `Pagination`, `SectionHeader`, `EmptyState`, `UrlFilterBarClient`).
+5. Xây dựng 10 section của Trang chủ tại `src/components/sections/*` (chuyển giao diện từ `_legacy_apps/web-shell` sang) + `BlockRenderer.tsx` và hoàn thiện `src/app/(frontend)/[locale]/page.tsx` (kiểm tra `locale !== 'vi'` -> `notFound()`).
+6. Tạo `api/preview/route.ts`, `api/preview/exit/route.ts`, `sitemap.ts`, `robots.ts`, `rss.xml/route.ts`.
+"""
+
+* Kiểm tra xong Phiên FE-1:
+  - Mở `http://localhost:3000/vi` hiển thị đúng Trang chủ, Header (logo không bị phóng to), Footer đọc từ `site-settings`.
+  - Mở `http://localhost:3000/en` trả về đúng trang 404.
+
+--------------------------------------------------------------------------------
+[PHIÊN FE-2] Cụm Tin tức & Sự kiện + Văn bản chính sách (Routes #2 -> #7)
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @01-FE.md @src/payload-types.ts
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @01-FE.md (mục 4 — các route từ #2 đến #7, mục 5, mục 7).
+Đối chiếu bố cục giao diện mẫu trong `_legacy_apps/news-events` để chuyển sang kiến trúc mới (bỏ toàn bộ mảng dữ liệu viết cứng, bỏ link .html, bỏ ảnh lh3.googleusercontent.com):
+1. Viết các hàm đọc dữ liệu tại `src/lib/data/articles.ts`, `src/lib/data/events.ts`, `src/lib/data/legal-docs.ts` (luôn đặt `overrideAccess: false`, `select` trường cần thiết, bọc `getCached` với đúng tag `articles`, `article:${slug}`, `events`, `event:${slug}`, `legal-docs`). Khi không tìm thấy `slug`, tra bảng `redirects` trước khi gọi `notFound()`.
+2. Tạo các thẻ `ArticleCard`, `EventCard`, `LegalDocRow` trong `src/components/ui/`.
+3. Hoàn thiện 6 route dưới `src/app/(frontend)/[locale]/tin-tuc-su-kien/`:
+   - `/tin-tuc-su-kien/page.tsx` (`landing('news-landing')`, tin mới, sự kiện sắp tới)
+   - `/tin-tuc-su-kien/chinh-sach-va-co-che/page.tsx` (lọc `level`, tìm số hiệu văn bản, tải PDF)
+   - `/tin-tuc-su-kien/xuc-tien-thuong-mai/page.tsx` (lọc sự kiện `?status=upcoming|ongoing|ended` tính theo `startAt`/`endAt` so với hiện tại)
+   - `/tin-tuc-su-kien/ocop-dia-phuong/page.tsx` (lọc `?province=&region=`)
+   - `/tin-tuc-su-kien/tin-tuc/[slug]/page.tsx` (chi tiết tin + JSON-LD `NewsArticle` + bài liên quan)
+   - `/tin-tuc-su-kien/su-kien/[slug]/page.tsx` (chi tiết sự kiện + lịch trình `agenda` + JSON-LD `Event`)
+Đảm bảo mỗi `page.tsx` <= 80 dòng, có đúng một thẻ `<h1>` và có `generateMetadata`.
+"""
+
+--------------------------------------------------------------------------------
+[PHIÊN FE-3] Cụm Sản phẩm OCOP & Chủ thể OCOP (Routes #13 -> #20)
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @01-FE.md @src/payload-types.ts
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @01-FE.md (mục 4 — các route từ #13 đến #20).
+Đối chiếu bố cục giao diện mẫu trong `_legacy_apps/products` để chuyển sang kiến trúc mới:
+1. Viết `src/lib/data/products.ts` (`listProducts`, `countProductsByStars`, `getProduct`) và `src/lib/data/producers.ts` (`listProducers`, `getProducer`) với `overrideAccess: false` và `getCached`.
+2. Tạo `ProductCard`, `ProducerCard` tại `src/components/ui/` và `ProductGalleryClient` tại `src/components/features/products/`.
+3. Hoàn thiện 8 route:
+   - `/san-pham-ocop/page.tsx` (lọc `?stars=&category=&province=&q=&page=`)
+   - `/san-pham-ocop/nong-san-va-thuc-pham/page.tsx` (`category=NONG_SAN_THUC_PHAM`)
+   - `/san-pham-ocop/duoc-lieu-va-san-pham-suc-khoe/page.tsx` (`category=DUOC_LIEU_SUC_KHOE`)
+   - `/san-pham-ocop/thu-cong-my-nghe/page.tsx` (`category=THU_CONG_MY_NGHE`)
+   - `/san-pham-ocop/san-pham-theo-sao/page.tsx` (tab `?stars=3|4|5`, thống kê số lượng theo sao từ DB)
+   - `/san-pham-ocop/[slug]/page.tsx` (chi tiết sản phẩm + gallery + thông tin chủ thể + JSON-LD `Product`)
+   - `/chu-the-ocop/page.tsx` (danh bạ chủ thể, lọc `?province=&type=&q=`)
+   - `/chu-the-ocop/[slug]/page.tsx` (hồ sơ chủ thể + danh sách sản phẩm của chủ thể đó).
+"""
+
+--------------------------------------------------------------------------------
+[PHIÊN FE-4] Cụm Câu chuyện OCOP & OCOP Hội nhập (Routes #8 -> #12 & #21 -> #25)
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @01-FE.md @src/payload-types.ts
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @01-FE.md (mục 4 — các route #8 -> #12 và #21 -> #25).
+Đối chiếu bố cục giao diện mẫu trong `_legacy_apps/ocop-stories` và `_legacy_apps/news-events/src/app/ocop-hoi-nhap` để chuyển sang kiến trúc mới:
+1. Tạo Client Components `ReadingProgressClient` và `VideoEmbedClient` (tải iframe YouTube/Vimeo sau khi bấm).
+2. Hoàn thiện 5 route OCOP Hội nhập dưới `/ocop-hoi-nhap/`:
+   - `/ocop-hoi-nhap/page.tsx` (`kind='INTEGRATION'`, lọc `?pillar=`)
+   - `/ocop-hoi-nhap/xuat-khau-va-thi-truong-quoc-te/page.tsx` (`topic='EXPORT_MARKET'`, lọc `?marketCode=`)
+   - `/ocop-hoi-nhap/tieu-chuan-va-chung-nhan-quoc-te/page.tsx` (`topic='STANDARDS'`)
+   - `/ocop-hoi-nhap/chuyen-doi-so-ocop/page.tsx` (`topic='DIGITAL'`, lưu ý tên thư mục viết thường `chuyen-doi-so-ocop`)
+   - `/ocop-hoi-nhap/[slug]/page.tsx` (`getArticle(slug, 'INTEGRATION')`)
+3. Hoàn thiện 5 route Câu chuyện OCOP dưới `/cau-chuyen-ocop/`:
+   - `/cau-chuyen-ocop/page.tsx` (`kind='STORY'`)
+   - `/cau-chuyen-ocop/van-hoa-tinh-hoa-ban-dia/page.tsx` (`topic='CULTURE'`)
+   - `/cau-chuyen-ocop/phong-su-da-phuong-tien/page.tsx` (`topic='REPORTAGE'`, hỗ trợ `VideoEmbedClient`)
+   - `/cau-chuyen-ocop/hanh-trinh-chu-the-ocop/page.tsx` (`topic='JOURNEY'`)
+   - `/cau-chuyen-ocop/[slug]/page.tsx` (đọc bài + `ReadingProgressClient` + sản phẩm liên quan `relatedProducts`).
+"""
+
+--------------------------------------------------------------------------------
+[PHIÊN FE-5] Cụm Điểm đến du lịch, Tìm kiếm & Gửi bài/Tra cứu (Routes #26 -> #31)
+--------------------------------------------------------------------------------
+* File đính kèm vào AI: @AGENTS.md @01-FE.md @src/payload-types.ts
+* Prompt copy gửi AI:
+
+"""
+Hãy đọc kỹ @AGENTS.md và @01-FE.md (mục 4 — các route #26 -> #31 và mục 9).
+Đối chiếu bố cục giao diện mẫu trong `_legacy_apps/tourism-destinations` và `_legacy_apps/web-shell`:
+1. Viết `src/lib/data/destinations.ts` (`listDestinations`, `getDestination`) và hoàn thiện 4 route dưới `/diem-den-du-lich/`:
+   - `/diem-den-du-lich/page.tsx`
+   - `/diem-den-du-lich/du-lich-sinh-thai-trai-nghiem-ocop/page.tsx` (`kind='ECO_TOUR'`, lọc `?ecosystem=`)
+   - `/diem-den-du-lich/lang-nghe-truyen-thong/page.tsx` (`kind='CRAFT_VILLAGE'`, lọc `?craft=&q=`)
+   - `/diem-den-du-lich/[slug]/page.tsx` (chi tiết cho cả 3 loại, hiển thị lịch trình nếu là `ECO_TOUR` hoặc thông tin làng nghề nếu là `CRAFT_VILLAGE`).
+   - Route `/diem-den-du-lich/ban-do-ocop-viet-nam/page.tsx` gọi `notFound()` (Phase 2) và đảm bảo không có link nào trên site trỏ tới route này.
+2. Hoàn thiện trang `/tim-kiem/page.tsx`: đọc `?q=&type=&province=&page=`, gọi dữ liệu tìm kiếm, gỡ bỏ toàn bộ kết quả mẫu viết cứng và modal mô phỏng cũ, chỉ hiện `EmptyState` khi `totalItems === 0`.
+3. Hoàn thiện trang `/gui-bai-ho-so-ocop/page.tsx` gồm 2 tab:
+   - `SubmissionFormClient`: validate bằng zod, đính kèm tối đa 5 tệp, ô tick đồng ý điều khoản, Cloudflare Turnstile, gửi `multipart/form-data` tới `POST /api/public/submissions`, hiển thị rõ mã `trackingCode` kèm nút sao chép (cấm dùng `alert()`).
+   - `TrackingFormClient`: gọi `GET /api/public/submissions/track?code=&email=`, hiển thị đúng trạng thái trả về.
+"""
+
+
+================================================================================
+V. CHECKLIST TỰ KIỂM TRA CỦA DEV FE TRƯỚC KHI MỞ PULL REQUEST
+================================================================================
+1. `pnpm lint && pnpm type-check && pnpm build` chạy xanh 100% (`ignoreBuildErrors = false`).
+2. Mọi lệnh gọi Payload Local API trong `src/lib/data/*` đều đặt `overrideAccess: false`.
+3. Chỉ có đúng 7 nhóm Client Components được khai báo `'use client'` (mục 9 của `01-FE.md`).
+4. Không có `dangerouslySetInnerHTML`, không còn link `.html`, không còn ảnh `lh3.googleusercontent.com`, không còn mảng dữ liệu bài viết/sản phẩm viết cứng trong `src/`.
+5. Mỗi trang có đúng một thẻ `<h1>`, dùng `MediaImage` có `alt`, và có `generateMetadata`.
+================================================================================

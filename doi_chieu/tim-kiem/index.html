@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link rel="stylesheet" href="/fonts/material-symbols.css" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#ffdbce", "surface-dim": "#d0daf0", "secondary-container": "#fd966d", "background": "#f9f9ff", "on-surface": "#121c2c", "on-error": "#ffffff", "inverse-on-surface": "#ebf1ff", "tertiary": "#372200", "surface": "#f9f9ff", "on-error-container": "#93000a", "on-secondary-container": "#752d0b", "on-primary-container": "#86af99", "secondary-fixed-dim": "#ffb599", "on-secondary-fixed-variant": "#79300f", "on-tertiary-fixed": "#291800", "on-primary-fixed": "#002114", "on-tertiary-fixed-variant": "#614000", "on-secondary": "#ffffff", "on-secondary-fixed": "#370e00", "primary-fixed-dim": "#a5d0b9", "error": "#ba1a1a", "tertiary-container": "#533600", "surface-container": "#e7eeff", "outline-variant": "#c1c8c2", "surface-variant": "#d9e3f9", "surface-tint": "#3f6653", "primary-fixed": "#c1ecd4", "on-primary-fixed-variant": "#274e3d", "on-tertiary": "#ffffff", "surface-bright": "#f9f9ff", "on-surface-variant": "#414844", "on-background": "#121c2c", "tertiary-fixed-dim": "#f2be71", "error-container": "#ffdad6", "primary": "#012d1d", "on-tertiary-container": "#ce9e54", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "inverse-surface": "#273141", "primary-container": "#1b4332", "surface-container-highest": "#d9e3f9", "secondary": "#984724", "tertiary-fixed": "#ffddb1", "outline": "#717973", "surface-container-high": "#dee8ff", "surface-container-low": "#f0f3ff", "inverse-primary": "#a5d0b9" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "gutter-tablet": "1.25rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin-tablet": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "4rem" }, "fontFamily": { "label-sm": ["Be Vietnam Pro"], "headline-lg": ["Noto Serif"], "body-sm": ["Be Vietnam Pro"], "lead-paragraph": ["Be Vietnam Pro"], "headline-sm": ["Noto Serif"], "display-hero": ["Noto Serif"], "label-md": ["Be Vietnam Pro"], "title-editorial": ["Noto Serif"], "headline-lg-mobile": ["Noto Serif"], "body-lg": ["Be Vietnam Pro"], "headline-md": ["Noto Serif"], "display-hero-mobile": ["Noto Serif"], "body-md": ["Be Vietnam Pro"], "quote-display": ["Noto Serif"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "lead-paragraph": ["20px", { "lineHeight": "34px", "fontWeight": "400" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }], "title-editorial": ["19px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "38px", "fontWeight": "700" }], "body-lg": ["17px", { "lineHeight": "30px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "38px", "fontWeight": "600" }], "display-hero-mobile": ["36px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-md": ["15px", { "lineHeight": "26px", "fontWeight": "400" }], "quote-display": ["24px", { "lineHeight": "38px", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body
+  class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+  <main class="w-full">
+    <div class="flex flex-col w-full">
+      <!-- KHỐI 02 – ĐẦU TRANG TÌM KIẾM & CHIP LỌC LOẠI NỘI DUNG (Nền Kem ấm #F8F5EE) -->
+      <section class="w-full bg-[#F8F5EE] py-space-xl">
+        <div class="max-w-[1360px] mx-auto px-gutter flex flex-col gap-space-lg">
+          <!-- Ô tìm kiếm lớn trang trọng ở giữa trang -->
+          <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
+            <form class="w-full flex items-center bg-surface-container-lowest rounded-xl shadow-md p-2 gap-space-sm"
+              onsubmit="event.preventDefault();">
+              <div class="pl-3 flex items-center text-primary">
+                <span class="material-symbols-outlined text-[28px]">search</span>
+              </div>
+              <input
+                class="w-full bg-transparent font-body-lg text-body-lg text-on-surface placeholder:italic placeholder:text-outline focus:outline-none px-2"
+                placeholder="Tìm sản phẩm, câu chuyện, làng nghề, chủ thể OCOP, tin tức…" type="text"
+                value="Trà Tân Cương" />
+              <button
+                class="px-space-lg py-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-sm flex items-center gap-2 flex-shrink-0"
+                type="button">
+                <span>Tìm kiếm</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            </form>
+            <!-- Dòng thống kê định hướng kết quả -->
+            <div class="mt-space-md text-center flex flex-col gap-1">
+              <h1 class="font-headline-sm text-headline-sm text-primary">
+                Kết quả cho ‘Trà Tân Cương’ · <span class="text-secondary font-bold">24 kết quả</span>
+              </h1>
+              <p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                Phân loại theo cơ sở dữ liệu số hóa di sản và tri thức nông thôn Việt Nam.
+              </p>
+            </div>
+          </div>
+          <!-- Thanh Chip lọc theo đúng 9 loại nội dung -->
+          <div class="w-full overflow-x-auto pb-1">
+            <div class="flex items-center gap-2 min-w-max justify-start lg:justify-center">
+              <!-- 1. Tất cả (24) - Active nổi bật Xanh rừng đậm #1F4D3A -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#1F4D3A] text-on-primary font-label-sm text-label-sm uppercase tracking-wider shadow-sm transition-all"
+                type="button">
+                <span>Tất cả</span>
+                <span class="px-1.5 py-0.2 bg-white/20 rounded-md text-[10px] leading-tight font-bold">24</span>
+              </button>
+              <!-- 2. Sản phẩm OCOP (6) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Sản phẩm OCOP</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">6</span>
+              </button>
+              <!-- 3. Câu chuyện (5) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Câu chuyện</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">5</span>
+              </button>
+              <!-- 4. Chủ thể OCOP (3) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Chủ thể OCOP</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">3</span>
+              </button>
+              <!-- 5. Điểm đến & Du lịch (2) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Điểm đến &amp; Du lịch</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">2</span>
+              </button>
+              <!-- 6. Bài Hội nhập (2) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Bài Hội nhập</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">2</span>
+              </button>
+              <!-- 7. Tin tức (3) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Tin tức</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">3</span>
+              </button>
+              <!-- 8. Sự kiện (2) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Sự kiện</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">2</span>
+              </button>
+              <!-- 9. Góc nhìn bạn đọc (1) -->
+              <button
+                class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-all"
+                type="button">
+                <span>Góc nhìn bạn đọc</span>
+                <span
+                  class="px-1.5 py-0.2 bg-surface-variant rounded-md text-[10px] leading-tight text-on-surface font-semibold">1</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- KHỐI 03 – DANH SÁCH KẾT QUẢ & TRẠNG THÁI RỖNG (Nền Trắng #FFFFFF) -->
+      <section class="w-full bg-[#FFFFFF] py-space-xl">
+        <div class="max-w-[1360px] mx-auto px-gutter flex flex-col gap-space-xl">
+          <!-- A. PHẦN TRÊN: Danh sách kết quả hỗn hợp thẻ chuẩn báo chí di sản -->
+          <div>
+            <div class="flex items-center justify-between pb-space-sm mb-space-md">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                <h2 class="font-headline-sm text-headline-sm text-primary">Tài liệu &amp; Dữ liệu đối soát</h2>
+              </div>
+              <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Trang 1 / 4 · Xếp theo độ
+                tương thích di sản</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+              <!-- Thẻ 1: Product Card -->
+              <article
+                class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                <div class="relative h-56 w-full overflow-hidden">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Mộc bản đặc sản trà Đinh Ngọc Tân Cương với những búp chè một tôm nõn nà sấy khô truyền thống, màu xanh đen ánh xám bạc, đặt trong khay gốm mộc nung mộc mạc bên cành chè xanh tươi mát sườn đồi Tân Cương Thái Nguyên, ánh sáng ban mai tinh tế tự nhiên."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx4pHkEIejrXl3C5CYl5aS-9BO_91NyqLkDof403kMhQO_dTSmPa4lYDfzg4p-GNb5j9KZDX99YLRkzztR1lbbf6llnfs8TBGKpQijSKBG2Bk_jGHUSQyjsUeVvZcjvUl1jpbYDQBNIpwQKAGND-pCKLziv98o9lRJ9E_YgInhgoXq-XeGeAVVEyjPc_QGIM5OxNCdsHQlrvHix2Mbh6OzF4UyJ4abEUVNJhS4fwI" />
+                  <div
+                    class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#1F4D3A] text-[#C89B3C] shadow-sm font-label-sm text-label-sm font-semibold">
+                    <span class="material-symbols-outlined text-[15px]"
+                      style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span>OCOP 5 Sao Quốc gia</span>
+                  </div>
+                </div>
+                <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm bg-surface-container-lowest">
+                  <div class="space-y-1.5">
+                    <span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Sản
+                      phẩm OCOP</span>
+                    <h3
+                      class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container transition-colors">
+                      Trà Đinh Ngọc Tân Cương
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      HTX Trà Tân Cương Thái Nguyên, thu hoạch từ nguồn gốc vùng trà đặc sản Tân Cương thổ nhưỡng phù sa
+                      cổ sông Công.
+                    </p>
+                  </div>
+                  <div class="pt-space-sm flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-outline">Thái Nguyên</span>
+                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-[#B85D3B] hover:text-on-secondary-container font-semibold uppercase tracking-wider"
+                      href="/san-pham-ocop/tra-dinh-ngoc-tan-cuong/index.html">
+                      <span>Xem hồ sơ sản phẩm</span>
+                      <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <!-- Thẻ 2: Story Card -->
+              <article
+                class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                <div class="relative h-56 w-full overflow-hidden">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Nghệ nhân cao tuổi sao chè thủ công trên chảo gang đỏ lửa đượm than củi, đôi tay chai sần thoăn thoắt đảo búp chè non thơm ngát tỏa khói lam chiều trong căn nhà gỗ truyền thống bên sườn núi Cốc Thái Nguyên, phong cách nhiếp ảnh phóng sự tài liệu đậm chất văn hóa."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3CCgASuElO6Cr8EUgNTa_Cz32OVuxkLUyiM4s-33u8gi-QNzT6D9Kxq1-keckkP-uNv33txEIPZoEOzNd9-_QpXQ1gZ5AlaAuViudguPS3e2Wlt2-_cK-Y-a_-zxOlABCPoSGXne6YwT5-pMIapA2Uva4GJ9Vr8Xr94PSKBOPyR0oVB9GTEsOZZkTDe7rM9Mlg7Ndx4A4xjwqXkoJuTmocCq90hQeVatSUAERQuY" />
+                  <div
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#984724] text-white shadow-sm font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                    Ký sự Di sản
+                  </div>
+                  <div
+                    class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm text-white font-label-sm text-label-sm">
+                    7 phút đọc
+                  </div>
+                </div>
+                <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm bg-surface-container-lowest">
+                  <div class="space-y-1.5">
+                    <span
+                      class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Chuyên
+                      khảo Longform Di sản</span>
+                    <h3
+                      class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container transition-colors">
+                      Giữ lửa nghề sao chè Tân Cương bên sườn núi Cốc
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      Hành trình hơn nửa thế kỷ gìn giữ bí quyết cảm nhận nhiệt than củi và tiếng nổ lách tách của cánh
+                      chè móc câu thượng hạng.
+                    </p>
+                  </div>
+                  <div class="pt-space-sm flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-outline">Bút ký điền dã</span>
+                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container font-semibold uppercase tracking-wider"
+                      href="/cau-chuyen-ocop/index.html">
+                      <span>Đọc bài ký sự</span>
+                      <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <!-- Thẻ 3: Business Card -->
+              <article
+                class="flex flex-col bg-[#F8F5EE] rounded-xl shadow-sm hover:shadow-md transition-shadow p-space-md justify-between group">
+                <div class="space-y-space-sm">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="px-2.5 py-0.5 rounded bg-surface-container-high text-[#1F4D3A] font-label-sm text-label-sm font-semibold uppercase tracking-wider">Chủ
+                      thể OCOP</span>
+                    <span class="font-label-sm text-label-sm text-outline">Mã số: TN-8820</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3
+                      class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+                      Hợp tác xã Trà Tân Cương Thái Nguyên
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Hồ sơ chủ thể OCOP tiêu biểu với 120 hộ nông dân liên kết sản xuất vùng nguyên liệu trà sạch theo
+                      quy chuẩn VietGAP &amp; hữu cơ vi sinh.
+                    </p>
+                  </div>
+                  <div class="p-3 bg-white/70 rounded-lg flex items-center gap-3">
+                    <span class="material-symbols-outlined text-secondary text-[26px]">nature_people</span>
+                    <div class="text-xs">
+                      <div class="font-semibold text-primary">120 Hộ nông gia liên kết</div>
+                      <div class="text-on-surface-variant">Quy mô 85 ha canh tác nguyên liệu bản địa</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-space-md">
+                  <a class="w-full inline-flex items-center justify-center gap-2 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md uppercase tracking-wider font-semibold transition-colors"
+                    href="/chu-the-ocop/hop-tac-xa-tra-tan-cuong-thai-nguyen/index.html">
+                    <span>Xem hồ sơ chủ thể</span>
+                    <span class="material-symbols-outlined text-[16px]">badge</span>
+                  </a>
+                </div>
+              </article>
+              <!-- Thẻ 4: Locality Card -->
+              <article
+                class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+                <div class="relative h-56 w-full overflow-hidden">
+                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    data-alt="Toàn cảnh những triền đồi chè Tân Cương xanh ngắt uốn lượn hình mâm xôi soi bóng bên hồ Núi Cốc mù sương tĩnh lặng buổi bình minh, các luống chè bậc thang xanh mướt mải ngút ngàn, điểm xuyết con đường đất đỏ rực rỡ và nón lá nông dân thu hái chè."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlSa7glfaNUyn6tyGsfwMDMDk6Mn2aNUPSqqhLt2ckCdwc7wd7olYlo66m3wU1YQ0aXhwzz4OdGtVL22aTEW__R19AUnSbJQnHeZsLkIkUdYzzqsXxPZwVaAKUrNgdnSIDb9iRl8ONxaMuQM-i4tQo1CMmpja2pUVYkIUEyDhvkUvuXJ4bItvWYmgIGGLyJubTkjGzoMrnKL58ly0Ui5IJDRiqqIihHDVU_prpQcA" />
+                  <div
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#1F4D3A] text-white shadow-sm font-label-sm text-label-sm font-semibold uppercase tracking-wider">
+                    Điểm đến &amp; Du lịch
+                  </div>
+                  <div
+                    class="absolute bottom-3 left-3 px-2 py-0.5 rounded bg-black/60 backdrop-blur-sm text-white font-label-sm text-label-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">pin_drop</span>
+                    <span>Chỉ dẫn địa lý</span>
+                  </div>
+                </div>
+                <div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm bg-surface-container-lowest">
+                  <div class="space-y-1.5">
+                    <span
+                      class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Không
+                      gian du lịch nông thôn</span>
+                    <h3
+                      class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container transition-colors">
+                      Vùng chè di sản Tân Cương - Tỉnh Thái Nguyên
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      12 điểm tham quan trải nghiệm văn hóa ẩm thực trà, homestay sinh thái và không gian thử trà nghệ
+                      thuật giữa nương chè trăm tuổi.
+                    </p>
+                  </div>
+                  <div class="pt-space-sm flex items-center justify-between">
+                    <span class="font-label-sm text-label-sm text-outline">12 điểm trải nghiệm</span>
+                    <a class="inline-flex items-center gap-1 font-label-md text-label-md text-[#B85D3B] hover:text-on-secondary-container font-semibold uppercase tracking-wider"
+                      href="/diem-den-du-lich/index.html">
+                      <span>Khám phá địa phương</span>
+                      <span class="material-symbols-outlined text-[16px]">explore</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+              <!-- Thẻ 5: Integration Card -->
+              <article
+                class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow p-space-md justify-between group">
+                <div class="space-y-space-sm">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="px-2.5 py-0.5 rounded bg-[#E8EFEA] text-[#1F4D3A] font-label-sm text-label-sm font-semibold uppercase tracking-wider">OCOP
+                      Hội nhập</span>
+                    <span class="font-label-sm text-label-sm text-outline">Chuyên đề Xuất khẩu</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3
+                      class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container transition-colors">
+                      Tiềm năng đưa trà và thảo dược OCOP sang thị trường EU và chứng nhận Halal
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Phân tích chuỗi giá trị và hàng rào kỹ thuật: Rà soát dư lượng hoạt chất bảo vệ thực vật, kiểm
+                      định carbon và tiêu chuẩn đóng gói thân thiện môi trường.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2 pt-2 text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+                    <span>Phân tích dữ liệu &amp; Tham vấn chuyên gia nông nghiệp EU</span>
+                  </div>
+                </div>
+                <div class="pt-space-md">
+                  <a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container font-semibold uppercase tracking-wider"
+                    href="/ocop-hoi-nhap/tiem-nang-dua-tra-va-thao-duoc-vao-eu/index.html">
+                    <span>Xem tư liệu nghiên cứu</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_right_alt</span>
+                  </a>
+                </div>
+              </article>
+              <!-- Thẻ 6: News Card -->
+              <article
+                class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow p-space-md justify-between group">
+                <div class="space-y-space-sm">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="px-2.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">Tin
+                      tức &amp; Sự kiện</span>
+                    <span class="font-label-sm text-label-sm text-outline">Tháng 03/2026</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3
+                      class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container transition-colors">
+                      Hội chợ xúc tiến thương mại tôn vinh văn hóa Trà Thái Nguyên 2026
+                    </h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">
+                      Chuỗi không gian giao lưu kết nối 63 tỉnh thành, trưng bày hơn 200 sản phẩm trà đạt phân hạng OCOP
+                      từ 4 sao đến 5 sao cấp Quốc gia.
+                    </p>
+                  </div>
+                  <div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-[16px] text-[#B85D3B]">calendar_month</span>
+                    <span>Diễn ra từ 18/03 đến 22/03/2026 tại TP. Thái Nguyên</span>
+                  </div>
+                </div>
+                <div class="pt-space-md">
+                  <a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-on-secondary-container font-semibold uppercase tracking-wider"
+                    href="/tin-tuc-su-kien/index.html">
+                    <span>Chi tiết sự kiện</span>
+                    <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- B. PHẦN DƯỚI: KHUNG TRẠNG THÁI KHÔNG CÓ KẾT QUẢ (EMPTY STATE COMPONENT) -->
+          <div class="w-full bg-[#E8EFEA] rounded-xl p-space-xl flex flex-col gap-space-lg shadow-sm">
+            <!-- Khung minh họa + thông điệp nguyên văn -->
+            <div class="flex flex-col items-center text-center max-w-2xl mx-auto gap-space-sm">
+              <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-primary shadow-sm mb-2">
+                <span class="material-symbols-outlined text-[36px]">travel_explore</span>
+              </div>
+              <h3 class="font-headline-sm text-headline-sm text-primary">
+                Chưa tìm thấy nội dung phù hợp với từ khóa của bạn. Hãy thử từ khóa khác hoặc khám phá 6 chuyên mục dưới
+                đây.
+              </h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Bạn có thể thử tìm theo tên địa phương (Hà Giang, Sơn La, Bến Tre), nhóm thảo dược bản địa, hoặc tên
+                nghệ nhân giữ nghề.
+              </p>
+            </div>
+            <!-- Lưới 6 thẻ dẫn nhanh vào 6 chuyên mục chính -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter pt-space-sm">
+              <!-- Chuyên mục 1 -->
+              <a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-all flex items-start gap-space-sm group shadow-sm"
+                href="/tin-tuc-su-kien/index.html">
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#E8EFEA] flex items-center justify-center text-primary group-hover:bg-[#1F4D3A] group-hover:text-white transition-colors flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">newspaper</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container">
+                    Tin tức &amp; Sự kiện
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Cập nhật chính sách, hội chợ và chuyển động OCOP
+                  </p>
+                </div>
+              </a>
+              <!-- Chuyên mục 2 -->
+              <a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-all flex items-start gap-space-sm group shadow-sm"
+                href="/san-pham-ocop/index.html">
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#E8EFEA] flex items-center justify-center text-[#C89B3C] group-hover:bg-[#1F4D3A] group-hover:text-[#C89B3C] transition-colors flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container">
+                    Sản phẩm OCOP
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Kho dữ liệu sản phẩm 3–5 sao có bảo chứng nguồn gốc
+                  </p>
+                </div>
+              </a>
+              <!-- Chuyên mục 3 -->
+              <a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-all flex items-start gap-space-sm group shadow-sm"
+                href="/cau-chuyen-ocop/index.html">
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#E8EFEA] flex items-center justify-center text-[#B85D3B] group-hover:bg-[#B85D3B] group-hover:text-white transition-colors flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">menu_book</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container">
+                    Câu chuyện OCOP
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Ký sự điền dã người giữ nghề và văn hóa bản địa
+                  </p>
+                </div>
+              </a>
+              <!-- Chuyên mục 4 -->
+              <a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-all flex items-start gap-space-sm group shadow-sm"
+                href="/diem-den-du-lich/index.html">
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#E8EFEA] flex items-center justify-center text-primary group-hover:bg-[#1F4D3A] group-hover:text-white transition-colors flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">forest</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container">
+                    Điểm đến &amp; Du lịch
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Bản đồ làng nghề và điểm du lịch sinh thái nông thôn
+                  </p>
+                </div>
+              </a>
+              <!-- Chuyên mục 5 -->
+              <a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-all flex items-start gap-space-sm group shadow-sm"
+                href="/ocop-hoi-nhap/index.html">
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#E8EFEA] flex items-center justify-center text-primary group-hover:bg-[#1F4D3A] group-hover:text-white transition-colors flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">public</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container">
+                    OCOP Hội nhập
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Báo chí dữ liệu, tiêu chuẩn xuất khẩu và kết nối B2B
+                  </p>
+                </div>
+              </a>
+              <!-- Chuyên mục 6 -->
+              <a class="p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-all flex items-start gap-space-sm group shadow-sm"
+                href="/ban-doc-toa-soan/index.html">
+                <div
+                  class="w-10 h-10 rounded-lg bg-[#E8EFEA] flex items-center justify-center text-primary group-hover:bg-[#1F4D3A] group-hover:text-white transition-colors flex-shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">contact_support</span>
+                </div>
+                <div class="flex flex-col gap-0.5">
+                  <h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-primary-container">
+                    Bạn đọc &amp; Tòa soạn
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Không gian phản ánh, gửi bài cộng tác và kết nối chủ thể
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- KHỐI 04 – COMPONENT PHỤ: HỘP TÌM KIẾM NHANH (SEARCH MODAL OVERLAY) -->
+      <section class="w-full bg-[#F8F5EE] py-space-xl">
+        <div class="max-w-[1360px] mx-auto px-gutter">
+          <!-- Tiêu đề mô phỏng Search Modal -->
+          <div class="mb-space-md flex items-center justify-between">
+            <div>
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Tương tác
+                Tra cứu Toàn hệ thống</span>
+              <h2 class="font-headline-sm text-headline-sm text-primary">Mô phỏng Giao diện Hộp Tìm Kiếm Nhanh (Search
+                Modal Overlay)</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <span
+                class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Phím
+                tắt: [⌘K]</span>
+              <button
+                class="px-3 py-1.5 rounded-lg bg-[#1F4D3A] text-white font-label-md text-label-md uppercase tracking-wider"
+                onclick="document.getElementById('mockup-search-modal').classList.toggle('hidden')" type="button">
+                Bật / Tắt Modal
+              </button>
+            </div>
+          </div>
+          <!-- Trình bày trực quan Search Modal Box nổi -->
+          <div
+            class="relative w-full rounded-2xl bg-black/40 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center shadow-xl"
+            id="mockup-search-modal">
+            <div
+              class="w-full max-w-3xl bg-surface-container-lowest rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+              <!-- Thanh tìm kiếm bên trong Modal -->
+              <div class="p-4 sm:p-5 flex items-center gap-3 bg-surface-container-lowest">
+                <span class="material-symbols-outlined text-[26px] text-primary">search</span>
+                <input
+                  class="w-full bg-transparent font-body-lg text-body-lg text-on-surface placeholder:italic placeholder:text-outline focus:outline-none"
+                  id="modal-search-input" placeholder="Tìm sản phẩm, câu chuyện, làng nghề, chủ thể OCOP, tin tức…"
+                  type="text" value="Trà" />
+                <div class="flex items-center gap-2">
+                  <kbd
+                    class="hidden sm:inline-block px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">ESC</kbd>
+                  <button
+                    class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant transition-colors"
+                    type="button">
+                    <span class="material-symbols-outlined text-[20px]">close</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Nội dung Modal chia 2 trạng thái: State 1 (Gợi ý) & State 2 (Kết quả gõ từ khóa Trà) -->
+              <div class="grid grid-cols-1 md:grid-cols-12 max-h-[520px] overflow-y-auto">
+                <!-- State 2: Khu vực Kết quả trực tiếp khi đang gõ từ khóa 'Trà' (Cột chính 7 cột) -->
+                <div class="md:col-span-7 p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+                  <div class="flex items-center justify-between pb-1">
+                    <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Kết
+                      quả khớp nhất (5)</span>
+                    <span class="font-label-sm text-label-sm text-[#1F4D3A] bg-[#E8EFEA] px-2 py-0.5 rounded">Từ khóa:
+                      “Trà”</span>
+                  </div>
+                  <!-- Danh sách tối đa 5 kết quả khớp nhất phân theo nhóm -->
+                  <div class="flex flex-col gap-2">
+                    <!-- 1. Nhóm Sản phẩm -->
+                    <a class="p-2.5 rounded-lg hover:bg-[#F8F5EE] transition-colors flex items-start gap-3 group"
+                      href="/san-pham-ocop/tra-dinh-ngoc-tan-cuong/index.html">
+                      <div
+                        class="w-8 h-8 rounded-md bg-[#1F4D3A] flex items-center justify-center text-[#C89B3C] flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]"
+                          style="font-variation-settings: 'FILL' 1;">star</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <div class="flex items-center gap-1.5">
+                          <span class="text-[10px] font-bold text-[#C89B3C] uppercase tracking-wider">[5 Sao]</span>
+                          <span
+                            class="font-label-md text-label-md text-primary group-hover:text-secondary truncate font-semibold">Trà
+                            Đinh Ngọc Tân Cương</span>
+                        </div>
+                        <span class="text-xs text-on-surface-variant truncate">HTX Trà Tân Cương Thái Nguyên · Nông sản
+                          di sản</span>
+                      </div>
+                    </a>
+                    <!-- 2. Nhóm Câu chuyện -->
+                    <a class="p-2.5 rounded-lg hover:bg-[#F8F5EE] transition-colors flex items-start gap-3 group"
+                      href="/cau-chuyen-ocop/giu-lua-nghe-sao-che-tan-cuong/index.html">
+                      <div
+                        class="w-8 h-8 rounded-md bg-[#B85D3B] flex items-center justify-center text-white flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">menu_book</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-label-md text-label-md text-primary group-hover:text-[#B85D3B] truncate font-semibold">Giữ
+                          lửa nghề sao chè Tân Cương</span>
+                        <span class="text-xs text-on-surface-variant truncate">Ký sự điền dã · Nghệ nhân sao chè thủ
+                          công</span>
+                      </div>
+                    </a>
+                    <!-- 3. Nhóm Chủ thể -->
+                    <a class="p-2.5 rounded-lg hover:bg-[#F8F5EE] transition-colors flex items-start gap-3 group"
+                      href="/chu-the-ocop/hop-tac-xa-tra-tan-cuong-thai-nguyen/index.html">
+                      <div
+                        class="w-8 h-8 rounded-md bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">domain</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-label-md text-label-md text-primary group-hover:text-secondary truncate font-semibold">HTX
+                          Trà Tân Cương Thái Nguyên</span>
+                        <span class="text-xs text-on-surface-variant truncate">Chủ thể OCOP tiêu biểu · Liên kết 120
+                          nông hộ</span>
+                      </div>
+                    </a>
+                    <!-- 4. Nhóm Điểm đến -->
+                    <a class="p-2.5 rounded-lg hover:bg-[#F8F5EE] transition-colors flex items-start gap-3 group"
+                      href="/diem-den-du-lich/tinh-thai-nguyen/index.html">
+                      <div
+                        class="w-8 h-8 rounded-md bg-[#E8EFEA] flex items-center justify-center text-[#1F4D3A] flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-label-md text-label-md text-primary group-hover:text-secondary truncate font-semibold">Vùng
+                          chè Tân Cương</span>
+                        <span class="text-xs text-on-surface-variant truncate">Điểm du lịch sinh thái nông thôn &amp;
+                          Không gian văn hóa</span>
+                      </div>
+                    </a>
+                    <!-- 5. Nhóm Thị trường -->
+                    <a class="p-2.5 rounded-lg hover:bg-[#F8F5EE] transition-colors flex items-start gap-3 group"
+                      href="/ocop-hoi-nhap/tiem-nang-dua-tra-va-thao-duoc-vao-eu/index.html">
+                      <div
+                        class="w-8 h-8 rounded-md bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+                        <span class="material-symbols-outlined text-[18px]">trending_up</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span
+                          class="font-label-md text-label-md text-primary group-hover:text-secondary truncate font-semibold">Xuất
+                          khẩu trà hữu cơ sang thị trường EU</span>
+                        <span class="text-xs text-on-surface-variant truncate">Phân tích chính sách tiêu chuẩn xanh và
+                          thị trường quốc tế</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- State 1: Khu vực Gợi ý nhanh & Từ khóa nổi bật (Cột phụ 5 cột) -->
+                <div class="md:col-span-5 p-space-md bg-[#F8F5EE] flex flex-col gap-space-md">
+                  <!-- Gợi ý nhanh 6 chuyên mục chính -->
+                  <div class="flex flex-col gap-2">
+                    <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Gợi ý
+                      nhanh 6 chuyên mục chính</span>
+                    <div class="flex flex-wrap gap-1.5">
+                      <a class="px-2.5 py-1 rounded bg-white hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-primary transition-colors"
+                        href="/tin-tuc-su-kien/index.html">Tin tức &amp; Sự kiện</a>
+                      <a class="px-2.5 py-1 rounded bg-white hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-primary transition-colors"
+                        href="/san-pham-ocop">Sản phẩm OCOP</a>
+                      <a class="px-2.5 py-1 rounded bg-white hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-primary transition-colors"
+                        href="/cau-chuyen-ocop">>Câu chuyện OCOP</a>
+                      <a class="px-2.5 py-1 rounded bg-white hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-primary transition-colors"
+                        href="/diem-den-du-lich/index.html">Điểm đến &amp; Du lịch</a>
+                      <a class="px-2.5 py-1 rounded bg-white hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-primary transition-colors"
+                        href="/ocop-hoi-nhap">OCOP Hội nhập</a>
+                      <a class="px-2.5 py-1 rounded bg-white hover:bg-surface-container-high text-xs text-on-surface-variant hover:text-primary transition-colors"
+                        href="/ban-doc-toa-soan/index.html">Bạn đọc &amp; Tòa soạn</a>
+                    </div>
+                  </div>
+                  <!-- Từ khóa nổi bật -->
+                  <div class="flex flex-col gap-2">
+                    <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Từ
+                      khóa nổi bật</span>
+                    <div class="flex flex-wrap gap-2">
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white hover:bg-secondary-fixed text-xs text-primary font-medium transition-colors"
+                        href="/tim-kiem/index.html">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                        <span>Dược liệu</span>
+                      </a>
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white hover:bg-secondary-fixed text-xs text-primary font-medium transition-colors"
+                        href="/tim-kiem/index.html">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#C89B3C]"></span>
+                        <span>Trà 5 sao</span>
+                      </a>
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white hover:bg-secondary-fixed text-xs text-primary font-medium transition-colors"
+                        href="/tim-kiem/index.html">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                        <span>Làng nghề</span>
+                      </a>
+                      <a class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white hover:bg-secondary-fixed text-xs text-primary font-medium transition-colors"
+                        href="/tim-kiem/index.html">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#1F4D3A]"></span>
+                        <span>Du lịch sinh thái</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="p-3 bg-white/60 rounded-lg text-xs text-on-surface-variant leading-relaxed">
+                    <span class="font-semibold text-primary">Mẹo tra cứu:</span> Bạn có thể gõ mã sản phẩm OCOP hoặc tên
+                    hợp tác xã để tra cứu dữ liệu gốc.
+                  </div>
+                </div>
+              </div>
+              <!-- Nút bấm nổi bật cuối modal: Xem tất cả kết quả -->
+              <div class="p-4 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-3">
+                <span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Hiển thị 24 kết quả tìm kiếm cho từ khóa ‘Trà Tân Cương’
+                </span>
+                <a class="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#1F4D3A] hover:bg-primary-container text-white font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-sm"
+                  href="/tim-kiem/index.html">
+                  <span>Xem tất cả kết quả</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="/navigation-active.js"></script>
+</body>
+
+</html>

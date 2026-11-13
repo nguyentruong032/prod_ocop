@@ -1,0 +1,94 @@
+# ==============================================================================
+# DOCKER COMPOSE DÀNH CHO GIAI ĐOẠN PHASE 2 (2027) — HẠ TẦNG NÂNG CAO
+# ==============================================================================
+# Tham chiếu: 00-TONG-QUAN.md mục 1.2
+# Bao gồm: Next.js + Payload CMS, PostgreSQL, Meilisearch, ClamAV Daemon, HLS Worker
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  # 1. Ứng dụng lõi Next.js 16 + Payload CMS 3.x
+  web:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URI=postgresql://ocop_user:${DB_PASSWORD}@postgres:5432/ocop_db
+      - PAYLOAD_SECRET=${PAYLOAD_SECRET}
+      - NEXT_PUBLIC_SITE_URL=https://ocopvietnam.vn
+      - MEILISEARCH_HOST=http://meilisearch:7700
+      - MEILISEARCH_KEY=${MEILI_MASTER_KEY}
+      - CLAMAV_HOST=clamav
+      - CLAMAV_PORT=3310
+    volumes:
+      - media_data:/data/media
+      - private_data:/data/private
+    depends_on:
+      postgres:
+        condition: service_healthy
+      meilisearch:
+        condition: service_started
+      clamav:
+        condition: service_started
+
+  # 2. Cơ sở dữ liệu PostgreSQL 16
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ocop_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ocop_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ocop_user -d ocop_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 3. Công cụ tìm kiếm mờ Meilisearch (Phase 2)
+  meilisearch:
+    image: getmeili/meilisearch:v1.12
+    restart: unless-stopped
+    environment:
+      - MEILI_ENV=production
+      - MEILI_MASTER_KEY=${MEILI_MASTER_KEY}
+      - MEILI_NO_ANALYTICS=true
+    volumes:
+      - meili_data:/meili_data
+    ports:
+      - "127.0.0.1:7700:7700"
+
+  # 4. Trình quét virus & mã độc ClamAV Daemon (Phase 2)
+  clamav:
+    image: clamav/clamav:stable
+    restart: unless-stopped
+    volumes:
+      - clamav_db:/var/lib/clamav
+    ports:
+      - "127.0.0.1:3310:3310"
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  # 5. Worker chuyển mã Video tự động sang chuẩn HLS Adaptive Streaming (Phase 2)
+  video-worker:
+    image: jrottenberg/ffmpeg:6.1-alpine
+    restart: unless-stopped
+    volumes:
+      - media_data:/data/media
+    entrypoint: ["sh", "-c", "echo 'HLS Video Transcoder Worker Ready' && tail -f /dev/null"]
+
+volumes:
+  postgres_data:
+  media_data:
+  private_data:
+  meili_data:
+  clamav_db:

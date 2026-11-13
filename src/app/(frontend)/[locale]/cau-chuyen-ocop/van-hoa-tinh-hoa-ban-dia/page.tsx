@@ -1,0 +1,67 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { listArticles } from "@/lib/data/articles";
+import { getLandingPage, listProvinces } from "@/lib/data/globals";
+import { StoriesListView } from "@/components/features/stories/StoriesListView";
+import { buildMetadata } from "@/lib/seo";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ province?: string; page?: string }>;
+};
+
+export async function generateMetadata({
+  params,
+  searchParams,
+}: Props): Promise<Metadata> {
+  const [{ locale }, sp] = await Promise.all([params, searchParams]);
+  if (locale !== "vi") return {};
+  const landing = await getLandingPage("stories-culture");
+  return buildMetadata({
+    title:
+      landing?.seo?.title || landing?.heading || "Văn hóa & Tinh hoa bản địa",
+    description:
+      landing?.seo?.description ||
+      landing?.intro ||
+      "Trầm tích văn hóa ngàn năm và bí quyết truyền đời sau mỗi sản phẩm OCOP.",
+    path: `/${locale}/cau-chuyen-ocop/van-hoa-tinh-hoa-ban-dia`,
+    seo: landing?.seo,
+    noIndex: (Number(sp.page) || 1) > 1 && Boolean(sp.province),
+  });
+}
+
+export default async function CultureStoriesPage({
+  params,
+  searchParams,
+}: Props) {
+  const [{ locale }, sp] = await Promise.all([params, searchParams]);
+  if (locale !== "vi") notFound();
+
+  const [landing, provinces, result] = await Promise.all([
+    getLandingPage("stories-culture"),
+    listProvinces(),
+    listArticles({
+      kind: "STORY",
+      topic: "CULTURE",
+      province: sp.province,
+      page: Number(sp.page) || 1,
+      limit: 12,
+    }),
+  ]);
+
+  return (
+    <StoriesListView
+      landing={landing}
+      result={result}
+      provinces={provinces}
+      baseUrl={`/${locale}/cau-chuyen-ocop/van-hoa-tinh-hoa-ban-dia`}
+      pageTitle="Văn hóa & Tinh hoa bản địa"
+      pageDescription="Trầm tích văn hóa và phong tục tập quán nuôi dưỡng nên những tinh hoa sản vật đất Việt."
+      selectedProvince={sp.province}
+      breadcrumbItems={[
+        { label: "Câu chuyện OCOP", href: `/${locale}/cau-chuyen-ocop` },
+        { label: "Văn hóa & Tinh hoa bản địa" },
+      ]}
+    />
+  );
+}

@@ -1,0 +1,21 @@
+import React from 'react';
+
+export interface JsonLdProps {
+  data: Record<string, unknown>;
+}
+
+export function JsonLd({ data }: JsonLdProps) {
+  const jsonString = JSON.stringify(data)
+    .replace(/</g, '\\u003c')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: jsonString }}
+    />
+  );
+}
+
+export default JsonLd;

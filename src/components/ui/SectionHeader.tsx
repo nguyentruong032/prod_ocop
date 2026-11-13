@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 export interface SectionHeaderProps {
   eyebrow?: string | null;
@@ -15,11 +15,13 @@ export function SectionHeader({
   title,
   description,
   viewAllHref,
-  viewAllLabel = 'Xem tất cả',
-  className = '',
+  viewAllLabel = "Xem tất cả",
+  className = "",
 }: SectionHeaderProps) {
   return (
-    <div className={`flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 ${className}`}>
+    <div
+      className={`flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 ${className}`}
+    >
       <div className="max-w-2xl">
         {eyebrow && (
           <span className="block font-label-md text-label-md text-secondary font-semibold uppercase tracking-wider mb-2">

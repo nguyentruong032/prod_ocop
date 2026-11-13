@@ -1,8 +1,10 @@
-import Image, { type ImageProps } from 'next/image';
-import ocopMediaLoader from '@/lib/media-loader';
-import type { Media } from '@/payload-types';
+import Image, { type ImageProps } from "next/image";
+import type { Media } from "@/payload-types";
 
-export interface MediaImageProps extends Omit<ImageProps, 'src' | 'alt' | 'loader'> {
+export interface MediaImageProps extends Omit<
+  ImageProps,
+  "src" | "alt" | "loader"
+> {
   media?: Media | string | null;
   src?: string | null;
   alt?: string | null;
@@ -20,8 +22,8 @@ export function MediaImage({
   caption,
   credit,
   showCaption = false,
-  className = '',
-  imageClassName = '',
+  className = "",
+  imageClassName = "",
   width,
   height,
   fill,
@@ -29,36 +31,44 @@ export function MediaImage({
   priority,
   ...rest
 }: MediaImageProps) {
-  let resolvedSrc = '/logo.webp';
-  let resolvedAlt = '';
+  let resolvedSrc = "/logo.webp";
+  let resolvedAlt = "";
   let resolvedCaption = caption;
   let resolvedCredit = credit;
 
-  if (typeof media === 'string') {
+  if (typeof media === "string") {
     resolvedSrc = media;
-    resolvedAlt = alt || '';
-  } else if (media && typeof media === 'object') {
-    resolvedSrc = media.filename || media.url || '/logo.webp';
-    resolvedAlt = alt !== undefined ? (alt || '') : (media.alt || '');
+    resolvedAlt = alt || "";
+  } else if (media && typeof media === "object") {
+    resolvedSrc = media.filename || media.url || "/logo.webp";
+    resolvedAlt = alt !== undefined ? alt || "" : media.alt || "";
     resolvedCaption = caption || media.caption || null;
     resolvedCredit = credit || media.credit || null;
   } else if (src) {
     resolvedSrc = src;
-    resolvedAlt = alt || '';
+    resolvedAlt = alt || "";
   }
 
   // Prevent Google lh3 external links
-  if (resolvedSrc.includes('lh3.googleusercontent.com')) {
-    resolvedSrc = '/anh_phong_canh.webp';
+  if (resolvedSrc.includes("lh3.googleusercontent.com")) {
+    resolvedSrc = "/anh_phong_canh.webp";
   }
+
+  const isStatic =
+    typeof resolvedSrc === "string" &&
+    (resolvedSrc.startsWith("/") || resolvedSrc.startsWith("./"));
+  const isUnoptimized =
+    rest.unoptimized !== undefined ? rest.unoptimized : isStatic;
 
   const imageElement = fill ? (
     <Image
       src={resolvedSrc}
       alt={resolvedAlt}
-      loader={ocopMediaLoader}
       fill
-      sizes={sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
+      unoptimized={isUnoptimized}
+      sizes={
+        sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      }
       priority={priority}
       className={`object-cover ${imageClassName}`}
       {...rest}
@@ -67,9 +77,9 @@ export function MediaImage({
     <Image
       src={resolvedSrc}
       alt={resolvedAlt}
-      loader={ocopMediaLoader}
       width={width || 600}
       height={height || 400}
+      unoptimized={isUnoptimized}
       sizes={sizes}
       priority={priority}
       className={`h-auto w-full object-cover ${imageClassName}`}
@@ -80,11 +90,16 @@ export function MediaImage({
   if (showCaption && (resolvedCaption || resolvedCredit)) {
     return (
       <figure className={`my-4 flex flex-col ${className}`}>
-        <div className="relative overflow-hidden rounded-lg">{imageElement}</div>
+        <div className="relative overflow-hidden rounded-lg">
+          {imageElement}
+        </div>
         <figcaption className="mt-2 text-center text-xs text-on-surface-variant font-body-sm">
           {resolvedCaption && <span>{resolvedCaption}</span>}
           {resolvedCredit && (
-            <span className="italic text-outline"> (Nguồn: {resolvedCredit})</span>
+            <span className="italic text-outline">
+              {" "}
+              (Nguồn: {resolvedCredit})
+            </span>
           )}
         </figcaption>
       </figure>
@@ -92,7 +107,11 @@ export function MediaImage({
   }
 
   if (fill) {
-    return <div className={`relative overflow-hidden ${className}`}>{imageElement}</div>;
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        {imageElement}
+      </div>
+    );
   }
 
   return imageElement;

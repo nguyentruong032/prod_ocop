@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 export interface EmptyStateProps {
   icon?: string;
@@ -11,15 +11,17 @@ export interface EmptyStateProps {
 }
 
 export function EmptyState({
-  icon = 'search_off',
-  title = 'Không tìm thấy dữ liệu phù hợp',
-  description = 'Vui lòng thử lại với các tiêu chí tìm kiếm hoặc bộ lọc khác.',
+  icon = "search_off",
+  title = "Không tìm thấy dữ liệu phù hợp",
+  description = "Vui lòng thử lại với các tiêu chí tìm kiếm hoặc bộ lọc khác.",
   actionHref,
-  actionLabel = 'Xem tất cả',
-  className = '',
+  actionLabel = "Xem tất cả",
+  className = "",
 }: EmptyStateProps) {
   return (
-    <div className={`flex flex-col items-center justify-center text-center py-16 px-4 bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant my-8 ${className}`}>
+    <div
+      className={`flex flex-col items-center justify-center text-center py-16 px-4 bg-surface-container-low/50 rounded-2xl border border-dashed border-outline-variant my-8 ${className}`}
+    >
       <div className="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline mb-4">
         <span className="material-symbols-outlined text-[36px]">{icon}</span>
       </div>

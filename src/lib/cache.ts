@@ -1,4 +1,4 @@
-import { unstable_cache } from 'next/cache';
+import { unstable_cache } from "next/cache";
 
 export function getCached<T>(
   keyParts: string[],

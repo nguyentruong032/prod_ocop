@@ -13,7 +13,12 @@ export interface PayloadLocalClient {
     sort?: string;
     limit?: number;
     select?: Record<string, boolean>;
-  }) => Promise<{ docs: T[] }>;
+  }) => Promise<{ docs: T[]; totalDocs?: number }>;
+  create?: <T = unknown>(args: {
+    collection: string;
+    data: Record<string, unknown>;
+    overrideAccess?: boolean;
+  }) => Promise<T>;
 }
 
 let cachedPayload: PayloadLocalClient | null = null;
@@ -22,9 +27,12 @@ export async function getPayloadClient(): Promise<PayloadLocalClient | null> {
   if (cachedPayload) return cachedPayload;
 
   try {
-    const importDynamic = new Function('modulePath', 'return import(modulePath)');
-    const { getPayload } = await importDynamic('payload');
-    const configModule = await importDynamic('@/payload.config');
+    const importDynamic = new Function(
+      "modulePath",
+      "return import(modulePath)",
+    );
+    const { getPayload } = await importDynamic("payload");
+    const configModule = await importDynamic("@/payload.config");
     const config = configModule.default || configModule;
     cachedPayload = (await getPayload({ config })) as PayloadLocalClient;
     return cachedPayload;

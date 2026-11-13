@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 export interface BreadcrumbItem {
   label: string;
@@ -11,9 +11,12 @@ export interface BreadcrumbProps {
   className?: string;
 }
 
-export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
+export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
   return (
-    <nav aria-label="Breadcrumb" className={`flex items-center text-body-sm font-body-sm text-on-surface-variant ${className}`}>
+    <nav
+      aria-label="Breadcrumb"
+      className={`flex items-center text-body-sm font-body-sm text-on-surface-variant ${className}`}
+    >
       <ol className="flex items-center flex-wrap gap-1.5">
         <li>
           <Link
@@ -29,16 +32,27 @@ export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
 
           return (
             <React.Fragment key={index}>
-              <li className="text-outline-variant select-none" aria-hidden="true">
-                <span className="material-symbols-outlined text-[14px]">chevron_right</span>
+              <li
+                className="text-outline-variant select-none"
+                aria-hidden="true"
+              >
+                <span className="material-symbols-outlined text-[14px]">
+                  chevron_right
+                </span>
               </li>
               <li>
                 {isLast || !item.href ? (
-                  <span className="font-semibold text-primary truncate max-w-[200px] md:max-w-md inline-block" aria-current="page">
+                  <span
+                    className="font-semibold text-primary truncate max-w-[200px] md:max-w-md inline-block"
+                    aria-current="page"
+                  >
                     {item.label}
                   </span>
                 ) : (
-                  <Link href={item.href} className="hover:text-primary transition-colors">
+                  <Link
+                    href={item.href}
+                    className="hover:text-primary transition-colors"
+                  >
                     {item.label}
                   </Link>
                 )}

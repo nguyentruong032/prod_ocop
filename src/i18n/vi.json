@@ -64,5 +64,41 @@
     "featured_destinations": "Điểm đến & Trải nghiệm",
     "integration_heading": "Trụ cột Hội nhập OCOP",
     "cta_heading": "Lan tỏa giá trị OCOP Việt Nam"
+  },
+  "markets": {
+    "EU": "Châu Âu (EU)",
+    "US": "Hoa Kỳ",
+    "JAPAN": "Nhật Bản",
+    "CHINA": "Trung Quốc",
+    "HALAL": "Thị trường Halal"
+  },
+  "ecosystems": {
+    "HIGHLAND_TEA_COFFEE": "Cao nguyên Chè & Cà phê",
+    "RIVER_GARDEN_DELTA": "Sông nước Miệt vườn",
+    "MEDICINAL_FOREST": "Rừng Dược liệu Bản địa",
+    "COASTAL_ISLAND": "Duyên hải & Đảo ngọc"
+  },
+  "craftGroups": {
+    "GOM_SU": "Gốm sứ",
+    "DET_MAY": "Dệt may & Thổ cẩm",
+    "MAY_TRE_DAN": "Mây tre đan",
+    "DIEU_KHAC": "Điêu khắc mỹ nghệ",
+    "KIM_HOAN": "Kim hoàn & Đậu bạc",
+    "KHAC": "Nghề thủ công khác"
+  },
+  "search": {
+    "title": "Tra cứu & Tìm kiếm OCOP",
+    "placeholder": "Tìm kiếm sản phẩm, câu chuyện, làng nghề, chủ thể OCOP...",
+    "button": "Tìm kiếm",
+    "no_results": "Không tìm thấy kết quả phù hợp",
+    "no_results_desc": "Hãy thử kiểm tra lỗi chính tả hoặc tìm kiếm bằng từ khóa tổng quát hơn."
+  },
+  "submission": {
+    "page_title": "Gửi bài & Hồ sơ thông tin OCOP",
+    "tab_submit": "Gửi bài / Ý kiến & Liên hệ",
+    "tab_track": "Tra cứu trạng thái hồ sơ",
+    "success_title": "Gửi hồ sơ thành công!",
+    "copy_code": "Sao chép mã hồ sơ",
+    "copied": "Đã sao chép!"
   }
 }

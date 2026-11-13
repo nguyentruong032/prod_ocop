@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useRouter, useSearchParams, usePathname } from 'next/navigation';
+import React from "react";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 
 export interface FilterOption {
   value: string;
@@ -19,7 +19,10 @@ export interface UrlFilterBarClientProps {
   className?: string;
 }
 
-export function UrlFilterBarClient({ fields, className = '' }: UrlFilterBarClientProps) {
+export function UrlFilterBarClient({
+  fields,
+  className = "",
+}: UrlFilterBarClientProps) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -34,23 +37,29 @@ export function UrlFilterBarClient({ fields, className = '' }: UrlFilterBarClien
     }
 
     // Always reset page to 1 on filter change
-    params.delete('page');
+    params.delete("page");
 
     const queryString = params.toString();
-    router.push(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false });
+    router.push(queryString ? `${pathname}?${queryString}` : pathname, {
+      scroll: false,
+    });
   };
 
   const handleReset = () => {
     router.push(pathname, { scroll: false });
   };
 
-  const hasActiveFilters = fields.some((field) => Boolean(searchParams.get(field.name)));
+  const hasActiveFilters = fields.some((field) =>
+    Boolean(searchParams.get(field.name)),
+  );
 
   return (
-    <div className={`p-4 bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs ${className}`}>
+    <div
+      className={`p-4 bg-surface-container-lowest rounded-xl border border-surface-container shadow-xs ${className}`}
+    >
       <div className="flex flex-wrap items-center gap-3">
         {fields.map((field) => {
-          const currentValue = searchParams.get(field.name) || '';
+          const currentValue = searchParams.get(field.name) || "";
 
           return (
             <div key={field.name} className="flex-1 min-w-[160px] max-w-xs">
@@ -61,7 +70,9 @@ export function UrlFilterBarClient({ fields, className = '' }: UrlFilterBarClien
                 <select
                   id={`filter-${field.name}`}
                   value={currentValue}
-                  onChange={(e) => handleFilterChange(field.name, e.target.value)}
+                  onChange={(e) =>
+                    handleFilterChange(field.name, e.target.value)
+                  }
                   className="w-full h-10 px-3 pr-8 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none cursor-pointer"
                 >
                   <option value="">{field.label}: Tất cả</option>

@@ -1,19 +1,26 @@
-import React from 'react';
+import React from "react";
 
 export interface BadgeProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'accent' | 'terracotta' | 'outline' | 'surface' | 'stars';
+  variant?:
+    | "primary"
+    | "secondary"
+    | "accent"
+    | "terracotta"
+    | "outline"
+    | "surface"
+    | "stars";
   stars?: 3 | 4 | 5;
   className?: string;
 }
 
 export function Badge({
   children,
-  variant = 'surface',
+  variant = "surface",
   stars,
-  className = '',
+  className = "",
 }: BadgeProps) {
-  if (variant === 'stars' || stars) {
+  if (variant === "stars" || stars) {
     const starCount = stars || 3;
     return (
       <span
@@ -21,7 +28,9 @@ export function Badge({
       >
         <span className="flex items-center">
           {Array.from({ length: starCount }).map((_, i) => (
-            <span key={i} className="text-[#C89B3C] text-[13px] leading-none">★</span>
+            <span key={i} className="text-[#C89B3C] text-[13px] leading-none">
+              ★
+            </span>
           ))}
         </span>
         <span>{children || `${starCount} Sao`}</span>
@@ -30,12 +39,14 @@ export function Badge({
   }
 
   const variantClasses = {
-    primary: 'bg-primary text-on-primary',
-    secondary: 'bg-secondary text-on-secondary',
-    accent: 'bg-accent/20 text-accent font-semibold',
-    terracotta: 'bg-terracotta text-white',
-    outline: 'border border-outline-variant text-on-surface-variant bg-transparent',
-    surface: 'bg-surface-container-low text-on-surface-variant border border-surface-container',
+    primary: "bg-primary text-on-primary",
+    secondary: "bg-secondary text-on-secondary",
+    accent: "bg-accent/20 text-accent font-semibold",
+    terracotta: "bg-terracotta text-white",
+    outline:
+      "border border-outline-variant text-on-surface-variant bg-transparent",
+    surface:
+      "bg-surface-container-low text-on-surface-variant border border-surface-container",
   };
 
   return (

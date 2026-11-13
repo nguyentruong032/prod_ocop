@@ -37,6 +37,8 @@ export function getPaginationInfo(
 
 export function parsePageParam(param: string | string[] | undefined): number {
   if (!param) return 1;
-  const parsed = Array.isArray(param) ? parseInt(param[0] ?? '1', 10) : parseInt(param, 10);
+  const parsed = Array.isArray(param)
+    ? parseInt(param[0] ?? "1", 10)
+    : parseInt(param, 10);
   return Number.isNaN(parsed) || parsed < 1 ? 1 : parsed;
 }

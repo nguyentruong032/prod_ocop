@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import type { PaginationInfo } from '@/lib/pagination';
+import React from "react";
+import Link from "next/link";
+import type { PaginationInfo } from "@/lib/pagination";
 
 export interface PaginationProps {
   pagination: PaginationInfo;
@@ -13,21 +13,28 @@ export function Pagination({
   pagination,
   baseUrl,
   searchParams = {},
-  className = '',
+  className = "",
 }: PaginationProps) {
-  const { currentPage, totalPages, hasPrevPage, hasNextPage, prevPage, nextPage } = pagination;
+  const {
+    currentPage,
+    totalPages,
+    hasPrevPage,
+    hasNextPage,
+    prevPage,
+    nextPage,
+  } = pagination;
 
   if (totalPages <= 1) return null;
 
   const createPageUrl = (pageNumber: number) => {
     const params = new URLSearchParams();
     Object.entries(searchParams).forEach(([key, val]) => {
-      if (val !== undefined && key !== 'page') {
+      if (val !== undefined && key !== "page") {
         params.set(key, String(val));
       }
     });
     if (pageNumber > 1) {
-      params.set('page', String(pageNumber));
+      params.set("page", String(pageNumber));
     }
     const queryString = params.toString();
     return queryString ? `${baseUrl}?${queryString}` : baseUrl;
@@ -41,7 +48,11 @@ export function Pagination({
     let l: number | undefined;
 
     for (let i = 1; i <= totalPages; i++) {
-      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+      if (
+        i === 1 ||
+        i === totalPages ||
+        (i >= currentPage - delta && i <= currentPage + delta)
+      ) {
         range.push(i);
       }
     }
@@ -51,7 +62,7 @@ export function Pagination({
         if (i - l === 2) {
           rangeWithDots.push(l + 1);
         } else if (i - l !== 1) {
-          rangeWithDots.push('...');
+          rangeWithDots.push("...");
         }
       }
       rangeWithDots.push(i);
@@ -62,14 +73,19 @@ export function Pagination({
   };
 
   return (
-    <nav aria-label="Phân trang" className={`flex items-center justify-center gap-1.5 my-8 ${className}`}>
+    <nav
+      aria-label="Phân trang"
+      className={`flex items-center justify-center gap-1.5 my-8 ${className}`}
+    >
       {hasPrevPage && prevPage ? (
         <Link
           href={createPageUrl(prevPage)}
           className="h-10 px-3.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-beige transition-colors flex items-center justify-center font-body-sm"
           aria-label="Trang trước"
         >
-          <span className="material-symbols-outlined text-[18px]">chevron_left</span>
+          <span className="material-symbols-outlined text-[18px]">
+            chevron_left
+          </span>
           <span className="hidden sm:inline ml-1">Trước</span>
         </Link>
       ) : (
@@ -77,13 +93,15 @@ export function Pagination({
           className="h-10 px-3.5 rounded-lg border border-outline-variant/40 bg-surface-container-low text-on-surface-variant/40 cursor-not-allowed flex items-center justify-center font-body-sm"
           aria-hidden="true"
         >
-          <span className="material-symbols-outlined text-[18px]">chevron_left</span>
+          <span className="material-symbols-outlined text-[18px]">
+            chevron_left
+          </span>
           <span className="hidden sm:inline ml-1">Trước</span>
         </span>
       )}
 
       {getPageNumbers().map((page, idx) => {
-        if (page === '...') {
+        if (page === "...") {
           return (
             <span
               key={`dots-${idx}`}
@@ -103,10 +121,10 @@ export function Pagination({
             href={createPageUrl(pageNum)}
             className={`w-10 h-10 rounded-lg flex items-center justify-center text-body-sm font-semibold transition-colors ${
               isActive
-                ? 'bg-primary text-on-primary shadow-xs'
-                : 'border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-beige'
+                ? "bg-primary text-on-primary shadow-xs"
+                : "border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-beige"
             }`}
-            aria-current={isActive ? 'page' : undefined}
+            aria-current={isActive ? "page" : undefined}
           >
             {pageNum}
           </Link>
@@ -120,7 +138,9 @@ export function Pagination({
           aria-label="Trang sau"
         >
           <span className="hidden sm:inline mr-1">Sau</span>
-          <span className="material-symbols-outlined text-[18px]">chevron_right</span>
+          <span className="material-symbols-outlined text-[18px]">
+            chevron_right
+          </span>
         </Link>
       ) : (
         <span
@@ -128,7 +148,9 @@ export function Pagination({
           aria-hidden="true"
         >
           <span className="hidden sm:inline mr-1">Sau</span>
-          <span className="material-symbols-outlined text-[18px]">chevron_right</span>
+          <span className="material-symbols-outlined text-[18px]">
+            chevron_right
+          </span>
         </span>
       )}
     </nav>
